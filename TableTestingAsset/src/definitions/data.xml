@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data.xml>
+
+	<!--Data collection for the branch context-->
+	<kColl id="branchData" dynamic="true">
+		<field id="BranchId"/>
+	</kColl>
+
+	<kColl id="sessionData" dynamic="true">
+	</kColl>
+
+</data.xml>

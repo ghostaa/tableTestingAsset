@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="131,148,400,300" dataBinding="{'ctxType':'proc','ctxFile':'sampleFlow','ctxName':'sampleFlowCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel">
+    <container name="Form" id="form">
+      <gridData heightHint="265" verticalAlignment="1" widthHint="353" autoSize="false"/>
+      <widget name="Label" id="label" text="%nls.bttsample/Welcome_To_Btt_Sample">
+        <gridData/>
+      </widget>
+      <widget name="Link" action="flowId=sampleFlow;flowEvent=" id="link" text="%nls.bttsample/Click_Link_Run_Flow">
+        <gridData/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+</XUI>

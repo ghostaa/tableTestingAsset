@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaultConfig.xml>
+	<xuiFolder id="xuiFolder" value="xui"/>
+	<defFolder id="defFolder" value="src/definitions"/>
+	<cssFolder id="cssFolder" value="WebContent/css"/>
+	<jspFolder id="jspFolder" value="WebContent/jsp"/>
+	<listFilesFolder id="listFilesFolder" value="WebContent/listFiles"/>
+	<templatesFolder id="templatesFolder" value="WebContent/templates"/>
+	<imgFolder id="imgFolder" value="WebContent/img"/>
+	<nlsFolder id="nlsFolder" value="src/nls"/>
+
+</defaultConfig.xml>

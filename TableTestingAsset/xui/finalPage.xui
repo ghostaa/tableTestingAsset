@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="145,139,400,300" dataBinding="{'ctxType':'proc','ctxFile':'sampleFlow','ctxName':'sampleFlowCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel">
+    <container name="Form" id="form">
+      <gridData heightHint="258" verticalAlignment="1" widthHint="329" autoSize="false"/>
+      <widget name="Label" id="label" text="%nls.bttsample/Final_Page_Flow">
+        <gridData/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+</XUI>

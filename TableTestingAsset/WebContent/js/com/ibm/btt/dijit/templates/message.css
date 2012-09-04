@@ -1,0 +1,15 @@
+
+.errorMessage{
+	background-color:#CC0000;
+	color:#000000;
+}
+
+.warnMessage{
+	background-color:#FFF1A8;
+	color:#000000;
+}
+
+.info{
+	background-color:white;
+	color:#000000;
+}

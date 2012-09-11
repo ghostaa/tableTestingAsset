@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Mon Sep 10 17:52:47 CST 2012 -->
+<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Tue Sep 11 14:44:39 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -14,13 +14,15 @@
 <title></title>
 <style type="text/css">
 @import "js/dojo/resources/dojo.css";
-@import "js/dijit/themes/claro/claro.css";		
+@import "js/dijit/themes/claro/claro.css";	
 @import "js/dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
 @import "css/dijit/message.css";
 @import "js/com/ibm/btt/dijit/templates/FileUpload.css";
 @import "js/dijit/themes/claro/document.css";
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
+@import "js/com/ibm/btt/dijit/templates/dijit.css";
+
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -34,11 +36,12 @@
 	var djConfig =  {
 		baseUrl:"js/dojo/",
 		<bttdojo:locale/>,
-		isDebug: true, 
+		isDebug: false, 
 		parseOnLoad: true
 	};
 </script>
-<script type="text/javascript" src="js/dojo/dojo_BTT.js"></script>
+
+<script type="text/javascript" src="js/dojo/dojo_BTT.js" ></script>
 <script type="text/javascript" src="js/com/ibm/btt/btt.js"></script>
 <script type="text/javascript" >
 dojo.addOnLoad(function(){

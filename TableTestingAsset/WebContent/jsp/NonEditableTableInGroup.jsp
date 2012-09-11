@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by ghost, on Mon Sep 10 15:57:38 CST 2012 -->
+<!-- Generated from NonEditableTableInGroup.xui by ghost, on Mon Sep 10 17:49:02 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -59,37 +59,48 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-  <table id="index_null">
+  <table id="NonEditableTableInGroup_panel">
     <tr>
       <td valign="top">
-        <bttdojo:form id="index_form" errorPage="index.jsp">
-          <table style="width:353px;height:265px;" id="index_form">
+        <bttdojo:form id="NonEditableTableInGroup_form" errorPage="NonEditableTableInGroup.jsp">
+          <table id="NonEditableTableInGroup_form">
             <tr>
-              <td>
-                <bttdojo:label id="index_label" text="%nls.bttsample/Welcome_To_Btt_Sample"/>
+              <td valign="top">
+                  <table id="NonEditableTableInGroup_panel01">
+                    <tr>
+                      <td>
+                        <bttdojo:a id="NonEditableTableInGroup_link" text=" non-editable table" flowEvent="returnToNonEditableTable"/>
+                      </td>
+                      <td>
+                        <bttdojo:label id="NonEditableTableInGroup_label" text=" -> non-editable table in group"/>
+                      </td>
+                    </tr>
+                  </table>
               </td>
             </tr>
             <tr>
-              <td>
-                <bttdojo:a id="index_link" text="%nls.bttsample/Click_Link_Run_Flow" flowId="sampleFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link01" text="Link" flowId="aFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow"/>
+              <td valign="top">
+                <bttdojo:group id="NonEditableTableInGroup_group" text="Group">
+                  <table id="NonEditableTableInGroup_group">
+                    <tr>
+                      <td>
+                        <bttdojo:table id="NonEditableTableInGroup_table" dataNameForList="nonEditableAccountList" isPageable="false">
+                          <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
+                          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
+                          <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
+                          <bttdojo:column align="left" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate"/>
+                          <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
+                          <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                          <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
+                        </bttdojo:table>
+                      </td>
+                    </tr>
+                  </table>
+                </bttdojo:group>
               </td>
             </tr>
           </table>
         </bttdojo:form>
-      </td>
-    </tr>
-    <tr>
-      <td>
       </td>
     </tr>
   </table>

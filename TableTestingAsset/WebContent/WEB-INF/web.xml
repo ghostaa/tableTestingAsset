@@ -9,7 +9,7 @@
 			<param-name>bttConfigPath</param-name>
 			<param-value>jar:///definitions/btt.xml</param-value>
 		</init-param>
-		<load-on-startup>-1</load-on-startup>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet>
 		<display-name>HTMLReqServlet</display-name>

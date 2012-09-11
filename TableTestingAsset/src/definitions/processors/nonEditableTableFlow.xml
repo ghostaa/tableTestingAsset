@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nonEditableTableFlow>
+
+
+	<htmlProcessor context="nonEditableTableCtx" id="nonEditableTableFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="CreateAccountInfoOp"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<operationState typeIdInfo="CreateAccountInfoOp" id="CreateAccountInfoOp" type="operation">
+			<transitions>
+				<htmlTransition id="CreateAccountInfoOp.ShowAccountInfo" outputMapFmt="CreateAccountInfoOp.ShowAccountInfo_OutputFmt" targetState="NonEditableTable"/>
+			</transitions>
+		</operationState>
+
+		<htmlState type="page" typeIdInfo="NonEditableTable.jsp" id="NonEditableTable">
+			<transitions>
+				<htmlTransition id="NonEditableTable.LinkToGroup" targetState="NonEditableTableInGroup"/>
+				<htmlTransition id="NonEditableTable.LinkToPane" targetState="NonEditableTableInTabbedPane"/>
+				<htmlTransition id="NonEditableTable.group popup" targetState="PopupNonEditableTableInGroup"/>
+				<htmlTransition id="NonEditableTable.manipulatetable" targetState="NonEditableTableIsManipulated"/>
+				<htmlTransition id="NonEditableTable.pane popup" targetState="PopupNonEditableTableInTabbedPane"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="NonEditableTableInGroup.jsp" id="NonEditableTableInGroup">
+			<transitions>
+				<htmlTransition id="NonEditableTableInGroup.event0" targetState="OK"/>
+				<htmlTransition id="NonEditableTableInGroup.returnToNonEditableTable" targetState="NonEditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="NonEditableTableInTabbedPane.jsp" id="NonEditableTableInTabbedPane">
+			<transitions>
+				<htmlTransition id="NonEditableTableInTabbedPane.returnToNonEditableTable" targetState="NonEditableTable"/>
+				<htmlTransition id="NonEditableTableInTabbedPane.event0" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="NonEditableTableInGroup.jsp" id="PopupNonEditableTableInGroup">
+			<transitions>
+				<htmlTransition id="PopupNonEditableTableInGroup.returnToNonEditableTable" targetState="NonEditableTable"/>
+			</transitions>
+		</popupPageState>
+
+		<htmlState type="page" typeIdInfo="NonEditableTableIsManipulated.jsp" id="NonEditableTableIsManipulated">
+			<transitions>
+				<htmlTransition id="NonEditableTableIsManipulated.returnToNonEditableTable" targetState="NonEditableTable"/>
+				<htmlTransition id="NonEditableTableIsManipulated.event0" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="NonEditableTableInTabbedPane.jsp" id="PopupNonEditableTableInTabbedPane">
+			<transitions>
+				<htmlTransition id="PopupNonEditableTableInTabbedPane.returnToNonEditableTable" targetState="NonEditableTable"/>
+			</transitions>
+		</popupPageState>
+	</htmlProcessor>
+
+	<context id="nonEditableTableCtx" type="op">
+		<refKColl refId="nonEditableTableRecord"/>
+	</context>
+
+	<kColl id="nonEditableTableRecord">
+		<refData refId="AccountInfoList" alias="nonEditableAccountList"/>
+	</kColl>
+
+	<fmtDef id="CreateAccountInfoOp.ShowAccountInfo_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="nonEditableAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</nonEditableTableFlow>

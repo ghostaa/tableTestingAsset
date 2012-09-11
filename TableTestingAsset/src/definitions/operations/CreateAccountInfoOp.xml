@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreateAccountInfoOp>
+
+	<operation id="CreateAccountInfoOp" context="CreateAccountInfoCtx" implClass="com.ibm.btt.application.op.CreateAccountInfoOp"/>
+
+	<context id="CreateAccountInfoCtx" type="op">
+		<refKColl refId="CreateAccountInfoRecord"/>
+	</context>
+
+	<kColl id="CreateAccountInfoRecord">
+		<refData refId="AccountInfoList"/>
+	</kColl>
+
+</CreateAccountInfoOp>

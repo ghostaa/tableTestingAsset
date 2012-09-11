@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transaction:WorkProduct xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:transaction="http://btt.cn.ibm.com/transaction" xmi:id="_11k4sPsREeGCXod0yz4C9Q">
+  <context xmi:type="transaction:ContextCategory" xmi:id="_11k4svsREeGCXod0yz4C9Q">
+    <contexts xmi:type="transaction:Context" xmi:id="_OiHD4PsSEeGCXod0yz4C9Q" tag="context" id="CreateAccountInfoCtx">
+      <attributes xmi:type="transaction:Attribute" xmi:id="_OiHD4fsSEeGCXod0yz4C9Q" name="id" required="true" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_OiHD4vsSEeGCXod0yz4C9Q" name="type" required="true" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_OiHD4_sSEeGCXod0yz4C9Q" name="addToDynamicKColl" type="java.lang.Boolean"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_OiHD5PsSEeGCXod0yz4C9Q" name="parent" type="java.lang.String"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_OiHD5fsSEeGCXod0yz4C9Q" key="_OiHD4vsSEeGCXod0yz4C9Q" value="op"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_OiHD5vsSEeGCXod0yz4C9Q" key="_OiHD4fsSEeGCXod0yz4C9Q" value="CreateAccountInfoCtx"/>
+      <refElement xmi:type="transaction:RefKColl" xmi:id="_mmBI0PsSEeGCXod0yz4C9Q" tag="refKColl">
+        <attributes xmi:type="transaction:Attribute" xmi:id="_mmBI0fsSEeGCXod0yz4C9Q" name="refId" required="true" type="java.lang.String"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_nGKBcPsSEeGCXod0yz4C9Q" key="_mmBI0fsSEeGCXod0yz4C9Q" value="CreateAccountInfoRecord"/>
+      </refElement>
+    </contexts>
+  </context>
+  <data xmi:type="transaction:DataCategory" xmi:id="_11k4s_sREeGCXod0yz4C9Q">
+    <dataElements xmi:type="transaction:KeyedCollection" xmi:id="_MzvHcPsbEeGCXod0yz4C9Q" tag="kColl" id="CreateAccountInfoRecord">
+      <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHcfsbEeGCXod0yz4C9Q" name="id" required="true" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHcvsbEeGCXod0yz4C9Q" name="description" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHc_sbEeGCXod0yz4C9Q" name="direction" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHdPsbEeGCXod0yz4C9Q" name="dynamic" type="java.lang.Boolean"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHdfsbEeGCXod0yz4C9Q" key="_MzvHc_sbEeGCXod0yz4C9Q" value="both"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHdvsbEeGCXod0yz4C9Q" key="_MzvHcfsbEeGCXod0yz4C9Q" value="CreateAccountInfoRecord"/>
+      <elements xmi:type="transaction:RefData" xmi:id="_MzvHd_sbEeGCXod0yz4C9Q" tag="refData">
+        <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHePsbEeGCXod0yz4C9Q" name="refId" required="true" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHefsbEeGCXod0yz4C9Q" name="direction" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_MzvHevsbEeGCXod0yz4C9Q" name="alias" type="java.lang.String"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHe_sbEeGCXod0yz4C9Q" key="_MzvHefsbEeGCXod0yz4C9Q" value="both"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHfPsbEeGCXod0yz4C9Q" key="_MzvHePsbEeGCXod0yz4C9Q" value="AccountInfoList"/>
+      </elements>
+    </dataElements>
+  </data>
+  <format xmi:type="transaction:FormatCategory" xmi:id="_11k4tPsREeGCXod0yz4C9Q"/>
+  <operation xmi:type="transaction:OperationCategory" xmi:id="_11k4tfsREeGCXod0yz4C9Q">
+    <operations xmi:type="transaction:Operation" xmi:id="_Nr2xUPsSEeGCXod0yz4C9Q" tag="operation" id="CreateAccountInfoOp">
+      <attributes xmi:type="transaction:Attribute" xmi:id="_Nr3_cPsSEeGCXod0yz4C9Q" name="id" required="true" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_Nr3_cfsSEeGCXod0yz4C9Q" name="context" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_Nr3_cvsSEeGCXod0yz4C9Q" name="implClass" type="java.lang.String"/>
+      <attributes xmi:type="transaction:Attribute" xmi:id="_Nr3_c_sSEeGCXod0yz4C9Q" name="xVal" type="java.lang.String"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Nr3_dPsSEeGCXod0yz4C9Q" key="_Nr3_cvsSEeGCXod0yz4C9Q" value="com.ibm.btt.application.op.CreateAccountInfoOp"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Nr3_dfsSEeGCXod0yz4C9Q" key="_Nr3_cPsSEeGCXod0yz4C9Q" value="CreateAccountInfoOp"/>
+      <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_nz54QPsSEeGCXod0yz4C9Q" key="_Nr3_cfsSEeGCXod0yz4C9Q" value="CreateAccountInfoCtx"/>
+    </operations>
+  </operation>
+  <service xmi:type="transaction:ServiceCategory" xmi:id="_11k4tvsREeGCXod0yz4C9Q"/>
+  <globalTag xmi:type="transaction:Taggable" xmi:id="_11k4t_sREeGCXod0yz4C9Q"/>
+</transaction:WorkProduct>

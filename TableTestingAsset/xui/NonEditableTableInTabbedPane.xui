@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,631,500" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="395" verticalAlignment="1" widthHint="631"/>
+    <container name="Form" id="form">
+      <gridData heightHint="387" verticalAlignment="1" widthHint="623"/>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="346"/>
+        <widget name="Link" action="flowEvent=returnToNonEditableTable" id="link" text=" non-editable table">
+          <gridData/>
+        </widget>
+        <widget name="Label" id="label" text="-&gt; non-editable table in TabbedPane">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <container name="TabbedPane" id="tabbedPane">
+        <gridData verticalAlignment="1"/>
+        <container name="ContentPane" title="NormalTab" id="ContentPane01">
+          <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
+          <widget name="Table" dataNameForList="nonEditableAccountList" id="table">
+            <gridData/>
+            <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+          </widget>
+          <gridLayout numColumns="1"/>
+        </container>
+        <container name="ContentPane" title="Group" id="ContentPane02">
+          <container name="Group" id="group" text="Group">
+            <gridData heightHint="128" verticalAlignment="1" widthHint="609"/>
+            <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy">
+              <gridData/>
+              <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+              <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+                <tableColumnAlignment>16384</tableColumnAlignment>
+              </column>
+            </widget>
+            <gridLayout numColumns="1"/>
+          </container>
+          <gridLayout numColumns="1"/>
+        </container>
+        <container name="ContentPane" title="Pane" id="ContentPane03">
+          <container name="TabbedPane" id="tabbedPane01">
+            <gridData verticalAlignment="1"/>
+            <container name="ContentPane" title="Tab01" id="ContentPane04">
+              <gridData heightHint="133" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
+              <widget name="Label" id="label01" text="tab01">
+                <gridData/>
+              </widget>
+              <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy01">
+                <gridData/>
+                <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+              </widget>
+              <gridLayout numColumns="1"/>
+            </container>
+            <container name="ContentPane" title="Tab02" id="ContentPane05">
+              <widget name="Label" id="label02" text="tab02">
+                <gridData/>
+              </widget>
+              <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy01_copy">
+                <gridData/>
+                <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+                <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+                  <tableColumnAlignment>16384</tableColumnAlignment>
+                </column>
+              </widget>
+              <gridLayout numColumns="1"/>
+            </container>
+          </container>
+          <gridLayout numColumns="1"/>
+        </container>
+      </container>
+      <widget name="PlaceHolder">
+        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

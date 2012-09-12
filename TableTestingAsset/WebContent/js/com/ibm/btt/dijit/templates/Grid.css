@@ -34,3 +34,12 @@
     filter: alpha(opacity:70);
     background: #F0F0F0;
 }
+
+
+.dojoxGridNumBtnDisabled {
+    color: #BCBCBC;
+    float: left;
+    font-weight: normal;
+    margin: 1px 6px 0 5px;
+    text-decoration: none !important;
+}

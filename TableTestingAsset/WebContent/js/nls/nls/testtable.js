@@ -2,7 +2,8 @@
 "AccountBlance":"AccountBlance",
 "Rate":"Rate",
 "AccountOpeningDate":"AccountOpeningDate",
-"TradeTime":"TradeTime",
+"TradeTimeForSelect":"TradeTimeForSelect",
 "Usable":"Usable",
+"TradeTime":"TradeTime",
 "AccountName":"AccountName",
 "MaximumAmount":"MaximumAmount"})

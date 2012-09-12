@@ -1,2 +1,9 @@
 ({
-"AccountName":"AccountName"})
+"AccountBlance":"AccountBlance",
+"Rate":"Rate",
+"AccountOpeningDate":"AccountOpeningDate",
+"TradeTimeForSelect":"TradeTimeForSelect",
+"Usable":"Usable",
+"TradeTime":"TradeTime",
+"AccountName":"AccountName",
+"MaximumAmount":"MaximumAmount"})

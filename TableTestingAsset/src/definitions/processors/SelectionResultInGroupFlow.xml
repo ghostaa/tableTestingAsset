@@ -9,7 +9,7 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState type="page" typeIdInfo="SelectionResultInGroupPage.jsp" id="SelectionResultInGroupPage">
+		<htmlState type="page" typeIdInfo="SelectionResultPage/SelectionResultInGroupPage.jsp" id="SelectionResultInGroupPage">
 			<transitions>
 				<htmlTransition id="SelectionResultInGroupPage.back" targetState="OK"/>
 			</transitions>

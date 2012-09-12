@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<null>
+<type.xml>
 
 	<type id="String" implClass="com.ibm.btt.base.DataField">
 		<Descriptor id="typeDefault" implClass="com.ibm.btt.base.types.impl.SimplePropertyDescriptor">
@@ -211,4 +211,4 @@
 		</Descriptor>
 	</type>
 
-</null>
+</type.xml>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data.xml>
 
+	<import file="table_data.xml"/>
+
 	<!--Data collection for the branch context-->
 	<kColl id="branchData" dynamic="true">
 		<field id="BranchId"/>
@@ -8,19 +10,5 @@
 
 	<kColl id="sessionData" dynamic="true">
 	</kColl>
-
-	<kColl id="AccountInfoRecord">
-		<data id="AccountName" refType="String"/>
-		<data id="TradeTime" refType="Integer"/>
-		<data id="MaximumAmount" refType="BigDecimal"/>
-		<data id="AccountOpeningDate" refType="Date"/>
-		<data id="AccountBlance" refType="Currency"/>
-		<data id="Rate" refType="Double"/>
-		<data id="Usable" refType="Boolean"/>
-	</kColl>
-
-	<iColl id="AccountInfoList" size="10">
-		<refData refId="AccountInfoRecord"/>
-	</iColl>
 
 </data.xml>

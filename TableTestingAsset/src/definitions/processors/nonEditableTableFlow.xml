@@ -15,7 +15,7 @@
 			</transitions>
 		</operationState>
 
-		<htmlState type="page" typeIdInfo="NonEditableTable.jsp" id="NonEditableTable">
+		<htmlState type="page" typeIdInfo="NonEditableTablePage/NonEditableTable.jsp" id="NonEditableTable">
 			<transitions>
 				<htmlTransition id="NonEditableTable.LinkToGroup" targetState="NonEditableTableInGroup"/>
 				<htmlTransition id="NonEditableTable.LinkToPane" targetState="NonEditableTableInTabbedPane"/>
@@ -29,7 +29,7 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState type="page" typeIdInfo="NonEditableTableInGroup.jsp" id="NonEditableTableInGroup">
+		<htmlState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableInGroup.jsp" id="NonEditableTableInGroup">
 			<transitions>
 				<htmlTransition id="NonEditableTableInGroup.returnToNonEditableTable" targetState="NonEditableTable"/>
 				<htmlTransition id="NonEditableTableInGroup.to group popup page" inputMapFmt="NonEditableTableInGroup.to pane page_InputFmt" targetState="SelectionResultInGroupPopupFlow"/>
@@ -37,7 +37,7 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState type="page" typeIdInfo="NonEditableTableInTabbedPane.jsp" id="NonEditableTableInTabbedPane">
+		<htmlState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableInTabbedPane.jsp" id="NonEditableTableInTabbedPane">
 			<transitions>
 				<htmlTransition id="NonEditableTableInTabbedPane.returnToNonEditableTable" targetState="NonEditableTable"/>
 				<htmlTransition id="NonEditableTableInTabbedPane.to group page" inputMapFmt="NonEditableTableInTabbedPane.to group page_InputFmt" targetState="SelectionResultInGroupFlow"/>
@@ -45,7 +45,7 @@
 			</transitions>
 		</htmlState>
 
-		<popupPageState type="page" typeIdInfo="NonEditableTableInGroup.jsp" id="PopupNonEditableTableInGroup">
+		<popupPageState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableInGroup.jsp" id="PopupNonEditableTableInGroup">
 			<transitions>
 				<htmlTransition id="PopupNonEditableTableInGroup.returnToNonEditableTable" targetState="NonEditableTable"/>
 				<htmlTransition id="PopupNonEditableTableInGroup.to group popup page" inputMapFmt="NonEditableTableInGroup.to pane page_InputFmt" targetState="SelectionResultInGroupPopupFlow"/>
@@ -53,14 +53,14 @@
 			</transitions>
 		</popupPageState>
 
-		<htmlState type="page" typeIdInfo="NonEditableTableIsManipulated.jsp" id="NonEditableTableIsManipulated">
+		<htmlState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableIsManipulated.jsp" id="NonEditableTableIsManipulated">
 			<transitions>
 				<htmlTransition id="NonEditableTableIsManipulated.returnToNonEditableTable" targetState="NonEditableTable"/>
 				<htmlTransition id="NonEditableTableIsManipulated.event0" targetState="OK"/>
 			</transitions>
 		</htmlState>
 
-		<popupPageState type="page" typeIdInfo="NonEditableTableInTabbedPane.jsp" id="PopupNonEditableTableInTabbedPane">
+		<popupPageState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableInTabbedPane.jsp" id="PopupNonEditableTableInTabbedPane">
 			<transitions>
 				<htmlTransition id="PopupNonEditableTableInTabbedPane.returnToNonEditableTable" targetState="NonEditableTable"/>
 				<htmlTransition id="PopupNonEditableTableInTabbedPane.to group page" inputMapFmt="NonEditableTableInTabbedPane.to group page_InputFmt" targetState="SelectionResultInGroupFlow"/>

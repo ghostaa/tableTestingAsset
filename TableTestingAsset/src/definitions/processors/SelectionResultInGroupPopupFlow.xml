@@ -11,7 +11,7 @@
 
 		<htmlState typeIdInfo="back" id="OK" type="final"/>
 
-		<popupPageState type="page" typeIdInfo="SelectionResultInGroupPage.jsp" id="SelectionResultInGroupPage">
+		<popupPageState type="page" typeIdInfo="SelectionResultPage/SelectionResultInGroupPage.jsp" id="SelectionResultInGroupPage">
 			<transitions>
 				<htmlTransition id="SelectionResultInGroupPage.back" targetState="OK"/>
 			</transitions>

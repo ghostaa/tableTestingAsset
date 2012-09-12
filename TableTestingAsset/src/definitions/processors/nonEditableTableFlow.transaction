@@ -360,7 +360,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_FdbsdfsUEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_FdbsdvsUEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_FdbscvsUEeGCXod0yz4C9Q" key="_FdbscfsUEeGCXod0yz4C9Q" value="NonEditableTable"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_FdbsdPsUEeGCXod0yz4C9Q" key="_Fdbsc_sUEeGCXod0yz4C9Q" value="NonEditableTable.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_FdbsdPsUEeGCXod0yz4C9Q" key="_Fdbsc_sUEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTable.xui"/>
         <events xmi:type="transaction:Event" xmi:id="_9c8aMPv3EeG05aSizZt4bg" name="submit to pane popup page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_sY9UwPv3EeG05aSizZt4bg" name="submit to group popup page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_tJP7gPvyEeG05aSizZt4bg" name="submit to pane page" automatic="true"/>
@@ -377,7 +377,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_4cVoJPsoEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_4cVoJfsoEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4cVoIfsoEeGCXod0yz4C9Q" key="_4cVoIPsoEeGCXod0yz4C9Q" value="NonEditableTableInGroup"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4cVoI_soEeGCXod0yz4C9Q" key="_4cVoIvsoEeGCXod0yz4C9Q" value="NonEditableTableInGroup.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4cVoI_soEeGCXod0yz4C9Q" key="_4cVoIvsoEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTableInGroup.xui"/>
         <events xmi:type="transaction:Event" xmi:id="_aT33UPv6EeG05aSizZt4bg" name="to group popup page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_aT33Ufv6EeG05aSizZt4bg" name="to pane page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_a5lfcPspEeGCXod0yz4C9Q" name="returnToNonEditableTable" automatic="true"/>
@@ -388,7 +388,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_l7l-5fsqEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_l7l-5vsqEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_l7l-4vsqEeGCXod0yz4C9Q" key="_l7l-4fsqEeGCXod0yz4C9Q" value="NonEditableTableInTabbedPane"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_l7l-5PsqEeGCXod0yz4C9Q" key="_l7l-4_sqEeGCXod0yz4C9Q" value="NonEditableTableInTabbedPane.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_l7l-5PsqEeGCXod0yz4C9Q" key="_l7l-4_sqEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTableInTabbedPane.xui"/>
         <events xmi:type="transaction:Event" xmi:id="_mnsZYPv6EeG05aSizZt4bg" name="to group page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_mnsZYfv6EeG05aSizZt4bg" name="to pane popup page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_nEjLAPsqEeGCXod0yz4C9Q" name="returnToNonEditableTable" automatic="true"/>
@@ -398,7 +398,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_TJ92c_srEeGCXod0yz4C9Q" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_TJ92dfsrEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_TJ92dvsrEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_TJ92cvsrEeGCXod0yz4C9Q" key="_TJ92cfsrEeGCXod0yz4C9Q" value="NonEditableTableInGroup.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_TJ92cvsrEeGCXod0yz4C9Q" key="_TJ92cfsrEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTableInGroup.xui"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_TJ92dPsrEeGCXod0yz4C9Q" key="_TJ92c_srEeGCXod0yz4C9Q" value="PopupNonEditableTableInGroup"/>
         <events xmi:type="transaction:Event" xmi:id="_evrXMPydEeGqbP2WAeYB4Q" name="to group popup page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_evrXMfydEeGqbP2WAeYB4Q" name="to pane page" automatic="true"/>
@@ -410,7 +410,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_IeyedfsxEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_IeyedvsxEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_IeyecvsxEeGCXod0yz4C9Q" key="_IeyecfsxEeGCXod0yz4C9Q" value="NonEditableTableIsManipulated"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_IeyedPsxEeGCXod0yz4C9Q" key="_Ieyec_sxEeGCXod0yz4C9Q" value="NonEditableTableIsManipulated.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_IeyedPsxEeGCXod0yz4C9Q" key="_Ieyec_sxEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTableIsManipulated.xui"/>
         <events xmi:type="transaction:Event" xmi:id="_YMTgMPsxEeGCXod0yz4C9Q" name="returnToNonEditableTable" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="__HaikPs0EeGCXod0yz4C9Q" name="event0"/>
       </children>
@@ -419,7 +419,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_pvAQA_szEeGCXod0yz4C9Q" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_pvAQBfszEeGCXod0yz4C9Q" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_pvAQBvszEeGCXod0yz4C9Q" name="Output Data Format" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_pvAQAvszEeGCXod0yz4C9Q" key="_pvAQAfszEeGCXod0yz4C9Q" value="NonEditableTableInTabbedPane.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_pvAQAvszEeGCXod0yz4C9Q" key="_pvAQAfszEeGCXod0yz4C9Q" value="NonEditableTablePage/NonEditableTableInTabbedPane.xui"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_pvAQBPszEeGCXod0yz4C9Q" key="_pvAQA_szEeGCXod0yz4C9Q" value="PopupNonEditableTableInTabbedPane"/>
         <events xmi:type="transaction:Event" xmi:id="_lNLmIPydEeGqbP2WAeYB4Q" name="to group page" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_lNLmIfydEeGqbP2WAeYB4Q" name="to pane popup page" automatic="true"/>

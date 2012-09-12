@@ -49,7 +49,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEo_v3EeG05aSizZt4bg" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEpfv3EeG05aSizZt4bg" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEpvv3EeG05aSizZt4bg" name="Output Data Format" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEovv3EeG05aSizZt4bg" key="_ebFEofv3EeG05aSizZt4bg" value="SelectionResultInGroupPage.xui"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEovv3EeG05aSizZt4bg" key="_ebFEofv3EeG05aSizZt4bg" value="SelectionResultPage/SelectionResultInGroupPage.xui"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEpPv3EeG05aSizZt4bg" key="_ebFEo_v3EeG05aSizZt4bg" value="SelectionResultInGroupPage"/>
         <events xmi:type="transaction:Event" xmi:id="_fKu_8Pv3EeG05aSizZt4bg" name="back" automatic="true"/>
       </children>

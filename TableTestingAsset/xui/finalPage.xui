@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="GB18030"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="145,139,400,300" dataBinding="{'ctxType':'proc','ctxFile':'sampleFlow','ctxName':'sampleFlowCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel">
+    <gridData verticalAlignment="1"/>
     <container name="Form" id="form">
       <gridData heightHint="258" verticalAlignment="1" widthHint="329" autoSize="false"/>
       <widget name="Label" id="label" text="%nls.bttsample/Final_Page_Flow">
@@ -12,4 +13,5 @@
     <gridLayout numColumns="1"/>
   </container>
   <rules/>
+  <groups/>
 </XUI>

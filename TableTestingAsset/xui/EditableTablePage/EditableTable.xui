@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="74,164,689,309" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="141" verticalAlignment="1" widthHint="609"/>
+    <container name="Form" id="form">
+      <gridData heightHint="31" verticalAlignment="1" widthHint="48"/>
+      <widget name="Label" id="label" text="Label">
+        <gridData/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <widget name="Table" dataNameForList="AccountInfoList" id="table">
+      <gridData/>
+      <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column dataNameForList="dataNameForListForSelect" widget="Select" editable="true" dataName="TradeTimeForSelect" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/TradeTimeForSelect">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+      <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+        <tableColumnAlignment>16384</tableColumnAlignment>
+      </column>
+    </widget>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

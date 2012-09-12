@@ -9,6 +9,7 @@
 
 	<kColl id="CreateAccountInfoRecord">
 		<refData refId="AccountInfoList"/>
+		<refData refId="dataNameForListForSelect"/>
 	</kColl>
 
 </CreateAccountInfoOp>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableTableFlow>
+
+
+	<htmlProcessor context="editableTableCtx" id="editableTableFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="CreateAccountInfoOp"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<operationState typeIdInfo="CreateAccountInfoOp" id="CreateAccountInfoOp" type="operation">
+			<transitions>
+				<htmlTransition id="CreateAccountInfoOp.ShowAccountInfo" outputMapFmt="CreateAccountInfoOp.ShowAccountInfo_OutputFmt" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</operationState>
+
+		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTable.jsp" id="EditableTablePage/EditableTable">
+			<transitions>
+				<htmlTransition id="EditableTablePage/EditableTable.event0" targetState="OK"/>
+			</transitions>
+		</htmlState>
+	</htmlProcessor>
+
+	<context id="editableTableCtx" type="op">
+		<refKColl refId="editableTableRecord"/>
+	</context>
+
+	<kColl id="editableTableRecord">
+		<refData refId="AccountInfoList"/>
+		<refData refId="dataNameForListForSelect"/>
+	</kColl>
+
+	<fmtDef id="CreateAccountInfoOp.ShowAccountInfo_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="dataNameForListForSelect" to="dataNameForListForSelect" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</editableTableFlow>

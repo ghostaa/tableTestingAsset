@@ -29,6 +29,13 @@
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHe_sbEeGCXod0yz4C9Q" key="_MzvHefsbEeGCXod0yz4C9Q" value="both"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MzvHfPsbEeGCXod0yz4C9Q" key="_MzvHePsbEeGCXod0yz4C9Q" value="AccountInfoList"/>
       </elements>
+      <elements xmi:type="transaction:RefData" xmi:id="_uuGpUPzKEeG6hodExeDsLA" tag="refData">
+        <attributes xmi:type="transaction:Attribute" xmi:id="_uuGpUfzKEeG6hodExeDsLA" name="refId" required="true" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_uuGpUvzKEeG6hodExeDsLA" name="direction" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_uuGpU_zKEeG6hodExeDsLA" name="alias" type="java.lang.String"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_uuGpVPzKEeG6hodExeDsLA" key="_uuGpUvzKEeG6hodExeDsLA" value="both"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_vK9kcPzKEeG6hodExeDsLA" key="_uuGpUfzKEeG6hodExeDsLA" value="dataNameForListForSelect"/>
+      </elements>
     </dataElements>
   </data>
   <format xmi:type="transaction:FormatCategory" xmi:id="_11k4tPsREeGCXod0yz4C9Q"/>

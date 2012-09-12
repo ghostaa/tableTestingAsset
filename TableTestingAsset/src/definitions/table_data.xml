@@ -4,15 +4,24 @@
 	<kColl id="AccountInfoRecord">
 		<data id="AccountName" refType="String"/>
 		<data id="TradeTime" refType="Integer"/>
+		<data id="TradeTimeForSelect" refType="Integer"/>
 		<data id="MaximumAmount" refType="BigDecimal"/>
 		<data id="AccountOpeningDate" refType="Date"/>
 		<data id="AccountBlance" refType="Currency"/>
 		<data id="Rate" refType="Double"/>
+		<data id="RateForCombo" refType="Double"/>
 		<data id="Usable" refType="Boolean"/>
 	</kColl>
 
 	<iColl id="AccountInfoList" size="10">
 		<refData refId="AccountInfoRecord"/>
+	</iColl>
+
+	<iColl id="dataNameForListForSelect" size="10">
+		<kColl id="table_dataRecord">
+			<field id="labelField"/>
+			<field id="valueField"/>
+		</kColl>
 	</iColl>
 
 </data.xml>

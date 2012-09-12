@@ -26,6 +26,8 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 		KeyedCollection opData = this.getContext().getKeyedCollection();
 		IndexedCollection accountTable = (IndexedCollection) opData
 				.getElementAt("AccountInfoList");
+		IndexedCollection dataNameForListForSelect = (IndexedCollection) opData
+		.getElementAt("dataNameForListForSelect");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		//set value
@@ -42,7 +44,14 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 			accountTable.setValueAt(i+".AccountOpeningDate",sdf.parse(dateString));
 			accountTable.setValueAt(i+".Rate",rand.nextDouble());
 			accountTable.setValueAt(i+".Usable",rand.nextBoolean());
+			
+			
+			dataNameForListForSelect.setValueAt(i+".labelField",i);
+			dataNameForListForSelect.setValueAt(i+".valueField",i);
 		}
+		
+		
+		
 		OperationRepliedEvent event = new OperationRepliedEvent(this);
 		com.ibm.btt.base.Hashtable ht = new com.ibm.btt.base.Hashtable();
 		ht.put(DSEOperationState.EXIT_EVENT_NAME, "ShowAccountInfo");

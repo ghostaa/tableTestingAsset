@@ -21,6 +21,7 @@
 @import "js/dijit/themes/claro/document.css";
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
+@import "js/com/ibm/btt/dijit/templates/dijit.css";
 <#list cssFiles as css>
 @import "${css}";
 </#list>

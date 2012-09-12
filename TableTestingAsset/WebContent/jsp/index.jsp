@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by ghost, on Mon Sep 10 15:57:38 CST 2012 -->
+<!-- Generated from index.xui by ghost, on Wed Sep 12 14:05:38 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -21,6 +21,7 @@
 @import "js/dijit/themes/claro/document.css";
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
+@import "js/com/ibm/btt/dijit/templates/dijit.css";
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTable.xui by ghost, on Wed Sep 12 13:52:40 CST 2012 -->
+<!-- Generated from NonEditableTable.xui by ghost, on Wed Sep 12 14:05:37 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,7 +63,7 @@ dojo.addOnLoad(function(){
   <table id="NonEditableTable_panel">
     <tr>
       <td valign="top">
-        <bttdojo:form id="NonEditableTable_form" errorPage="NonEditableTable.jsp">
+        <bttdojo:form id="NonEditableTable_form" errorPage="NonEditableTablePage/NonEditableTable.jsp">
           <table id="NonEditableTable_form">
             <tr>
               <td valign="top">

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultPage.xui by ghost, on Tue Sep 11 16:30:06 CST 2012 -->
+<!-- Generated from SelectionResultPage.xui by ghost, on Wed Sep 12 14:05:38 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,7 +63,7 @@ dojo.addOnLoad(function(){
   <table id="SelectionResultPage_panel">
     <tr>
       <td valign="top">
-        <bttdojo:form id="SelectionResultPage_form" errorPage="SelectionResultPage.jsp">
+        <bttdojo:form id="SelectionResultPage_form" errorPage="SelectionResultPage/SelectionResultPage.jsp">
           <table id="SelectionResultPage_form">
             <tr>
               <td valign="top">

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Mon Sep 10 18:33:31 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Wed Sep 12 14:05:38 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -21,6 +21,7 @@
 @import "js/dijit/themes/claro/document.css";
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
+@import "js/com/ibm/btt/dijit/templates/dijit.css";
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -59,11 +60,11 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-<script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/NonEditableTableIsManipulated.js"> </script>
+<script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/NonEditableTablePage/NonEditableTableIsManipulated.js"> </script>
   <table id="NonEditableTableIsManipulated_panel">
     <tr>
       <td valign="top">
-        <bttdojo:form id="NonEditableTableIsManipulated_form" errorPage="NonEditableTableIsManipulated.jsp">
+        <bttdojo:form id="NonEditableTableIsManipulated_form" errorPage="NonEditableTablePage/NonEditableTableIsManipulated.jsp">
           <table id="NonEditableTableIsManipulated_form">
             <tr>
               <td valign="top">

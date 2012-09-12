@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="GB18030"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,149" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="428" verticalAlignment="1" widthHint="617"/>
+    <gridData heightHint="449" verticalAlignment="1" widthHint="617"/>
     <container name="Form" id="form">
-      <gridData heightHint="420" verticalAlignment="1" widthHint="609"/>
+      <gridData heightHint="441" verticalAlignment="1" widthHint="609"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="31" verticalAlignment="1" widthHint="125"/>
         <widget name="Label" id="label" text=" non-editable table">
@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" dataNameForList="nonEditableAccountList" id="table">
+      <widget name="Table" dataNameForList="nonEditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
         <gridData/>
         <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -37,43 +37,57 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="277" verticalAlignment="1" widthHint="264"/>
+        <gridData heightHint="298" verticalAlignment="1" widthHint="366"/>
         <container name="Group" id="group" text="Test in group">
-          <gridData heightHint="103" verticalAlignment="1" widthHint="197"/>
+          <gridData heightHint="113" verticalAlignment="1" widthHint="336"/>
           <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'table in group' page">
             <gridData/>
           </widget>
           <widget name="Link" action="flowEvent=group popup" id="link02" text="Link to popup page">
             <gridData/>
           </widget>
-          <widget name="Button" id="button" buttonType="button" text="Button">
-            <gridData/>
-          </widget>
+          <container name="Panel" id="panel04">
+            <gridData heightHint="33" verticalAlignment="1" widthHint="308"/>
+            <widget name="Button" action="flowEvent=submit to group page" id="button" text="submit to group page">
+              <gridData/>
+            </widget>
+            <widget name="Button" action="flowEvent=submit to group popup page" id="button02" text="submit to group popup page">
+              <gridData/>
+            </widget>
+            <gridLayout numColumns="2"/>
+          </container>
           <gridLayout numColumns="1"/>
         </container>
         <widget name="PlaceHolder">
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Group" id="group01" text="Test inTabbedpane">
-          <gridData heightHint="103" verticalAlignment="1" widthHint="234"/>
+          <gridData heightHint="113" verticalAlignment="1" widthHint="324"/>
           <widget name="Link" action="flowEvent=LinkToPane" id="link01" text="Link to 'table in TabbedPane' page">
             <gridData/>
           </widget>
           <widget name="Link" action="flowEvent=pane popup" id="link04" text="Link to popup page">
             <gridData/>
           </widget>
-          <widget name="Button" id="button01" buttonType="button" text="Button">
-            <gridData/>
-          </widget>
+          <container name="Panel" id="panel05">
+            <gridData heightHint="33" verticalAlignment="1" widthHint="296"/>
+            <widget name="Button" action="flowEvent=submit to pane page" id="button01" text="submit to pane page">
+              <gridData/>
+            </widget>
+            <widget name="Button" action="flowEvent=submit to pane popup page" id="button03" text="submit to pane popup page">
+              <gridData/>
+            </widget>
+            <gridLayout numColumns="2"/>
+          </container>
           <gridLayout numColumns="1"/>
         </container>
         <widget name="PlaceHolder">
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Panel" id="panel03">
-          <gridData heightHint="59" verticalAlignment="1" widthHint="221"/>
+          <gridData heightHint="60" verticalAlignment="1" widthHint="221"/>
           <container name="Group" id="group02" text="Test in 'manipulate table'">
-            <gridData heightHint="51" verticalAlignment="1" widthHint="213"/>
+            <gridData heightHint="52" verticalAlignment="1" widthHint="213"/>
             <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate table' page">
               <gridData/>
             </widget>

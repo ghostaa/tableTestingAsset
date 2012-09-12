@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="GB18030"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,631,500" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="395" verticalAlignment="1" widthHint="631"/>
+    <gridData heightHint="396" verticalAlignment="1" widthHint="631"/>
     <container name="Form" id="form">
-      <gridData heightHint="387" verticalAlignment="1" widthHint="623"/>
+      <gridData heightHint="388" verticalAlignment="1" widthHint="623"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="346"/>
+        <gridData heightHint="32" verticalAlignment="1" widthHint="346"/>
         <widget name="Link" action="flowEvent=returnToNonEditableTable" id="link" text=" non-editable table">
           <gridData/>
         </widget>
@@ -18,8 +18,8 @@
       <container name="TabbedPane" id="tabbedPane">
         <gridData verticalAlignment="1"/>
         <container name="ContentPane" title="NormalTab" id="ContentPane01">
-          <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
-          <widget name="Table" dataNameForList="nonEditableAccountList" id="table">
+          <gridData heightHint="143" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
+          <widget name="Table" dataNameForList="nonEditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
             <gridData/>
             <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
               <tableColumnAlignment>16384</tableColumnAlignment>
@@ -43,6 +43,16 @@
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
           </widget>
+          <container name="Panel" id="panel02">
+            <gridData heightHint="33" verticalAlignment="1" widthHint="234"/>
+            <widget name="Button" action="flowEvent=to group page" id="button" text="to group page">
+              <gridData/>
+            </widget>
+            <widget name="Button" action="flowEvent=to pane popup page" id="button01" text="to pane popup page">
+              <gridData/>
+            </widget>
+            <gridLayout numColumns="2"/>
+          </container>
           <gridLayout numColumns="1"/>
         </container>
         <container name="ContentPane" title="Group" id="ContentPane02">

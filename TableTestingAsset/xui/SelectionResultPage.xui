@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultFlow','ctxName':'SelectionResultCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="149" verticalAlignment="1" widthHint="517"/>
+    <container name="Form" id="form">
+      <gridData heightHint="141" verticalAlignment="1" widthHint="509"/>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="170"/>
+        <widget name="Link" action="flowEvent=back" id="link_copy" text="back">
+          <gridData/>
+        </widget>
+        <widget name="Label" id="label" text=" -&gt; Selection Result">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <widget name="Table" dataNameForList="selectAccountList" id="table">
+        <gridData/>
+        <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

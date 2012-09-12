@@ -2,9 +2,9 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="178" verticalAlignment="1" widthHint="625"/>
+    <gridData heightHint="213" verticalAlignment="1" widthHint="625"/>
     <container name="Form" id="form">
-      <gridData heightHint="170" verticalAlignment="1" widthHint="617"/>
+      <gridData heightHint="205" verticalAlignment="1" widthHint="617"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="32" verticalAlignment="1" widthHint="313"/>
         <widget name="Link" action="flowEvent=returnToNonEditableTable" id="link" text=" non-editable table">
@@ -16,8 +16,8 @@
         <gridLayout numColumns="2"/>
       </container>
       <container name="Group" id="group" text="Group">
-        <gridData heightHint="128" verticalAlignment="1" widthHint="609"/>
-        <widget name="Table" dataNameForList="nonEditableAccountList" id="table">
+        <gridData heightHint="163" verticalAlignment="1" widthHint="609"/>
+        <widget name="Table" dataNameForList="nonEditableAccountList" dataName="AccountInfo" selectionRequired="true" id="table" selectionMode="single">
           <gridData/>
           <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
             <tableColumnAlignment>16384</tableColumnAlignment>
@@ -41,6 +41,16 @@
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
         </widget>
+        <container name="Panel" id="panel02">
+          <gridData heightHint="33" verticalAlignment="1" widthHint="222"/>
+          <widget name="Button" action="flowEvent=to group popup page" id="button" text="to group popup page">
+            <gridData/>
+          </widget>
+          <widget name="Button" action="flowEvent=to pane page" id="button01" text="to pane page">
+            <gridData/>
+          </widget>
+          <gridLayout numColumns="2"/>
+        </container>
         <gridLayout numColumns="1"/>
       </container>
       <gridLayout numColumns="1"/>

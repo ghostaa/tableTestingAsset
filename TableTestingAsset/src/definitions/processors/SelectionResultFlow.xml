@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SelectionResultFlow>
+
+
+	<htmlProcessor context="SelectionResultCtx" id="SelectionResultFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="SelectionResultPage"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="SelectionResultPage.jsp" id="SelectionResultPage">
+			<transitions>
+				<htmlTransition id="SelectionResultPage.back" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="back" id="OK" type="final"/>
+	</htmlProcessor>
+
+	<context id="SelectionResultCtx" type="op">
+		<refKColl refId="SelectionResultRecord"/>
+	</context>
+
+	<kColl id="SelectionResultRecord">
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
+	</kColl>
+
+</SelectionResultFlow>

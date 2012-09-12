@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTable.xui by ghost, on Mon Sep 10 18:39:54 CST 2012 -->
+<!-- Generated from NonEditableTable.xui by ghost, on Wed Sep 12 13:52:40 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -21,6 +21,7 @@
 @import "js/dijit/themes/claro/document.css";
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
+@import "js/com/ibm/btt/dijit/templates/dijit.css";
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -77,7 +78,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="NonEditableTable_table" dataNameForList="nonEditableAccountList" isPageable="false">
+                <bttdojo:table id="NonEditableTable_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
                   <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
@@ -106,8 +107,17 @@ dojo.addOnLoad(function(){
                               </td>
                             </tr>
                             <tr>
-                              <td>
-                                <bttdojo:button id="NonEditableTable_button" type="button" text="Button"/>
+                              <td valign="top">
+                                  <table id="NonEditableTable_panel04">
+                                    <tr>
+                                      <td>
+                                        <bttdojo:button id="NonEditableTable_button" type="submit" text="submit to group page" flowEvent="submit to group page"/>
+                                      </td>
+                                      <td>
+                                        <bttdojo:button id="NonEditableTable_button02" type="submit" text="submit to group popup page" flowEvent="submit to group popup page"/>
+                                      </td>
+                                    </tr>
+                                  </table>
                               </td>
                             </tr>
                           </table>
@@ -131,8 +141,17 @@ dojo.addOnLoad(function(){
                               </td>
                             </tr>
                             <tr>
-                              <td>
-                                <bttdojo:button id="NonEditableTable_button01" type="button" text="Button"/>
+                              <td valign="top">
+                                  <table id="NonEditableTable_panel05">
+                                    <tr>
+                                      <td>
+                                        <bttdojo:button id="NonEditableTable_button01" type="submit" text="submit to pane page" flowEvent="submit to pane page"/>
+                                      </td>
+                                      <td>
+                                        <bttdojo:button id="NonEditableTable_button03" type="submit" text="submit to pane popup page" flowEvent="submit to pane popup page"/>
+                                      </td>
+                                    </tr>
+                                  </table>
                               </td>
                             </tr>
                           </table>

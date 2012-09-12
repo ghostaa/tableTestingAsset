@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Tue Sep 11 14:44:39 CST 2012 -->
+<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Wed Sep 12 13:47:31 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -14,7 +14,7 @@
 <title></title>
 <style type="text/css">
 @import "js/dojo/resources/dojo.css";
-@import "js/dijit/themes/claro/claro.css";	
+@import "js/dijit/themes/claro/claro.css";		
 @import "js/dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
 @import "css/dijit/message.css";
 @import "js/com/ibm/btt/dijit/templates/FileUpload.css";
@@ -22,7 +22,6 @@
 @import "js/com/ibm/btt/dijit/templates/Grid.css";
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
 @import "js/com/ibm/btt/dijit/templates/dijit.css";
-
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -36,12 +35,11 @@
 	var djConfig =  {
 		baseUrl:"js/dojo/",
 		<bttdojo:locale/>,
-		isDebug: false, 
+		isDebug: true, 
 		parseOnLoad: true
 	};
 </script>
-
-<script type="text/javascript" src="js/dojo/dojo_BTT.js" ></script>
+<script type="text/javascript" src="js/dojo/dojo_BTT.js"></script>
 <script type="text/javascript" src="js/com/ibm/btt/btt.js"></script>
 <script type="text/javascript" >
 dojo.addOnLoad(function(){
@@ -88,7 +86,7 @@ dojo.addOnLoad(function(){
                     <table id="NonEditableTableInTabbedPane_ContentPane01" style="table-layout:fixed">
                       <tr>
                         <td>
-                          <bttdojo:table id="NonEditableTableInTabbedPane_table" dataNameForList="nonEditableAccountList" isPageable="false">
+                          <bttdojo:table id="NonEditableTableInTabbedPane_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
                             <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                             <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
                             <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
@@ -97,6 +95,20 @@ dojo.addOnLoad(function(){
                             <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
                             <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
                           </bttdojo:table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top">
+                            <table id="NonEditableTableInTabbedPane_panel02">
+                              <tr>
+                                <td>
+                                  <bttdojo:button id="NonEditableTableInTabbedPane_button" type="submit" text="to group page" flowEvent="to group page"/>
+                                </td>
+                                <td>
+                                  <bttdojo:button id="NonEditableTableInTabbedPane_button01" type="submit" text="to pane popup page" flowEvent="to pane popup page"/>
+                                </td>
+                              </tr>
+                            </table>
                         </td>
                       </tr>
                     </table>

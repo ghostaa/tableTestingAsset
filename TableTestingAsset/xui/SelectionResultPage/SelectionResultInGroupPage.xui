@@ -2,9 +2,9 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInGroupFlow','ctxName':'SelectionResultInGroupCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData verticalAlignment="1"/>
+    <gridData heightHint="403" verticalAlignment="1" widthHint="625"/>
     <container name="Form" id="form">
-      <gridData heightHint="395" verticalAlignment="1" widthHint="537"/>
+      <gridData heightHint="395" verticalAlignment="1" widthHint="617"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="32" verticalAlignment="1" widthHint="297"/>
         <widget name="Link" action="flowEvent=back" id="link_copy" text="non-editable table">
@@ -16,7 +16,7 @@
         <gridLayout numColumns="2"/>
       </container>
       <container name="Group" id="group" text="multi-selection result">
-        <gridData heightHint="150" verticalAlignment="1" widthHint="529"/>
+        <gridData heightHint="150" verticalAlignment="1" widthHint="609"/>
         <widget name="Table" dataNameForList="selectAccountList" id="table">
           <gridData/>
           <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
@@ -35,6 +35,9 @@
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
           <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+            <tableColumnAlignment>16384</tableColumnAlignment>
+          </column>
+          <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
         </widget>

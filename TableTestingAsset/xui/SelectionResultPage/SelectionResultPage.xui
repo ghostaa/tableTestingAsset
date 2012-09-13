@@ -2,11 +2,11 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultFlow','ctxName':'SelectionResultCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="149" verticalAlignment="1" widthHint="517"/>
+    <gridData heightHint="150" verticalAlignment="1" widthHint="597"/>
     <container name="Form" id="form">
-      <gridData heightHint="141" verticalAlignment="1" widthHint="509"/>
+      <gridData heightHint="142" verticalAlignment="1" widthHint="589"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="170"/>
+        <gridData heightHint="32" verticalAlignment="1" widthHint="170"/>
         <widget name="Link" action="flowEvent=back" id="link_copy" text="back">
           <gridData/>
         </widget>
@@ -33,6 +33,9 @@
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
       </widget>

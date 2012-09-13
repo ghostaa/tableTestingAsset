@@ -2,9 +2,9 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInPaneFlow','ctxName':'SelectionResultInPaneCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData verticalAlignment="1"/>
+    <gridData heightHint="350" verticalAlignment="1" widthHint="603"/>
     <container name="Form" id="form">
-      <gridData heightHint="342" verticalAlignment="1" widthHint="515"/>
+      <gridData heightHint="342" verticalAlignment="1" widthHint="595"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="32" verticalAlignment="1" widthHint="292"/>
         <widget name="Link" action="flowEvent=back" id="link_copy" text="non-editable table">
@@ -18,7 +18,7 @@
       <container name="TabbedPane" id="tabbedPane">
         <gridData verticalAlignment="1"/>
         <container name="ContentPane" title="multi-selection result" id="ContentPane01">
-          <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="509"/>
+          <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
           <widget name="Table" dataNameForList="selectAccountList" id="table">
             <gridData/>
             <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
@@ -37,6 +37,9 @@
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
             <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
           </widget>

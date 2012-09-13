@@ -2,6 +2,7 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInGroupFlow','ctxName':'SelectionResultInGroupCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
+    <gridData verticalAlignment="1"/>
     <container name="Form" id="form">
       <gridData heightHint="395" verticalAlignment="1" widthHint="537"/>
       <container name="Panel" id="panel01">

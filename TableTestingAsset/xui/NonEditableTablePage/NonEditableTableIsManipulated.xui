@@ -2,6 +2,7 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTableIsManipulated.js'}">
   <styles/>
   <container name="Panel" id="panel">
+    <gridData verticalAlignment="1"/>
     <container name="Form" id="form">
       <gridData heightHint="329" verticalAlignment="1" widthHint="509"/>
       <container name="Panel" id="panel03">

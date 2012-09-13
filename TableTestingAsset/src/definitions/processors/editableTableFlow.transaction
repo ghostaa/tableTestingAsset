@@ -110,7 +110,14 @@
           <attributes xmi:type="transaction:Attribute" xmi:id="_oFhy0vzKEeG6hodExeDsLA" name="direction" type="java.lang.String"/>
           <attributes xmi:type="transaction:Attribute" xmi:id="_oFhy0_zKEeG6hodExeDsLA" name="alias" type="java.lang.String"/>
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_oFhy1PzKEeG6hodExeDsLA" key="_oFhy0vzKEeG6hodExeDsLA" value="both"/>
-          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_o5u28PzKEeG6hodExeDsLA" key="_oFhy0fzKEeG6hodExeDsLA" value="dataNameForListForSelect"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_o5u28PzKEeG6hodExeDsLA" key="_oFhy0fzKEeG6hodExeDsLA" value="AccountTypeForSelect"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_sMBeIP16EeG3ieuZiiLRMg" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_sMBeIf16EeG3ieuZiiLRMg" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_sMBeIv16EeG3ieuZiiLRMg" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_sMBeI_16EeG3ieuZiiLRMg" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_sMBeJP16EeG3ieuZiiLRMg" key="_sMBeIv16EeG3ieuZiiLRMg" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_sojpIP16EeG3ieuZiiLRMg" key="_sMBeIf16EeG3ieuZiiLRMg" value="LocaltionForComboBox"/>
         </elements>
       </dataElements>
     </data>
@@ -118,26 +125,36 @@
       <formatters xmi:type="transaction:Formatter" xmi:id="_OGnYkPywEeGqbP2WAeYB4Q" tag="fmtDef" id="CreateAccountInfoOp.ShowAccountInfo_OutputFmt">
         <attributes xmi:type="transaction:Attribute" xmi:id="_OGnYkfywEeGqbP2WAeYB4Q" name="id" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_OGnYkvywEeGqbP2WAeYB4Q" key="_OGnYkfywEeGqbP2WAeYB4Q" value="CreateAccountInfoOp.ShowAccountInfo_OutputFmt"/>
-        <rootElement xmi:type="transaction:DataMapperConverterFormatElement" xmi:id="_xKd-EPzKEeG6hodExeDsLA" tag="mapperConverterExpression">
-          <mappers xmi:type="transaction:ExpressionDataMapper" xmi:id="_xKd-EfzKEeG6hodExeDsLA" tag="map">
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-EvzKEeG6hodExeDsLA" name="from" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-E_zKEeG6hodExeDsLA" name="to" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-FPzKEeG6hodExeDsLA" name="append" type="java.lang.String"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-FfzKEeG6hodExeDsLA" key="_xKd-EvzKEeG6hodExeDsLA" value="AccountInfoList"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-FvzKEeG6hodExeDsLA" key="_xKd-E_zKEeG6hodExeDsLA" value="AccountInfoList"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-F_zKEeG6hodExeDsLA" key="_xKd-FPzKEeG6hodExeDsLA" value="false"/>
-            <fromValue xmi:type="transaction:ContextValue" xmi:id="_xKd-GPzKEeG6hodExeDsLA" type="RefData" valueToString="AccountInfoList" field="AccountInfoList" contextName="CreateAccountInfoCtx"/>
-            <toValue xmi:type="transaction:ContextValue" xmi:id="_xKd-GfzKEeG6hodExeDsLA" type="RefData" valueToString="AccountInfoList" field="AccountInfoList" contextName="editableTableCtx"/>
+        <rootElement xmi:type="transaction:DataMapperConverterFormatElement" xmi:id="_t0Ck0P16EeG3ieuZiiLRMg" tag="mapperConverterExpression">
+          <mappers xmi:type="transaction:ExpressionDataMapper" xmi:id="_t0Ck0f16EeG3ieuZiiLRMg" tag="map">
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck0v16EeG3ieuZiiLRMg" name="from" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck0_16EeG3ieuZiiLRMg" name="to" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck1P16EeG3ieuZiiLRMg" name="append" type="java.lang.String"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck1f16EeG3ieuZiiLRMg" key="_t0Ck0v16EeG3ieuZiiLRMg" value="AccountInfoList"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck1v16EeG3ieuZiiLRMg" key="_t0Ck0_16EeG3ieuZiiLRMg" value="AccountInfoList"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck1_16EeG3ieuZiiLRMg" key="_t0Ck1P16EeG3ieuZiiLRMg" value="false"/>
+            <fromValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck2P16EeG3ieuZiiLRMg" type="RefData" valueToString="AccountInfoList" field="AccountInfoList" contextName="CreateAccountInfoCtx"/>
+            <toValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck2f16EeG3ieuZiiLRMg" type="RefData" valueToString="AccountInfoList" field="AccountInfoList" contextName="editableTableCtx"/>
           </mappers>
-          <mappers xmi:type="transaction:ExpressionDataMapper" xmi:id="_xKd-GvzKEeG6hodExeDsLA" tag="map">
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-G_zKEeG6hodExeDsLA" name="from" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-HPzKEeG6hodExeDsLA" name="to" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
-            <attributes xmi:type="transaction:Attribute" xmi:id="_xKd-HfzKEeG6hodExeDsLA" name="append" type="java.lang.String"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-HvzKEeG6hodExeDsLA" key="_xKd-G_zKEeG6hodExeDsLA" value="dataNameForListForSelect"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-H_zKEeG6hodExeDsLA" key="_xKd-HPzKEeG6hodExeDsLA" value="dataNameForListForSelect"/>
-            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_xKd-IPzKEeG6hodExeDsLA" key="_xKd-HfzKEeG6hodExeDsLA" value="false"/>
-            <fromValue xmi:type="transaction:ContextValue" xmi:id="_xKd-IfzKEeG6hodExeDsLA" type="RefData" valueToString="dataNameForListForSelect" field="dataNameForListForSelect" contextName="CreateAccountInfoCtx"/>
-            <toValue xmi:type="transaction:ContextValue" xmi:id="_xKd-IvzKEeG6hodExeDsLA" type="RefData" valueToString="dataNameForListForSelect" field="dataNameForListForSelect" contextName="editableTableCtx"/>
+          <mappers xmi:type="transaction:ExpressionDataMapper" xmi:id="_t0Ck2v16EeG3ieuZiiLRMg" tag="map">
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck2_16EeG3ieuZiiLRMg" name="from" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck3P16EeG3ieuZiiLRMg" name="to" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck3f16EeG3ieuZiiLRMg" name="append" type="java.lang.String"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck3v16EeG3ieuZiiLRMg" key="_t0Ck2_16EeG3ieuZiiLRMg" value="AccountTypeForSelect"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck3_16EeG3ieuZiiLRMg" key="_t0Ck3P16EeG3ieuZiiLRMg" value="AccountTypeForSelect"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck4P16EeG3ieuZiiLRMg" key="_t0Ck3f16EeG3ieuZiiLRMg" value="false"/>
+            <fromValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck4f16EeG3ieuZiiLRMg" type="RefData" valueToString="AccountTypeForSelect" field="AccountTypeForSelect" contextName="CreateAccountInfoCtx"/>
+            <toValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck4v16EeG3ieuZiiLRMg" type="RefData" valueToString="AccountTypeForSelect" field="AccountTypeForSelect" contextName="editableTableCtx"/>
+          </mappers>
+          <mappers xmi:type="transaction:ExpressionDataMapper" xmi:id="_t0Ck4_16EeG3ieuZiiLRMg" tag="map">
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck5P16EeG3ieuZiiLRMg" name="from" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck5f16EeG3ieuZiiLRMg" name="to" type="com.ibm.btt.tools.transaction.dominate.manipulators.dialog.DataMappingFmt"/>
+            <attributes xmi:type="transaction:Attribute" xmi:id="_t0Ck5v16EeG3ieuZiiLRMg" name="append" type="java.lang.String"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck5_16EeG3ieuZiiLRMg" key="_t0Ck5P16EeG3ieuZiiLRMg" value="LocaltionForComboBox"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck6P16EeG3ieuZiiLRMg" key="_t0Ck5f16EeG3ieuZiiLRMg" value="LocaltionForComboBox"/>
+            <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_t0Ck6f16EeG3ieuZiiLRMg" key="_t0Ck5v16EeG3ieuZiiLRMg" value="false"/>
+            <fromValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck6v16EeG3ieuZiiLRMg" type="RefData" valueToString="LocaltionForComboBox" field="LocaltionForComboBox" contextName="CreateAccountInfoCtx"/>
+            <toValue xmi:type="transaction:ContextValue" xmi:id="_t0Ck6_16EeG3ieuZiiLRMg" type="RefData" valueToString="LocaltionForComboBox" field="LocaltionForComboBox" contextName="editableTableCtx"/>
           </mappers>
         </rootElement>
       </formatters>

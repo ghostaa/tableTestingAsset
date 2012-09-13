@@ -34,7 +34,14 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_uuGpUvzKEeG6hodExeDsLA" name="direction" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_uuGpU_zKEeG6hodExeDsLA" name="alias" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_uuGpVPzKEeG6hodExeDsLA" key="_uuGpUvzKEeG6hodExeDsLA" value="both"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_vK9kcPzKEeG6hodExeDsLA" key="_uuGpUfzKEeG6hodExeDsLA" value="dataNameForListForSelect"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_vK9kcPzKEeG6hodExeDsLA" key="_uuGpUfzKEeG6hodExeDsLA" value="AccountTypeForSelect"/>
+      </elements>
+      <elements xmi:type="transaction:RefData" xmi:id="_qrWVkP16EeG3ieuZiiLRMg" tag="refData">
+        <attributes xmi:type="transaction:Attribute" xmi:id="_qrWVkf16EeG3ieuZiiLRMg" name="refId" required="true" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_qrWVkv16EeG3ieuZiiLRMg" name="direction" type="java.lang.String"/>
+        <attributes xmi:type="transaction:Attribute" xmi:id="_qrWVk_16EeG3ieuZiiLRMg" name="alias" type="java.lang.String"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_qrWVlP16EeG3ieuZiiLRMg" key="_qrWVkv16EeG3ieuZiiLRMg" value="both"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_rKmdYP16EeG3ieuZiiLRMg" key="_qrWVkf16EeG3ieuZiiLRMg" value="LocaltionForComboBox"/>
       </elements>
     </dataElements>
   </data>

@@ -9,7 +9,8 @@
 
 	<kColl id="CreateAccountInfoRecord">
 		<refData refId="AccountInfoList"/>
-		<refData refId="dataNameForListForSelect"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
 	</kColl>
 
 </CreateAccountInfoOp>

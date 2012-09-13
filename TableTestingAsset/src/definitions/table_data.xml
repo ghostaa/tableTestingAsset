@@ -4,23 +4,31 @@
 	<kColl id="AccountInfoRecord">
 		<data id="AccountName" refType="String"/>
 		<data id="TradeTime" refType="Integer"/>
-		<data id="TradeTimeForSelect" refType="Integer"/>
+		<data id="AccountType" refType="Integer"/>
 		<data id="MaximumAmount" refType="BigDecimal"/>
 		<data id="AccountOpeningDate" refType="Date"/>
 		<data id="AccountBlance" refType="Currency"/>
 		<data id="Rate" refType="Double"/>
-		<data id="RateForCombo" refType="Double"/>
+		<data id="Localtion" refType="String"/>
 		<data id="Usable" refType="Boolean"/>
+		<data id="accountAttribution" refType="Integer"/>
+		<data id="ImageField" refType="String"/>
 	</kColl>
 
 	<iColl id="AccountInfoList" size="10">
 		<refData refId="AccountInfoRecord"/>
 	</iColl>
 
-	<iColl id="dataNameForListForSelect" size="10">
+	<iColl id="AccountTypeForSelect" size="4">
+		<kColl id="AccountTypeForSelect_Record">
+			<data id="labelField" refType="String"/>
+			<data id="valueField" refType="Integer"/>
+		</kColl>
+	</iColl>
+
+	<iColl id="LocaltionForComboBox" size="4">
 		<kColl id="table_dataRecord">
-			<field id="labelField"/>
-			<field id="valueField"/>
+			<data id="labelField" refType="String"/>
 		</kColl>
 	</iColl>
 

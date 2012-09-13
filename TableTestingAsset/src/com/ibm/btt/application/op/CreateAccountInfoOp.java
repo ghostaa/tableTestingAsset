@@ -24,16 +24,16 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 		
 
 		KeyedCollection opData = this.getContext().getKeyedCollection();
-		IndexedCollection accountTable = (IndexedCollection) opData
-				.getElementAt("AccountInfoList");
-		IndexedCollection dataNameForListForSelect = (IndexedCollection) opData
-		.getElementAt("dataNameForListForSelect");
+		IndexedCollection accountTable = (IndexedCollection) opData.getElementAt("AccountInfoList");
+		IndexedCollection accountTypeForSelect = (IndexedCollection) opData.getElementAt("AccountTypeForSelect");
+		IndexedCollection localtionForComboBox = (IndexedCollection) opData.getElementAt("LocaltionForComboBox");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		//set value
 		for (int i = 0; i < accountTable.size(); i++) {
 			accountTable.setValueAt(i + ".AccountName", "Helen" + i);
 			accountTable.setValueAt(i + ".TradeTime", rand.nextInt(10));
+			accountTable.setValueAt(i + ".AccountType", rand.nextInt(4));
 			accountTable.setValueAt(i + ".AccountBlance", new Currency("USD",
 					new BigDecimal(rand.nextInt(99999999))));
 			accountTable.setValueAt(i+".MaximumAmount",new BigDecimal(rand.nextDouble()*1000000000));
@@ -43,11 +43,36 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 			
 			accountTable.setValueAt(i+".AccountOpeningDate",sdf.parse(dateString));
 			accountTable.setValueAt(i+".Rate",rand.nextDouble());
+			accountTable.setValueAt(i+".Localtion",rand.nextBoolean()?"CHINA":"SPAIN");
 			accountTable.setValueAt(i+".Usable",rand.nextBoolean());
+			accountTable.setValueAt(i+".accountAttribution", rand.nextBoolean()?0:1);
+			accountTable.setValueAt(i+".ImageField", rand.nextBoolean()?"img/cry.jpg":"img/location.gif");
 			
+		}
+		for (int i = 0; i < 4; i++) {
+			switch (i) {
+			case 0:
+				accountTypeForSelect.setValueAt(i+".labelField","SUPER");
+				localtionForComboBox.setValueAt(i+".labelField","CHINA");
+				break;
+			case 1:
+				accountTypeForSelect.setValueAt(i+".labelField","VIP");
+				localtionForComboBox.setValueAt(i+".labelField","SPAIN");
+				break;
+			case 2:
+				accountTypeForSelect.setValueAt(i+".labelField","LUCKY");
+				localtionForComboBox.setValueAt(i+".labelField","RUSSIA");
+				break;
+			case 3:
+				accountTypeForSelect.setValueAt(i+".labelField","GOLDEN");
+				localtionForComboBox.setValueAt(i+".labelField","USA");
+				break;
+
+			default:
+				break;
+			}
 			
-			dataNameForListForSelect.setValueAt(i+".labelField",i);
-			dataNameForListForSelect.setValueAt(i+".valueField",i);
+			accountTypeForSelect.setValueAt(i+".valueField",i);
 		}
 		
 		

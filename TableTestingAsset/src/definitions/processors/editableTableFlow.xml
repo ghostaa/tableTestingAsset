@@ -30,13 +30,15 @@
 
 	<kColl id="editableTableRecord">
 		<refData refId="AccountInfoList"/>
-		<refData refId="dataNameForListForSelect"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
 	</kColl>
 
 	<fmtDef id="CreateAccountInfoOp.ShowAccountInfo_OutputFmt">
 		<mapperConverterExpression>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
-			<map from="dataNameForListForSelect" to="dataNameForListForSelect" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

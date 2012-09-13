@@ -751,7 +751,7 @@
       <styles xmi:type="notation:ShapeStyle" xmi:id="_y-7wsfybEeGqbP2WAeYB4Q" fontName="Arial" fontHeight="10" fillColor="14798212" gradient="16777215, 14798212, 0" lineColor="0"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y-7wsvybEeGqbP2WAeYB4Q" x="437" y="741"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_PBMLMP1EEeGgRPm0FmnTtA" type="Note" fontName="Segoe UI" description="init the data in table" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:Shape" xmi:id="_PBMLMP1EEeGgRPm0FmnTtA" type="Note" fontName="Segoe UI" description="Init the data in table" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
       <children xmi:type="notation:BasicDecorationNode" xmi:id="_PBMLMf1EEeGgRPm0FmnTtA" type="DiagramName">
         <element xsi:nil="true"/>
       </children>

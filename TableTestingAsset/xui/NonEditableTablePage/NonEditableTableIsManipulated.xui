@@ -2,7 +2,7 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTableIsManipulated.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData verticalAlignment="1"/>
+    <gridData heightHint="337" verticalAlignment="1" widthHint="517"/>
     <container name="Form" id="form">
       <gridData heightHint="329" verticalAlignment="1" widthHint="509"/>
       <container name="Panel" id="panel03">
@@ -24,7 +24,7 @@
       </container>
       <widget name="Table" dataNameForList="nonEditableAccountList" sortEnabled="true" dataName="selectAccountList" selectionRequired="true" id="table" columnReordering="true" selectionMode="multiple">
         <gridData/>
-        <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="AccountName" width="80" checkedValue="true" text="%nls.testtable/AccountName">
+        <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">

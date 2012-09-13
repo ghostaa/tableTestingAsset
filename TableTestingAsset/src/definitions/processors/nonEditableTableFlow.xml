@@ -56,7 +56,9 @@
 		<htmlState type="page" typeIdInfo="NonEditableTablePage/NonEditableTableIsManipulated.jsp" id="NonEditableTableIsManipulated">
 			<transitions>
 				<htmlTransition id="NonEditableTableIsManipulated.returnToNonEditableTable" targetState="NonEditableTable"/>
-				<htmlTransition id="NonEditableTableIsManipulated.event0" targetState="OK"/>
+				<htmlTransition id="NonEditableTableIsManipulated.end" targetState="OK"/>
+				<htmlTransition id="NonEditableTableIsManipulated.to group popup page" inputMapFmt="NonEditableTableIsManipulated.to group popup page_InputFmt" targetState="SelectionResultInGroupPopupFlow"/>
+				<htmlTransition id="NonEditableTableIsManipulated.to pane popup page" inputMapFmt="NonEditableTableIsManipulated.to pane popup page_InputFmt" targetState="SelectionResultInPanePopupFlow"/>
 			</transitions>
 		</htmlState>
 
@@ -124,6 +126,18 @@
 	</fmtDef>
 
 	<fmtDef id="NonEditableTableInTabbedPane.to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="NonEditableTableIsManipulated.to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="NonEditableTableIsManipulated.to group popup page_InputFmt">
 		<mapperConverterExpression>
 			<map from="selectAccountList" to="selectAccountList" append="false"/>
 		</mapperConverterExpression>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Thu Sep 13 17:54:37 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Thu Sep 13 18:14:23 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -101,6 +101,7 @@ dojo.addOnLoad(function(){
                   <bttdojo:column align="left" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate"/>
                   <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
                   <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                  <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
                 </bttdojo:table>
               </td>
             </tr>

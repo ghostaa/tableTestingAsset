@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Wed Sep 12 17:46:29 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Thu Sep 13 13:59:36 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -94,7 +94,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="NonEditableTableIsManipulated_table" dataNameForList="nonEditableAccountList" sortEnabled="true" columnReordering="true" isPageable="false">
+                <bttdojo:table id="NonEditableTableIsManipulated_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" sortEnabled="true" columnReordering="true" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column uncheckedValue="false" widget="CheckBox" align="left" dataName="AccountName" width="80" checkedValue="true" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
                   <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
@@ -153,6 +153,24 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                   </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                  <table id="NonEditableTableIsManipulated_panel02">
+                    <tr>
+                      <td>
+                        <bttdojo:button id="NonEditableTableIsManipulated_To group popup page" type="submit" text="To group popup page" flowEvent="to group popup page"/>
+                      </td>
+                      <td>
+                        <bttdojo:button id="NonEditableTableIsManipulated_To pane popup page" type="submit" text="To pane popup page" flowEvent="to pane popup page"/>
+                      </td>
+                    </tr>
+                  </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
               </td>
             </tr>
           </table>

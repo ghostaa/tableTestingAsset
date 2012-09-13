@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultInPanePage.xui by ghost, on Wed Sep 12 17:46:29 CST 2012 -->
+<!-- Generated from SelectionResultInPanePage.xui by ghost, on Thu Sep 13 13:59:36 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -103,40 +103,63 @@ dojo.addOnLoad(function(){
                     <table id="SelectionResultInPanePage_ContentPane02" style="table-layout:fixed">
                       <tr>
                         <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label08" text="AccountName"/>
+                        </td>
+                        <td>
                           <bttdojo:label id="SelectionResultInPanePage_label01" dataName="AccountInfo.AccountName" text="Label"/>
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label09" text="TradeTime"/>
+                        </td>
                         <td>
                           <bttdojo:label id="SelectionResultInPanePage_label02" dataName="AccountInfo.TradeTime" text="Label"/>
                         </td>
                       </tr>
                       <tr>
                         <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label10" text="MaximumAmount"/>
+                        </td>
+                        <td>
                           <bttdojo:label id="SelectionResultInPanePage_label03" dataName="AccountInfo.MaximumAmount" text="Label"/>
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label11" text="AccountOpeningDate"/>
+                        </td>
                         <td>
                           <bttdojo:label id="SelectionResultInPanePage_label04" dataName="AccountInfo.AccountOpeningDate" text="Label"/>
                         </td>
                       </tr>
                       <tr>
                         <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label12" text="AccountBlance"/>
+                        </td>
+                        <td>
                           <bttdojo:label id="SelectionResultInPanePage_label05" dataName="AccountInfo.AccountBlance" text="Label"/>
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label13" text="Rate"/>
+                        </td>
                         <td>
                           <bttdojo:label id="SelectionResultInPanePage_label06" dataName="AccountInfo.Rate" text="Label"/>
                         </td>
                       </tr>
                       <tr>
                         <td>
+                          <bttdojo:label id="SelectionResultInPanePage_label14" text="Usable"/>
+                        </td>
+                        <td>
                           <bttdojo:label id="SelectionResultInPanePage_label07" dataName="AccountInfo.Usable" text="Label"/>
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                        </td>
                         <td>
                         </td>
                       </tr>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EditSelectionResultInPaneFlow>
+
+
+	<htmlProcessor context="EditSelectionResultInPaneCtx" id="EditSelectionResultInPaneFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="EditSelectionResultPage/EditSelectionResultInPanePage"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditSelectionResultPage/EditSelectionResultInPanePage.jsp" id="EditSelectionResultPage/EditSelectionResultInPanePage">
+			<transitions>
+				<htmlTransition id="EditSelectionResultPage/EditSelectionResultInPanePage.back" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="back" id="OK" type="final"/>
+	</htmlProcessor>
+
+	<context id="EditSelectionResultInPaneCtx" type="op">
+		<refKColl refId="EditSelectionResultInPaneRecord"/>
+	</context>
+
+	<kColl id="EditSelectionResultInPaneRecord">
+		<refData refId="AccountInfoList" alias="EditableAccountList"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoRecord" alias="AccountInfo"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
+	</kColl>
+
+</EditSelectionResultInPaneFlow>

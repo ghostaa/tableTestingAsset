@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EidtSelectionResultInGroupFlow>
+
+
+	<htmlProcessor context="EidtSelectionResultInGroupCtx" id="EidtSelectionResultInGroupFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="EditSelectionResultPage/EditSelectionResultInGroupPage"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditSelectionResultPage/EditSelectionResultInGroupPage.jsp" id="EditSelectionResultPage/EditSelectionResultInGroupPage">
+			<transitions>
+				<htmlTransition id="EditSelectionResultPage/EditSelectionResultInGroupPage.back" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="back" id="OK" type="final"/>
+	</htmlProcessor>
+
+	<context id="EidtSelectionResultInGroupCtx" type="op">
+		<refKColl refId="EidtSelectionResultInGroupRecord"/>
+	</context>
+
+	<kColl id="EidtSelectionResultInGroupRecord">
+		<refData refId="AccountInfoList" alias="EditableAccountList"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoRecord" alias="AccountInfo"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
+	</kColl>
+
+</EidtSelectionResultInGroupFlow>

@@ -19,7 +19,78 @@
 
 		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTable.jsp" id="EditableTablePage/EditableTable">
 			<transitions>
-				<htmlTransition id="EditableTablePage/EditableTable.event0" targetState="OK"/>
+				<htmlTransition id="EditableTablePage/EditableTable.manipulatetable" targetState="EditableTablePage/EditableTableIsManipulated"/>
+				<htmlTransition id="EditableTablePage/EditableTable.submit to group page" inputMapFmt="EditableTablePage/EditableTable.submit to group page_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTable.submit to pane page" inputMapFmt="EditableTablePage/EditableTable.submit to pane page_InputFmt" targetState="EditSelectionResultInPaneFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTable.LinkToGroup" targetState="EditableTablePage/EditableTableInGroup"/>
+				<htmlTransition id="EditableTablePage/EditableTable.LinkToPane" targetState="EditableTablePage/EditableTableInTabbedPane"/>
+				<htmlTransition id="EditableTablePage/EditableTable.group popup" targetState="PopupEditableTableInGroup"/>
+				<htmlTransition id="EditableTablePage/EditableTable.pane popup" targetState="PopupEditableTableInTabbedPane"/>
+				<htmlTransition id="EditableTablePage/EditableTable.submit to group popup page" inputMapFmt="EditableTablePage/EditableTable.submit to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTable.submit to pane popup page" inputMapFmt="EditableTablePage/EditableTable.submit to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTableIsManipulated.jsp" id="EditableTablePage/EditableTableIsManipulated">
+			<transitions>
+				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.end" targetState="OK"/>
+				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.returnToEditable" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="EidtSelectionResultInGroupFlow" id="EidtSelectionResultInGroupFlow" type="subFlow">
+			<transitions>
+				<htmlTransition id="EidtSelectionResultInGroupFlow.back" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="EditSelectionResultInPaneFlow" id="EditSelectionResultInPaneFlow" type="subFlow">
+			<transitions>
+				<htmlTransition id="EditSelectionResultInPaneFlow.back" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTableInGroup.jsp" id="EditableTablePage/EditableTableInGroup">
+			<transitions>
+				<htmlTransition id="EditableTablePage/EditableTableInGroup.returnToEditableTable" targetState="EditableTablePage/EditableTable"/>
+				<htmlTransition id="EditableTablePage/EditableTableInGroup.to pane page" inputMapFmt="EditableTablePage/EditableTableInGroup.to pane page_InputFmt" targetState="EditSelectionResultInPaneFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableInGroup.to group popup page" inputMapFmt="EditableTablePage/EditableTableInGroup.to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTableInTabbedPane.jsp" id="EditableTablePage/EditableTableInTabbedPane">
+			<transitions>
+				<htmlTransition id="EditableTablePage/EditableTableInTabbedPane.returnToEditTable" targetState="EditableTablePage/EditableTable"/>
+				<htmlTransition id="EditableTablePage/EditableTableInTabbedPane.to group page" inputMapFmt="EditableTablePage/EditableTableInTabbedPane.to group page_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableInTabbedPane.to pane popup page" inputMapFmt="EditableTablePage/EditableTableInTabbedPane.to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="EditableTablePage/EditableTableInGroup.jsp" id="PopupEditableTableInGroup">
+			<transitions>
+				<htmlTransition id="PopupEditableTableInGroup.returnToEditableTable" targetState="EditableTablePage/EditableTable"/>
+				<htmlTransition id="PopupEditableTableInGroup.to pane page" inputMapFmt="PopupEditableTableInGroup.to pane page_InputFmt" targetState="EditSelectionResultInPaneFlow"/>
+				<htmlTransition id="PopupEditableTableInGroup.to group popup page" inputMapFmt="PopupEditableTableInGroup.to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
+			</transitions>
+		</popupPageState>
+
+		<popupPageState type="page" typeIdInfo="EditableTablePage/EditableTableInTabbedPane.jsp" id="PopupEditableTableInTabbedPane">
+			<transitions>
+				<htmlTransition id="PopupEditableTableInTabbedPane.returnToEditTable" targetState="EditableTablePage/EditableTable"/>
+				<htmlTransition id="PopupEditableTableInTabbedPane.to group page" inputMapFmt="PopupEditableTableInTabbedPane.to group page_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="PopupEditableTableInTabbedPane.to pane popup page" inputMapFmt="PopupEditableTableInTabbedPane.to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
+			</transitions>
+		</popupPageState>
+
+		<htmlState typeIdInfo="EditSelectionResultInGroupPopupFlow" id="EditSelectionResultInGroupPopupFlow" type="subFlow">
+			<transitions>
+				<htmlTransition id="EditSelectionResultInGroupPopupFlow.back" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="EditSelectionResultInPanePopupFlow" id="EditSelectionResultInPanePopupFlow" type="subFlow">
+			<transitions>
+				<htmlTransition id="EditSelectionResultInPanePopupFlow.back" targetState="EditableTablePage/EditableTable"/>
 			</transitions>
 		</htmlState>
 	</htmlProcessor>
@@ -29,16 +100,90 @@
 	</context>
 
 	<kColl id="editableTableRecord">
-		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoList" alias="EditableAccountList"/>
 		<refData refId="AccountTypeForSelect"/>
 		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoRecord"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
 	</kColl>
 
 	<fmtDef id="CreateAccountInfoOp.ShowAccountInfo_OutputFmt">
 		<mapperConverterExpression>
-			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="AccountInfoList" to="EditableAccountList" append="false"/>
 			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTable.submit to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTable.submit to pane page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="PopupEditableTableInGroup.to pane page_InputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoRecord" to="AccountInfo"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTable.submit to group popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTable.submit to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableInGroup.to pane page_InputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoRecord" to="AccountInfo"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableInTabbedPane.to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="PopupEditableTableInTabbedPane.to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableInTabbedPane.to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="PopupEditableTableInTabbedPane.to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="PopupEditableTableInGroup.to group popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoRecord" to="AccountInfo"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableInGroup.to group popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoRecord" to="AccountInfo"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

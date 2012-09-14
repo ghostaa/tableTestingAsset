@@ -101,14 +101,20 @@
         <gridLayout numColumns="3"/>
       </container>
       <container name="Panel" id="panel02">
-        <gridData heightHint="31" horizontalAlignment="4" verticalAlignment="4" widthHint="279"/>
+        <gridData heightHint="31" horizontalAlignment="4" verticalAlignment="4" widthHint="463"/>
         <widget name="Button" action="flowEvent=to group popup page" id="To group popup page" text="To group popup page">
           <gridData/>
         </widget>
         <widget name="Button" action="flowEvent=to pane popup page" id="To pane popup page" text="To pane popup page">
           <gridData/>
         </widget>
-        <gridLayout numColumns="2"/>
+        <widget name="Button" action="flowEvent=to group page" id="button" text="To group page">
+          <gridData/>
+        </widget>
+        <widget name="Button" action="flowEvent=to pane page" id="button01" text="To pane page">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="4"/>
       </container>
       <widget name="PlaceHolder">
         <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>

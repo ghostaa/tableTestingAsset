@@ -37,6 +37,8 @@
 				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.returnToEditable" targetState="EditableTablePage/EditableTable"/>
 				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.to group popup page" inputMapFmt="EditableTablePage/EditableTableIsManipulated.to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
 				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.to pane popup page" inputMapFmt="EditableTablePage/EditableTableIsManipulated.to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.to group page" inputMapFmt="EditableTablePage/EditableTableIsManipulated.to group page_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableIsManipulated.to pane page" inputMapFmt="EditableTablePage/EditableTableIsManipulated.to pane page_InputFmt" targetState="EditSelectionResultInPaneFlow"/>
 			</transitions>
 		</htmlState>
 
@@ -196,6 +198,18 @@
 	</fmtDef>
 
 	<fmtDef id="EditableTablePage/EditableTableIsManipulated.to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableIsManipulated.to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableIsManipulated.to pane page_InputFmt">
 		<mapperConverterExpression>
 			<map from="selectAccountList" to="selectAccountList" append="false"/>
 		</mapperConverterExpression>

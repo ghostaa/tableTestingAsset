@@ -14,7 +14,7 @@
       <widget name="Link" action="flowId=nonEditableTableFlow;flowEvent=" id="link02" text="nonEditable">
         <gridData/>
       </widget>
-      <widget name="Link" action="flowId=editableTableFlow;flowEvent=" id="link01" text="editable">
+      <widget name="Link" action="flowId=editableTableFlow;flowEvent=start" id="link01" text="editable">
         <gridData/>
       </widget>
       <widget name="PlaceHolder">

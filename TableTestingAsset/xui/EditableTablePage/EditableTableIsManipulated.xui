@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated_20120914110824.js'}">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="336" verticalAlignment="1" widthHint="1017"/>
+    <container name="Form" id="form">
+      <gridData heightHint="328" verticalAlignment="1" widthHint="1009"/>
+      <container name="Panel" id="panel03">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="273"/>
+        <widget name="Link" action="flowEvent=returnToEditable" id="link_copy" text="editable table">
+          <gridData/>
+        </widget>
+        <widget name="Label" id="label" text=" -&gt; manipulate editable table">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="151"/>
+        <widget name="Label" id="label01" text="Sort and columReorder">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
+      <widget name="Table" dataNameForList="EditableAccountList" id="table">
+        <gridData/>
+        <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTimeValue">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountType" width="80" text="%nls.testtable/AccountTypeValue">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+      </widget>
+      <container name="Panel" id="visibility">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="222"/>
+        <widget name="Button" id="visible" buttonType="button" text="visible">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="hidden" buttonType="button" text="hidden">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="gone" buttonType="button" text="gone">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="3"/>
+      </container>
+      <container name="Panel" id="disabled">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="214"/>
+        <widget name="Label" id="label02" text="disabled:">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="disabletrue" buttonType="button" text=" true">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="disablefalse" buttonType="button" text="false">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="3"/>
+      </container>
+      <container name="Panel" id="readonly">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="221"/>
+        <widget name="Label" id="readonlylabel" text="read only:">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="readonlytrue" buttonType="button" text="true">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="readonlyfalse" buttonType="button" text="false">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="3"/>
+      </container>
+      <container name="Panel" id="panel02">
+        <gridData heightHint="31" horizontalAlignment="4" verticalAlignment="4" widthHint="279"/>
+        <widget name="Button" action="flowEvent=to group popup page" id="To group popup page" text="To group popup page">
+          <gridData/>
+        </widget>
+        <widget name="Button" action="flowEvent=to pane popup page" id="To pane popup page" text="To pane popup page">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <widget name="PlaceHolder">
+        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules>
+    <rule name="ecaRule">
+      <events>
+        <event widget="visible" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="visibility">
+          <value type="constant" constant="'visible'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule01">
+      <events>
+        <event widget="hidden" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="visibility">
+          <value type="constant" constant="'hidden'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule02">
+      <events>
+        <event widget="gone" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="visibility">
+          <value type="constant" constant="'gone'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule03">
+      <events>
+        <event widget="disabletrue" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="disabled">
+          <value type="constant" constant="true"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule04">
+      <events>
+        <event widget="disablefalse" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="disabled">
+          <value type="constant" constant="false"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule05">
+      <events>
+        <event widget="readonlytrue" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="readOnly">
+          <value type="constant" constant="true"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule06">
+      <events>
+        <event widget="readonlyfalse" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="readOnly">
+          <value type="constant" constant="false"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+  </rules>
+  <groups/>
+</XUI>

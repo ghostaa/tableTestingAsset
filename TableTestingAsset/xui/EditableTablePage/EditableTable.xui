@@ -2,53 +2,121 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="74,164,689,309" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="141" verticalAlignment="1" widthHint="1009"/>
+    <gridData heightHint="445" verticalAlignment="1" widthHint="1017"/>
     <container name="Form" id="form">
-      <gridData heightHint="31" verticalAlignment="1" widthHint="48"/>
+      <gridData heightHint="437" verticalAlignment="1" widthHint="1009"/>
       <widget name="Label" id="label" text="Label">
         <gridData/>
       </widget>
+      <widget name="Table" dataNameForList="EditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
+        <gridData/>
+        <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" labelField="" width="80" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTimeValue">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" labelField="labelField" width="80" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountType" width="80" text="%nls.testtable/AccountTypeValue">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" labelField="" width="80" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" labelField="labelField" width="80" urlForList="" text="%nls.testtable/Localtion">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+      </widget>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="302" verticalAlignment="1" widthHint="389"/>
+        <container name="Panel" id="panel02">
+          <gridData heightHint="294" verticalAlignment="1" widthHint="381"/>
+          <container name="Group" id="group" text="Test in group">
+            <gridData heightHint="111" verticalAlignment="1" widthHint="351"/>
+            <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'table in group' page">
+              <gridData/>
+            </widget>
+            <widget name="Link" action="flowEvent=group popup" id="link02" text="Link to popup page">
+              <gridData/>
+            </widget>
+            <container name="Panel" id="panel04">
+              <gridData heightHint="31" verticalAlignment="1" widthHint="323"/>
+              <widget name="Button" action="flowEvent=submit to group page" id="button" text="submit to group page">
+                <gridData/>
+              </widget>
+              <widget name="Button" action="flowEvent=submit to group popup page" id="button02" text="submit to group popup page">
+                <gridData/>
+              </widget>
+              <gridLayout numColumns="2"/>
+            </container>
+            <gridLayout numColumns="1"/>
+          </container>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <container name="Group" id="group01" text="Test inTabbedpane">
+            <gridData heightHint="111" verticalAlignment="1" widthHint="341"/>
+            <widget name="Link" action="flowEvent=LinkToPane" id="link01" text="Link to 'table in TabbedPane' page">
+              <gridData/>
+            </widget>
+            <widget name="Link" action="flowEvent=pane popup" id="link04" text="Link to popup page">
+              <gridData/>
+            </widget>
+            <container name="Panel" id="panel05">
+              <gridData heightHint="31" verticalAlignment="1" widthHint="313"/>
+              <widget name="Button" action="flowEvent=submit to pane page" id="button01" text="submit to pane page">
+                <gridData/>
+              </widget>
+              <widget name="Button" action="flowEvent=submit to pane popup page" id="button03" text="submit to pane popup page">
+                <gridData/>
+              </widget>
+              <gridLayout numColumns="2"/>
+            </container>
+            <gridLayout numColumns="1"/>
+          </container>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <container name="Panel" id="panel03">
+            <gridData heightHint="60" verticalAlignment="1" widthHint="221"/>
+            <container name="Group" id="group02" text="Test in 'manipulate table'">
+              <gridData heightHint="52" verticalAlignment="1" widthHint="213"/>
+              <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate table' page">
+                <gridData/>
+              </widget>
+              <gridLayout numColumns="1"/>
+            </container>
+            <gridLayout numColumns="1"/>
+          </container>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <gridLayout numColumns="2"/>
+        </container>
+        <gridLayout numColumns="1"/>
+      </container>
       <gridLayout numColumns="1"/>
     </container>
-    <widget name="Table" dataNameForList="AccountInfoList" id="table">
-      <gridData/>
-      <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTimeValue">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="" dataName="AccountType" width="80" text="%nls.testtable/AccountTypeValue">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-      <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
-        <tableColumnAlignment>16384</tableColumnAlignment>
-      </column>
-    </widget>
     <gridLayout numColumns="1"/>
   </container>
   <rules/>

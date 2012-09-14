@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="GB18030"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated_20120914110824.js'}">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated_20120914165959.js'}">
   <styles/>
   <container name="Panel" id="panel">
     <gridData heightHint="336" verticalAlignment="1" widthHint="1017"/>
@@ -22,7 +22,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" dataNameForList="EditableAccountList" id="table">
+      <widget name="Table" dataNameForList="EditableAccountList" sortEnabled="true" dataName="selectAccountList" selectionRequired="true" id="table" columnReordering="true" selectionMode="multiple">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -193,6 +193,13 @@
           <value type="constant" constant="false"/>
         </action>
       </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule07">
+      <events>
+        <event widget="table" event="onFocus"/>
+      </events>
+      <trueActions/>
       <falseActions/>
     </rule>
   </rules>

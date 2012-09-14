@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'EditSelectionResultInPaneFlow','ctxName':'EditSelectionResultInPaneCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="350" verticalAlignment="1" widthHint="1023"/>
+    <container name="Form" id="form">
+      <gridData heightHint="342" verticalAlignment="1" widthHint="1015"/>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="32" verticalAlignment="1" widthHint="283"/>
+        <widget name="Link" action="flowEvent=back" id="link_copy" text="editable table">
+          <gridData/>
+        </widget>
+        <widget name="Label" id="label" text="-&gt; EditSelection Result in pane">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <container name="TabbedPane" id="tabbedPane">
+        <gridData/>
+        <container name="ContentPane" title="multi-selection result" id="ContentPane01">
+          <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="1009"/>
+          <widget name="Table" dataNameForList="selectAccountList" id="table">
+            <gridData/>
+            <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTimeValue">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="" dataName="AccountType" width="80" text="%nls.testtable/AccountTypeValue">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+            <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
+              <tableColumnAlignment>16384</tableColumnAlignment>
+            </column>
+          </widget>
+          <gridLayout numColumns="1"/>
+        </container>
+        <container name="ContentPane" title="single-selection result" id="ContentPane02">
+          <widget name="Label" id="label08" text="AccountName">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.AccountName" id="label01" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label09" text="TradeTime">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.TradeTime" id="label02" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label10" text="MaximumAmount">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.MaximumAmount" id="label03" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label11" text="AccountOpeningDate">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.AccountOpeningDate" id="label04" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label12" text="AccountBlance">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.AccountBlance" id="label05" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label13" text="Rate">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.Rate" id="label06" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="Label" id="label14" text="Usable">
+            <gridData/>
+          </widget>
+          <widget name="Label" dataName="AccountInfo.Usable" id="label07" text="Label">
+            <gridData/>
+          </widget>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <gridLayout numColumns="2"/>
+        </container>
+      </container>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="GB18030"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
@@ -7,7 +7,7 @@
       <gridData heightHint="388" verticalAlignment="1" widthHint="623"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="32" verticalAlignment="1" widthHint="346"/>
-        <widget name="Link" action="flowEvent=returnToNonEditableTable" id="link" text=" non-editable table">
+        <widget name="Link" id="link" text=" non-editable table" action="flowEvent=returnToNonEditableTable">
           <gridData/>
         </widget>
         <widget name="Label" id="label" text="-&gt; non-editable table in TabbedPane">
@@ -17,68 +17,68 @@
       </container>
       <container name="TabbedPane" id="tabbedPane">
         <gridData verticalAlignment="1"/>
-        <container name="ContentPane" title="NormalTab" id="ContentPane01">
+        <container name="ContentPane" id="ContentPane01" title="NormalTab">
           <gridData heightHint="143" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
-          <widget name="Table" dataNameForList="nonEditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
+          <widget name="Table" id="table" selectionRequired="true" selectionMode="multiple" dataNameForList="nonEditableAccountList" dataName="selectAccountList">
             <gridData/>
-            <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+            <column text="%nls.testtable/AccountName" width="80" widget="" dataName="AccountName">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+            <column text="%nls.testtable/TradeTime" width="80" widget="" dataName="TradeTime">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+            <column text="%nls.testtable/MaximumAmount" width="80" widget="" dataName="MaximumAmount">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+            <column text="%nls.testtable/AccountOpeningDate" width="80" widget="" dataName="AccountOpeningDate">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+            <column text="%nls.testtable/AccountBlance" width="80" widget="" dataName="AccountBlance">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
-              <tableColumnAlignment>16384</tableColumnAlignment>
+            <column text="%nls.testtable/Rate" width="80" widget="" dataName="Rate">
+              <tableColumnAlignment>16777216</tableColumnAlignment>
             </column>
-            <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
-              <tableColumnAlignment>16384</tableColumnAlignment>
+            <column text="%nls.testtable/Usable" width="80" widget="" dataName="Usable">
+              <tableColumnAlignment>131072</tableColumnAlignment>
             </column>
           </widget>
           <container name="Panel" id="panel02">
             <gridData heightHint="33" verticalAlignment="1" widthHint="234"/>
-            <widget name="Button" action="flowEvent=to group page" id="button" text="to group page">
+            <widget name="Button" id="button" text="to group page" action="flowEvent=to group page">
               <gridData/>
             </widget>
-            <widget name="Button" action="flowEvent=to pane popup page" id="button01" text="to pane popup page">
+            <widget name="Button" id="button01" text="to pane popup page" action="flowEvent=to pane popup page">
               <gridData/>
             </widget>
             <gridLayout numColumns="2"/>
           </container>
           <gridLayout numColumns="1"/>
         </container>
-        <container name="ContentPane" title="Group" id="ContentPane02">
+        <container name="ContentPane" id="ContentPane02" title="Group">
           <container name="Group" id="group" text="Group">
             <gridData heightHint="128" verticalAlignment="1" widthHint="609"/>
-            <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy">
+            <widget name="Table" id="table_copy" dataNameForList="nonEditableAccountList">
               <gridData/>
-              <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+              <column text="%nls.testtable/AccountName" width="80" widget="" dataName="AccountName">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+              <column text="%nls.testtable/TradeTime" width="80" widget="" dataName="TradeTime">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+              <column text="%nls.testtable/MaximumAmount" width="80" widget="" dataName="MaximumAmount">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+              <column text="%nls.testtable/AccountOpeningDate" width="80" widget="" dataName="AccountOpeningDate">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+              <column text="%nls.testtable/AccountBlance" width="80" widget="" dataName="AccountBlance">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+              <column text="%nls.testtable/Rate" width="80" widget="" dataName="Rate">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
-              <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+              <column text="%nls.testtable/Usable" width="80" widget="" dataName="Usable">
                 <tableColumnAlignment>16384</tableColumnAlignment>
               </column>
             </widget>
@@ -86,66 +86,66 @@
           </container>
           <gridLayout numColumns="1"/>
         </container>
-        <container name="ContentPane" title="Pane" id="ContentPane03">
+        <container name="ContentPane" id="ContentPane03" title="Pane">
           <container name="TabbedPane" id="tabbedPane01">
             <gridData verticalAlignment="1"/>
-            <container name="ContentPane" title="Tab01" id="ContentPane04">
+            <container name="ContentPane" id="ContentPane04" title="Tab01">
               <gridData heightHint="133" horizontalAlignment="4" verticalAlignment="4" widthHint="589"/>
               <widget name="Label" id="label01" text="tab01">
                 <gridData/>
               </widget>
-              <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy01">
+              <widget name="Table" id="table_copy01" dataNameForList="nonEditableAccountList">
                 <gridData/>
-                <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+                <column text="%nls.testtable/AccountName" width="80" widget="" dataName="AccountName">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+                <column text="%nls.testtable/TradeTime" width="80" widget="" dataName="TradeTime">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+                <column text="%nls.testtable/MaximumAmount" width="80" widget="" dataName="MaximumAmount">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+                <column text="%nls.testtable/AccountOpeningDate" width="80" widget="" dataName="AccountOpeningDate">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+                <column text="%nls.testtable/AccountBlance" width="80" widget="" dataName="AccountBlance">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
-                  <tableColumnAlignment>16384</tableColumnAlignment>
+                <column text="%nls.testtable/Rate" width="80" widget="" dataName="Rate">
+                  <tableColumnAlignment>131072</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+                <column text="%nls.testtable/Usable" width="80" widget="" dataName="Usable">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
               </widget>
               <gridLayout numColumns="1"/>
             </container>
-            <container name="ContentPane" title="Tab02" id="ContentPane05">
+            <container name="ContentPane" id="ContentPane05" title="Tab02">
               <widget name="Label" id="label02" text="tab02">
                 <gridData/>
               </widget>
-              <widget name="Table" dataNameForList="nonEditableAccountList" id="table_copy01_copy">
+              <widget name="Table" id="table_copy01_copy" dataNameForList="nonEditableAccountList">
                 <gridData/>
-                <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+                <column text="%nls.testtable/AccountName" width="80" widget="" dataName="AccountName">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+                <column text="%nls.testtable/TradeTime" width="80" widget="" dataName="TradeTime">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+                <column text="%nls.testtable/MaximumAmount" width="80" widget="" dataName="MaximumAmount">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+                <column text="%nls.testtable/AccountOpeningDate" width="80" widget="" dataName="AccountOpeningDate">
                   <tableColumnAlignment>16384</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
-                  <tableColumnAlignment>16384</tableColumnAlignment>
+                <column text="%nls.testtable/AccountBlance" width="80" widget="" dataName="AccountBlance">
+                  <tableColumnAlignment>16777216</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
-                  <tableColumnAlignment>16384</tableColumnAlignment>
+                <column text="%nls.testtable/Rate" width="80" widget="" dataName="Rate">
+                  <tableColumnAlignment>16777216</tableColumnAlignment>
                 </column>
-                <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
-                  <tableColumnAlignment>16384</tableColumnAlignment>
+                <column text="%nls.testtable/Usable" width="80" widget="" dataName="Usable">
+                  <tableColumnAlignment>131072</tableColumnAlignment>
                 </column>
               </widget>
               <gridLayout numColumns="1"/>

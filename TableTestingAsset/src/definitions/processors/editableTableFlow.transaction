@@ -1034,8 +1034,8 @@
       <styles xmi:type="notation:ArrowStyle" xmi:id="_iWbm7P4bEeGLweLxz80DNA" arrowTarget="SolidArrow"/>
       <styles xmi:type="notation:LineStyle" xmi:id="_iWbm7f4bEeGLweLxz80DNA"/>
       <styles xmi:type="notation:LineTypeStyle" xmi:id="_iWbm7v4bEeGLweLxz80DNA"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWbm7_4bEeGLweLxz80DNA" points="[-20, 0, 233, -96]$[-253, 0, 0, -96]$[-253, 96, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWbm8v4bEeGLweLxz80DNA" id="(0.09852216748768473,0.27692307692307694)"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iWbm7_4bEeGLweLxz80DNA" points="[-1, -9, 233, -95]$[-234, -9, 0, -95]$[-234, 86, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iWbm8v4bEeGLweLxz80DNA" id="(0.0049261083743842365,0.13846153846153847)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XC3Q0P4vEeGLweLxz80DNA" id="(0.893719806763285,0.0)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_yMz-2f4dEeGLweLxz80DNA" type="3001" element="_yMz-0P4dEeGLweLxz80DNA" source="_UoN4iv4dEeGLweLxz80DNA" target="_KAOEl_yoEeGqbP2WAeYB4Q">
@@ -1061,7 +1061,7 @@
       <styles xmi:type="notation:LineTypeStyle" xmi:id="_2T-Bdf4dEeGLweLxz80DNA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2T-Bdv4dEeGLweLxz80DNA" points="[9, -18, 203, 94]$[9, -112, 203, 0]$[-192, -112, 2, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2T-Bef4dEeGLweLxz80DNA" id="(0.04830917874396135,0.27692307692307694)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2T-Bev4dEeGLweLxz80DNA" id="(0.98989898989899,0.3076923076923077)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2T-Bev4dEeGLweLxz80DNA" id="(0.9949494949494949,0.2)"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_RpTLKf4vEeGLweLxz80DNA" type="3001" element="_RpTLIP4vEeGLweLxz80DNA" source="_KAOEl_yoEeGqbP2WAeYB4Q" target="_B3RSR_4uEeGLweLxz80DNA">
       <children xmi:type="notation:Node" xmi:id="_RpTLMP4vEeGLweLxz80DNA" type="4003">

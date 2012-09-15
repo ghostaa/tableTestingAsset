@@ -2,10 +2,10 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="74,164,689,309" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="445" verticalAlignment="1" widthHint="1017"/>
+    <gridData heightHint="449" verticalAlignment="1" widthHint="1017"/>
     <container name="Form" id="form">
-      <gridData heightHint="437" verticalAlignment="1" widthHint="1009"/>
-      <widget name="Label" id="label" text="Label">
+      <gridData heightHint="441" verticalAlignment="1" widthHint="1009"/>
+      <widget name="Label" id="label" text="editable table">
         <gridData/>
       </widget>
       <widget name="Table" dataNameForList="EditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
@@ -48,11 +48,11 @@
         </column>
       </widget>
       <container name="Panel" id="panel01">
-        <gridData heightHint="302" verticalAlignment="1" widthHint="389"/>
+        <gridData heightHint="306" verticalAlignment="1" widthHint="389"/>
         <container name="Panel" id="panel02">
-          <gridData heightHint="294" verticalAlignment="1" widthHint="381"/>
+          <gridData heightHint="298" verticalAlignment="1" widthHint="381"/>
           <container name="Group" id="group" text="Test in group">
-            <gridData heightHint="111" verticalAlignment="1" widthHint="351"/>
+            <gridData heightHint="113" verticalAlignment="1" widthHint="351"/>
             <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'table in group' page">
               <gridData/>
             </widget>
@@ -60,7 +60,7 @@
               <gridData/>
             </widget>
             <container name="Panel" id="panel04">
-              <gridData heightHint="31" verticalAlignment="1" widthHint="323"/>
+              <gridData heightHint="33" verticalAlignment="1" widthHint="323"/>
               <widget name="Button" action="flowEvent=submit to group page" id="button" text="submit to group page">
                 <gridData/>
               </widget>
@@ -75,7 +75,7 @@
             <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
           </widget>
           <container name="Group" id="group01" text="Test inTabbedpane">
-            <gridData heightHint="111" verticalAlignment="1" widthHint="341"/>
+            <gridData heightHint="113" verticalAlignment="1" widthHint="341"/>
             <widget name="Link" action="flowEvent=LinkToPane" id="link01" text="Link to 'table in TabbedPane' page">
               <gridData/>
             </widget>
@@ -83,7 +83,7 @@
               <gridData/>
             </widget>
             <container name="Panel" id="panel05">
-              <gridData heightHint="31" verticalAlignment="1" widthHint="313"/>
+              <gridData heightHint="33" verticalAlignment="1" widthHint="313"/>
               <widget name="Button" action="flowEvent=submit to pane page" id="button01" text="submit to pane page">
                 <gridData/>
               </widget>

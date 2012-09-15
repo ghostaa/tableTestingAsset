@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditableTable.xui by ghost, on Sat Sep 15 16:44:54 CST 2012 -->
+<!-- Generated from EditableTable.xui by ghost, on Sat Sep 15 17:17:38 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -68,7 +68,7 @@ dojo.addOnLoad(function(){
           <table id="EditableTable_form">
             <tr>
               <td>
-                <bttdojo:label id="EditableTable_label" text="Label"/>
+                <bttdojo:label id="EditableTable_label" text="editable table"/>
               </td>
             </tr>
             <tr>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Thu Sep 13 17:54:37 CST 2012 -->
+<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -93,8 +93,8 @@ dojo.addOnLoad(function(){
                             <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
                             <bttdojo:column align="left" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate"/>
                             <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
-                            <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
-                            <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
+                            <bttdojo:column align="center" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                            <bttdojo:column align="right" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
                           </bttdojo:table>
                         </td>
                       </tr>
@@ -159,7 +159,7 @@ dojo.addOnLoad(function(){
                                       <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
                                       <bttdojo:column align="left" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate"/>
                                       <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
-                                      <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                                      <bttdojo:column align="right" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
                                       <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
                                     </bttdojo:table>
                                   </td>
@@ -180,9 +180,9 @@ dojo.addOnLoad(function(){
                                       <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
                                       <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
                                       <bttdojo:column align="left" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate"/>
-                                      <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
-                                      <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
-                                      <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
+                                      <bttdojo:column align="center" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
+                                      <bttdojo:column align="center" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                                      <bttdojo:column align="right" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
                                     </bttdojo:table>
                                   </td>
                                 </tr>

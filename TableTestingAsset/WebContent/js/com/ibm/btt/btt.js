@@ -8202,7 +8202,9 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 			} else if(this.selectionMode === "extended"){
 				msg = this._bundle.getMessage("rangeMultiMessage");
 				this.SELECTION_VALID_STATE = false;
-			} 
+			} else {
+				this.SELECTION_VALID_STATE = true;
+			}
 		} else {
 			this.SELECTION_VALID_STATE = true;
 		}
@@ -8293,7 +8295,8 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 		if(this.selectionMode != "none"){
 	 			this._disableCache.selectionMode = this.selectionMode;
 	 			this.selectionMode = "none";
-	 			this.selection.setMode(this.selectionMode);			
+	 			this.selection.setMode(this.selectionMode);	
+	 			this.selection.deselectAll();
 	 		}
 	 		
 	 		//check if columnReordering is enabled
@@ -8385,6 +8388,9 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 		dojo.removeClass(this.domNode, "dijitDisabled");
 	 		
 	 	}
+	 	this.checkSelectionNum();
+	 	this._set("state", this._getState());
+	 	
 	 },
 	 
 	/**

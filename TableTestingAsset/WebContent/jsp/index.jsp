@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by ghost, on Thu Sep 13 17:54:37 CST 2012 -->
+<!-- Generated from index.xui by ghost, on Sat Sep 15 16:44:58 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -83,7 +83,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow"/>
+                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow" flowEvent="start"/>
               </td>
             </tr>
             <tr>

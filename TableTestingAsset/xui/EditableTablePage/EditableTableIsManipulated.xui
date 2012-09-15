@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="GB18030"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated_20120914165959.js'}">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated.js'}">
   <styles/>
   <container name="Panel" id="panel">
     <gridData heightHint="336" verticalAlignment="1" widthHint="1017"/>

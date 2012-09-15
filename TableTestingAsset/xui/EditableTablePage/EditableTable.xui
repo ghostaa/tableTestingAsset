@@ -13,13 +13,13 @@
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" labelField="" width="80" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+        <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTimeValue">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" labelField="labelField" width="80" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
+        <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="" dataName="AccountType" width="80" text="%nls.testtable/AccountTypeValue">
@@ -31,10 +31,10 @@
         <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" labelField="" width="80" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
+        <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/rateForCombo.js" text="%nls.testtable/Rate">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" labelField="labelField" width="80" urlForList="" text="%nls.testtable/Localtion">
+        <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">

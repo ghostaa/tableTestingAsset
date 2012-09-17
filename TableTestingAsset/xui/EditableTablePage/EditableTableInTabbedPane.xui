@@ -2,11 +2,11 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="395" verticalAlignment="1" widthHint="1051"/>
+    <gridData heightHint="396" verticalAlignment="1" widthHint="1051"/>
     <container name="Form" id="form">
-      <gridData heightHint="387" verticalAlignment="1" widthHint="1043"/>
+      <gridData heightHint="388" verticalAlignment="1" widthHint="1043"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="290"/>
+        <gridData heightHint="32" verticalAlignment="1" widthHint="290"/>
         <widget name="Link" action="flowEvent=returnToEditTable" id="link" text="editable table">
           <gridData/>
         </widget>
@@ -19,7 +19,7 @@
         <gridData verticalAlignment="1"/>
         <container name="ContentPane" title="NormalTab" id="ContentPane01">
           <gridData heightHint="141" horizontalAlignment="4" verticalAlignment="4" widthHint="1009"/>
-          <widget name="Table" dataNameForList="EditableAccountList" dataName="selectAccountList" id="table" selectionMode="multiple">
+          <widget name="Table" dataNameForList="EditableAccountList" dataName="selectAccountList" selectionRequired="true" id="table" selectionMode="multiple">
             <gridData/>
             <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
               <tableColumnAlignment>16384</tableColumnAlignment>

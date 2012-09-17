@@ -2,11 +2,11 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="210" verticalAlignment="1" widthHint="1045"/>
+    <gridData heightHint="211" verticalAlignment="1" widthHint="1045"/>
     <container name="Form" id="form">
-      <gridData heightHint="202" verticalAlignment="1" widthHint="1037"/>
+      <gridData heightHint="203" verticalAlignment="1" widthHint="1037"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="253"/>
+        <gridData heightHint="32" verticalAlignment="1" widthHint="253"/>
         <widget name="Link" action="flowEvent=returnToEditableTable" id="link" text="editable table">
           <gridData/>
         </widget>
@@ -17,7 +17,7 @@
       </container>
       <container name="Group" id="group" text="Group">
         <gridData heightHint="161" verticalAlignment="1" widthHint="1029"/>
-        <widget name="Table" dataNameForList="EditableAccountList" dataName="AccountInfoRecord" id="table" selectionMode="single">
+        <widget name="Table" dataNameForList="EditableAccountList" dataName="AccountInfoRecord" selectionRequired="true" id="table" selectionMode="single">
           <gridData/>
           <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
             <tableColumnAlignment>16384</tableColumnAlignment>

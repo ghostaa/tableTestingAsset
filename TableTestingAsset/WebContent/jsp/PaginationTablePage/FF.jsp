@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by ghost, on Tue Sep 18 15:25:45 CST 2012 -->
+<!-- Generated from FF.xui by ghost, on Tue Sep 18 15:17:38 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,47 +61,14 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-  <table id="index_null">
-    <tr>
-      <td valign="top">
-        <bttdojo:form id="index_form" errorPage="index.jsp">
-          <table style="width:353px;height:265px;" id="index_form">
-            <tr>
-              <td>
-                <bttdojo:label id="index_label" text="%nls.bttsample/Welcome_To_Btt_Sample"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link" text="%nls.bttsample/Click_Link_Run_Flow" flowId="sampleFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow" flowEvent="start"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link03" text="FF" flowId="PaginationFFFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link04" text="TF" flowId="PaginationTFFlow"/>
-              </td>
-            </tr>
-          </table>
-        </bttdojo:form>
-      </td>
-    </tr>
+  <table id="FF_panel">
     <tr>
       <td>
+        <bttdojo:table id="FF_tableFF" dataName="AccountInfoRecord" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
+          <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
+          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
+          <bttdojo:column align="left" dataName="AccountType" width="80" text="%nls.testtable/AccountType"/>
+        </bttdojo:table>
       </td>
     </tr>
   </table>

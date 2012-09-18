@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAG_PaginationTablePageFF_table>
+
+	<operation id="PAG_PaginationTablePage$FF_table" context="pagOpCtx" implClass="com.ibm.btt.cs.ajax.DefaultPaginationOp"/>
+
+	<context id="pagOpCtx" type="op">
+		<refKColl refId="pagOpData"/>
+	</context>
+
+	<kColl id="pagOpData">
+		<kColl id="tableProperties">
+			<field id="tableId" value="table"/>
+			<field id="dataName" value="AccountInfoRecord"/>
+			<field id="dataNameForList" value="AccountInfoList"/>
+			<field id="rowsPerPage" value="25"/>
+			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
+			<field id="directPagination" value="false"/>
+			<!-- this four fields corresponds to four columns on table -->
+			<field id="tableColumnIDs" value="AccountName"/>
+		</kColl>
+		<kColl id="pageRequest">
+			<!-- candidate value should be "initial", "next", "prev", "page" -->
+			<field id="pageEvent"/>
+			<field id="pageNumber"/>
+			<field id="sortData"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+		</kColl>
+		<kColl id="pageReply">
+			<field id="totalRowNumber"/>
+			<field id="enableNext"/>
+			<field id="enablePrevious"/>
+			<field id="errMsg"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+			<!-- the technical operation will set data into iColl, filtering through the tableColumnIDs -->
+			<iColl id="items">
+				<field id="dummy"/>
+			</iColl>
+		</kColl>
+	</kColl>
+
+</PAG_PaginationTablePageFF_table>

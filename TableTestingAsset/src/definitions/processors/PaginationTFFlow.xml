@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaginationTFFlow>
+
+
+	<htmlProcessor context="PaginationTFCtx" id="PaginationTFFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="CreatePaginationDataOp"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TF.jsp" id="PaginationTablePage/FF">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/FF.event0" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
+			<transitions>
+				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt" targetState="PaginationTablePage/FF"/>
+			</transitions>
+		</operationState>
+	</htmlProcessor>
+
+	<context id="PaginationTFCtx" type="op">
+		<refKColl refId="PaginationTFRecord"/>
+	</context>
+
+	<kColl id="PaginationTFRecord">
+		<kColl id="paginationData">
+			<data id="TF_tableTF_enableNext" refType="Boolean"/>
+			<data id="TF_tableTF_enablePrevious" refType="Boolean"/>
+			<data id="TF_tableTF_totalRowNumber" refType="Integer"/>
+			<data id="TF_tableTF_errMsg" refType="String"/>
+			<data id="TF_tableTF_pageNumber" refType="Long"/>
+			<field id="TF_tableTF_pageEvent"/>
+			<data id="TF_tableTF_rowsPerPage" refType="Integer"/>
+		</kColl>
+		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoRecord"/>
+	</kColl>
+
+	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TF_tableTF_totalRowNumber"/>
+			<map from="paginationData.errMsg" to="paginationData.TF_tableTF_errMsg"/>
+			<map from="paginationData.pageNumber" to="paginationData.TF_tableTF_pageNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PaginationTFFlow>

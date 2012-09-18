@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaginationFFFlow>
+
+
+	<htmlProcessor context="PaginationFFCtx" id="PaginationFFFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="CreatePaginationDataOp"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FF.jsp" id="PaginationTablePage/FF">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/FF.event0" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
+			<transitions>
+				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt" targetState="PaginationTablePage/FF"/>
+			</transitions>
+		</operationState>
+	</htmlProcessor>
+
+	<context id="PaginationFFCtx" type="op">
+		<refKColl refId="PaginationFFRecord"/>
+	</context>
+
+	<kColl id="PaginationFFRecord">
+		<kColl id="paginationData">
+			<data id="FF_tableFF_enableNext" refType="Boolean"/>
+			<data id="FF_tableFF_enablePrevious" refType="Boolean"/>
+			<data id="FF_tableFF_totalRowNumber" refType="Integer"/>
+			<data id="FF_tableFF_errMsg" refType="String"/>
+			<data id="FF_tableFF_pageNumber" refType="Integer"/>
+			<field id="FF_tableFF_pageEvent"/>
+			<data id="FF_tableFF_rowsPerPage" refType="Integer"/>
+		</kColl>
+		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoRecord"/>
+	</kColl>
+
+	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.enableNext" to="paginationData.FF_tableFF_enableNext"/>
+			<map from="paginationData.enablePrevious" to="paginationData.FF_tableFF_enablePrevious"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.FF_tableFF_totalRowNumber"/>
+			<map from="paginationData.errMsg" to="paginationData.FF_tableFF_errMsg"/>
+			<map from="paginationData.pageNumber" to="paginationData.FF_tableFF_pageNumber"/>
+			<map fromExpression="&apos;next&apos;" to="paginationData.FF_tableFF_pageEvent"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PaginationFFFlow>

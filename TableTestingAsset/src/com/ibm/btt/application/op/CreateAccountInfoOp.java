@@ -21,7 +21,8 @@ public class CreateAccountInfoOp extends BTTServerOperation {
  */
   public void execute() throws Exception {
 	  	System.out.println("CreateAccountInfoOp + execute");
-		
+	  	
+		String img[] = {"img/JPG.JPG","img/PNG.png","img/BMP.bmp","img/GIF.gif","img/ICO.ico"};
 
 		KeyedCollection opData = this.getContext().getKeyedCollection();
 		IndexedCollection accountTable = (IndexedCollection) opData.getElementAt("AccountInfoList");
@@ -45,8 +46,8 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 			accountTable.setValueAt(i+".Rate",rand.nextDouble());
 			accountTable.setValueAt(i+".Localtion",rand.nextBoolean()?"CHINA":"SPAIN");
 			accountTable.setValueAt(i+".Usable",rand.nextBoolean());
-			accountTable.setValueAt(i+".accountAttribution", rand.nextBoolean()?0:1);
-			accountTable.setValueAt(i+".ImageField", rand.nextBoolean()?"img/cry.jpg":"img/location.gif");
+			accountTable.setValueAt(i+".accountAttribution", rand.nextBoolean()?0:1);				
+			accountTable.setValueAt(i+".ImageField", img[rand.nextInt(5)]);			
 			
 		}
 		for (int i = 0; i < 4; i++) {

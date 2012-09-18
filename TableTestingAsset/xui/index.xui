@@ -17,8 +17,11 @@
       <widget name="Link" action="flowId=editableTableFlow;flowEvent=start" id="link01" text="editable">
         <gridData/>
       </widget>
-      <widget name="PlaceHolder">
-        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      <widget name="Link" action="flowId=PaginationFFFlow;flowEvent=" id="link03" text="FF">
+        <gridData/>
+      </widget>
+      <widget name="Link" action="flowId=PaginationTFFlow;flowEvent=" id="link04" text="TF">
+        <gridData/>
       </widget>
       <gridLayout numColumns="1"/>
     </container>

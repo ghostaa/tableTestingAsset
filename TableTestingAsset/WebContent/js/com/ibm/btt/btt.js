@@ -12000,7 +12000,7 @@ dojo.declare("com.ibm.btt.dijit.plugins.NonePageSizePaginator", [dijit._Widget,d
 		}
 		var padBorder = g._getPadBorder().h;
 		if(!this.plugin.gh){
-			this.plugin.gh = dojo.contentBox(g.domNode).h + 2 * padBorder;
+			this.plugin.gh = (g.domNode.clientHeight || dojo.style(g.domNode, 'height')) + 2 * padBorder;
 		}
 		if(resultSize){
 			changeSize = resultSize;

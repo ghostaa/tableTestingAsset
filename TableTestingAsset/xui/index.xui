@@ -1,33 +1,52 @@
-<?xml version="1.0" encoding="GB18030"?>
+<?xml version="1.0" encoding="Cp1252"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="131,148,361,295" dataBinding="{'ctxType':'proc','ctxFile':'sampleFlow','ctxName':'sampleFlowCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel">
-    <gridData heightHint="295" verticalAlignment="1" widthHint="361"/>
+    <gridData heightHint="369" verticalAlignment="1" widthHint="383"/>
     <container name="Form" id="form">
-      <gridData heightHint="265" verticalAlignment="1" widthHint="353" autoSize="false"/>
+      <gridData heightHint="361" verticalAlignment="1" widthHint="375" autoSize="false"/>
       <widget name="Label" id="label" text="%nls.bttsample/Welcome_To_Btt_Sample">
         <gridData/>
       </widget>
       <widget name="Link" action="flowId=sampleFlow;flowEvent=" id="link" text="%nls.bttsample/Click_Link_Run_Flow">
         <gridData/>
       </widget>
-      <widget name="Link" action="flowId=nonEditableTableFlow;flowEvent=" id="link02" text="nonEditable">
+      <widget name="Link" action="flowId=nonEditableTableFlow;flowEvent=start" id="link02" text="nonEditable">
         <gridData/>
       </widget>
       <widget name="Link" action="flowId=editableTableFlow;flowEvent=start" id="link01" text="editable">
         <gridData/>
       </widget>
-      <widget name="Link" action="flowId=PaginationFFFlow;flowEvent=" id="link03" text="FF">
-        <gridData/>
-      </widget>
-      <widget name="Link" action="flowId=PaginationTFFlow;flowEvent=" id="link04" text="TF">
-        <gridData/>
-      </widget>
+      <container name="Group" id="group" text="PaginationIndex">
+        <gridData heightHint="214" verticalAlignment="1" widthHint="80"/>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <widget name="Link" action="flowId=PaginationTFFlow;flowEvent=start" id="link03" text="TFtable">
+          <gridData/>
+        </widget>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <widget name="Link" action="flowId=PaginationTTFlow;flowEvent=start" id="link04" text="TTtable">
+          <gridData/>
+        </widget>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <widget name="Link" action="flowId=PaginationFFFlow;flowEvent=start" id="link05" text="FFtable">
+          <gridData/>
+        </widget>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <widget name="Link" action="flowId=PaginationFTFlow;flowEvent=" id="link06" text="FTtable">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
       <gridLayout numColumns="1"/>
     </container>
-    <widget name="PlaceHolder">
-      <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
-    </widget>
     <gridLayout numColumns="1"/>
   </container>
   <rules/>

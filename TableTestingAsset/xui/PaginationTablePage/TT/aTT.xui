@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationTTFlow','ctxName':'PaginationTTCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="434" verticalAlignment="1" widthHint="617"/>
+    <container name="Form" defaultAction="flowEvent=" id="form">
+      <gridData heightHint="426" verticalAlignment="1" widthHint="609"/>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="64"/>
+        <widget name="Label" id="label" text=" TTtable">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
+      <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'','directPagination':'true','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'','directInputMapping':'directInputMapping'}" dataNameForList="AccountInfoList" isPageable="true" id="tableTT">
+        <gridData/>
+        <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+      </widget>
+      <container name="Panel" id="panel02">
+        <gridData heightHint="283" verticalAlignment="1" widthHint="285"/>
+        <container name="Group" id="group" text="Test in group">
+          <gridData heightHint="106" verticalAlignment="1" widthHint="218"/>
+          <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'TTtable in group'">
+            <gridData/>
+          </widget>
+          <widget name="Link" action="flowEvent=group popup" id="link02" text="Link to 'TTtable in popup group'">
+            <gridData/>
+          </widget>
+          <container name="Panel" id="panel04">
+            <gridData heightHint="28" verticalAlignment="1" widthHint="50"/>
+            <widget name="PlaceHolder">
+              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+            </widget>
+            <widget name="PlaceHolder">
+              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+            </widget>
+            <gridLayout numColumns="2"/>
+          </container>
+          <gridLayout numColumns="1"/>
+        </container>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <container name="Group" id="group01" text="Test in Tabbedpane">
+          <gridData heightHint="106" verticalAlignment="1" widthHint="255"/>
+          <widget name="Link" action="flowEvent=LinkToPane" id="link01" text="Link to 'TTtable in TabbedPane'">
+            <gridData/>
+          </widget>
+          <widget name="Link" action="flowEvent=pane popup" id="link04" text="Link to 'TTtable in popup TabbedPane'">
+            <gridData/>
+          </widget>
+          <container name="Panel" id="panel05">
+            <gridData heightHint="28" verticalAlignment="1" widthHint="28"/>
+            <widget name="PlaceHolder">
+              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+            </widget>
+            <gridLayout numColumns="1"/>
+          </container>
+          <gridLayout numColumns="1"/>
+        </container>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <container name="Panel" id="panel03">
+          <gridData heightHint="59" verticalAlignment="1" widthHint="202"/>
+          <container name="Group" id="group02" text="Test in manipulate table">
+            <gridData heightHint="51" verticalAlignment="1" widthHint="194"/>
+            <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate TFtable'">
+              <gridData/>
+            </widget>
+            <gridLayout numColumns="1"/>
+          </container>
+          <gridLayout numColumns="1"/>
+        </container>
+        <widget name="PlaceHolder">
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAG_PaginationTablePageTFTFInTabbedPane_tableTF2>
+
+	<operation id="PAG_PaginationTablePage$TF$TFInTabbedPane_tableTF2" context="pagOpCtx" implClass="com.ibm.btt.cs.ajax.DefaultPaginationOp">
+		<refFormat refId="directInputMapping" name="directInputMapping"/>
+		<refFormat refId="normalOutputMapping" name="normalOutputMapping"/>
+	</operation>
+
+	<context id="pagOpCtx" type="op">
+		<refKColl refId="pagOpData"/>
+	</context>
+
+	<kColl id="pagOpData">
+		<kColl id="tableProperties">
+			<field id="tableId" value="tableTF2"/>
+			<field id="dataName"/>
+			<field id="dataNameForList" value="AccountInfoList"/>
+			<field id="rowsPerPage" value="10"/>
+			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
+			<field id="directPagination" value="true"/>
+			<!-- this four fields corresponds to four columns on table -->
+			<field id="tableColumnIDs" value="AccountName,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Usable"/>
+		</kColl>
+		<kColl id="pageRequest">
+			<!-- candidate value should be "initial", "next", "prev", "page" -->
+			<field id="pageEvent"/>
+			<field id="pageNumber"/>
+			<field id="sortData"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+		</kColl>
+		<kColl id="pageReply">
+			<field id="totalRowNumber"/>
+			<field id="enableNext"/>
+			<field id="enablePrevious"/>
+			<field id="errMsg"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+			<!-- the technical operation will set data into iColl, filtering through the tableColumnIDs -->
+			<iColl id="items">
+				<field id="dummy"/>
+			</iColl>
+		</kColl>
+	</kColl>
+
+	<fmtDef id="directInputMapping">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.TFInTabbedPane_tableTF2_totalRowNumber" to="paginationData.totalRowNumber"/>
+			<map from="paginationData.TFInTabbedPane_tableTF2_rowsPerPage" to="paginationData.rowsPerPage"/>
+			<map from="paginationData.TFInTabbedPane_tableTF2_pageNumber" to="paginationData.pageNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="normalOutputMapping">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.rowsPerPage" to="paginationData.TFInTabbedPane_tableTF2_rowsPerPage"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF2_pageNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF2_totalRowNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PAG_PaginationTablePageTFTFInTabbedPane_tableTF2>

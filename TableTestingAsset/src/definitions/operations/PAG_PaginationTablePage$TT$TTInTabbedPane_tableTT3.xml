@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAG_PaginationTablePageTTTTInTabbedPane_tableTT3>
+
+	<operation id="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT3" context="pagOpCtx" implClass="com.ibm.btt.cs.ajax.DefaultPaginationOp">
+		<refFormat refId="directInputMapping" name="directInputMapping"/>
+		<refFormat refId="initialInputMapping" name="initialInputMapping"/>
+		<refFormat refId="normalOutputMapping" name="normalOutputMapping"/>
+	</operation>
+
+	<context id="pagOpCtx" type="op">
+		<refKColl refId="pagOpData"/>
+	</context>
+
+	<kColl id="pagOpData">
+		<kColl id="tableProperties">
+			<field id="tableId" value="tableTT3"/>
+			<field id="dataName"/>
+			<field id="dataNameForList" value="AccountInfoList"/>
+			<field id="rowsPerPage" value="10"/>
+			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
+			<field id="directPagination" value="true"/>
+			<!-- this four fields corresponds to four columns on table -->
+			<field id="tableColumnIDs" value="AccountName,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Usable"/>
+		</kColl>
+		<kColl id="pageRequest">
+			<!-- candidate value should be "initial", "next", "prev", "page" -->
+			<field id="pageEvent"/>
+			<field id="pageNumber"/>
+			<field id="sortData"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+		</kColl>
+		<kColl id="pageReply">
+			<field id="totalRowNumber"/>
+			<field id="enableNext"/>
+			<field id="enablePrevious"/>
+			<field id="errMsg"/>
+			<!-- for extension on project-level, product do not handle -->
+			<field id="customData"/>
+			<!-- the technical operation will set data into iColl, filtering through the tableColumnIDs -->
+			<iColl id="items">
+				<field id="dummy"/>
+			</iColl>
+		</kColl>
+	</kColl>
+
+	<fmtDef id="directInputMapping">
+		<mapperConverterExpression>
+			<map from="paginationData.TTInTabbedPane_tableTT3_totalRowNumber" to="paginationData.totalRowNumber"/>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="initialInputMapping">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map fromExpression="10" to="paginationData.rowsPerPage"/>
+			<map fromExpression="1" to="paginationData.pageNumber"/>
+			<map fromExpression="100" to="paginationData.totalRowNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="normalOutputMapping">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.rowsPerPage" to="paginationData.TTInTabbedPane_tableTT3_rowsPerPage"/>
+			<map from="paginationData.pageNumber" to="paginationData.TTInTabbedPane_tableTT3_pageNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TTInTabbedPane_tableTT3_totalRowNumber"/>
+			<map from="paginationData.enablePrevious" to="paginationData.TTInTabbedPane_tableTT3_enablePrevious"/>
+			<map from="paginationData.enableNext" to="paginationData.TTInTabbedPane_tableTT3_enableNext"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PAG_PaginationTablePageTTTTInTabbedPane_tableTT3>

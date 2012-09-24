@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="Cp1252"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationTFFlow','ctxName':'PaginationTFCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="177" verticalAlignment="1" widthHint="385"/>
+    <container name="Form" id="form">
+      <gridData heightHint="169" verticalAlignment="1" widthHint="377"/>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="31" verticalAlignment="1" widthHint="181"/>
+        <widget name="Link" action="flowEvent=returnToTFtable" id="link" text="TFtable">
+          <gridData/>
+        </widget>
+        <widget name="Label" id="label" text="-&gt; TFtable in group">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <container name="Group" id="group" text="Group">
+        <gridData heightHint="128" verticalAlignment="1" widthHint="369"/>
+        <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'true','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'','directInputMapping':'directInputMapping'}" dataNameForList="AccountInfoList" isPageable="true" id="tableTF">
+          <gridData verticalAlignment="1"/>
+          <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+            <tableColumnAlignment>16384</tableColumnAlignment>
+          </column>
+          <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+            <tableColumnAlignment>16384</tableColumnAlignment>
+          </column>
+          <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+            <tableColumnAlignment>16384</tableColumnAlignment>
+          </column>
+          <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+            <tableColumnAlignment>16384</tableColumnAlignment>
+          </column>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

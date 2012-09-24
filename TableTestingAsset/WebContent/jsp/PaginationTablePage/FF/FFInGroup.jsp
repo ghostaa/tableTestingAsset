@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by Administrator, on Mon Sep 24 09:58:30 CST 2012 -->
+<!-- Generated from FFInGroup.xui by Administrator, on Mon Sep 24 11:42:47 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,69 +61,40 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-  <table id="index_null">
+  <table id="FFInGroup_panel">
     <tr>
       <td valign="top">
-        <bttdojo:form id="index_form" errorPage="index.jsp">
-          <table style="width:375px;height:361px;" id="index_form">
+        <bttdojo:form id="FFInGroup_form" errorPage="PaginationTablePage/FF/FFInGroup.jsp">
+          <table id="FFInGroup_form">
             <tr>
-              <td>
-                <bttdojo:label id="index_label" text="%nls.bttsample/Welcome_To_Btt_Sample"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link" text="%nls.bttsample/Click_Link_Run_Flow" flowId="sampleFlow"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow" flowEvent="start"/>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow" flowEvent="start"/>
+              <td valign="top">
+                  <table id="FFInGroup_panel01">
+                    <tr>
+                      <td>
+                        <bttdojo:a id="FFInGroup_link" text="FFtable" flowEvent="returnToTFtable"/>
+                      </td>
+                      <td>
+                        <bttdojo:label id="FFInGroup_label" text="-> FFtable in group"/>
+                      </td>
+                    </tr>
+                  </table>
               </td>
             </tr>
             <tr>
               <td valign="top">
-                <bttdojo:group id="index_group" text="PaginationIndex">
-                  <table id="index_group">
+                <bttdojo:group id="FFInGroup_group" text="Group">
+                  <table id="FFInGroup_group">
                     <tr>
                       <td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <bttdojo:a id="index_link03" text="TFtable" flowId="PaginationTFFlow" flowEvent="start"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <bttdojo:a id="index_link04" text="TTtable" flowId="PaginationTTFlow" flowEvent="start"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <bttdojo:a id="index_link05" text="FFtable" flowId="PaginationFFFlow" flowEvent="start"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <bttdojo:a id="index_link06" text="FTtable" flowId="PaginationFTFlow"/>
+                        <bttdojo:table id="FFInGroup_tableFF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInGroup_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
+                          <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
+                          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
+                          <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
+                          <bttdojo:column align="left" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate"/>
+                          <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
+                          <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                          <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
+                        </bttdojo:table>
                       </td>
                     </tr>
                   </table>

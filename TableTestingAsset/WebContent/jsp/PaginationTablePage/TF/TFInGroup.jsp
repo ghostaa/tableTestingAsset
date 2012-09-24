@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from TF.xui by ghost, on Tue Sep 18 15:56:59 CST 2012 -->
+<!-- Generated from TFInGroup.xui by Administrator, on Fri Sep 21 14:10:02 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,14 +61,45 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-  <table id="TF_panel">
+  <table id="TFInGroup_panel">
     <tr>
-      <td>
-        <bttdojo:table id="TF_tableTF" dataName="AccountInfoRecord" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TF_tableTF" directPagination="true" paginationWhenLoading="false" rowsPerPage="10">
-          <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
-          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
-          <bttdojo:column align="left" dataName="AccountType" width="80" text="%nls.testtable/AccountType"/>
-        </bttdojo:table>
+      <td valign="top">
+        <bttdojo:form id="TFInGroup_form" errorPage="PaginationTablePage/TF/TFInGroup.jsp">
+          <table id="TFInGroup_form">
+            <tr>
+              <td valign="top">
+                  <table id="TFInGroup_panel01">
+                    <tr>
+                      <td>
+                        <bttdojo:a id="TFInGroup_link" text="TFtable" flowEvent="returnToTFtable"/>
+                      </td>
+                      <td>
+                        <bttdojo:label id="TFInGroup_label" text="-> TFtable in group"/>
+                      </td>
+                    </tr>
+                  </table>
+              </td>
+            </tr>
+            <tr>
+              <td valign="top">
+                <bttdojo:group id="TFInGroup_group" text="Group">
+                  <table id="TFInGroup_group">
+                    <tr>
+                      <td valign="top">
+                        <bttdojo:table id="TFInGroup_tableTF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TF$TFInGroup_tableTF" directPagination="true" paginationWhenLoading="false" rowsPerPage="10">
+                          <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
+                          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
+                          <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
+                          <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
+                        </bttdojo:table>
+                      </td>
+                    </tr>
+                  </table>
+                </bttdojo:group>
+              </td>
+            </tr>
+          </table>
+        </bttdojo:form>
       </td>
     </tr>
   </table>

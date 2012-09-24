@@ -9,19 +9,47 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState typeIdInfo="OK" id="OK" type="final"/>
-
-		<htmlState type="page" typeIdInfo="PaginationTablePage/TF.jsp" id="PaginationTablePage/FF">
+		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
 			<transitions>
-				<htmlTransition id="PaginationTablePage/FF.event0" targetState="OK"/>
+				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/TF/TF"/>
+			</transitions>
+		</operationState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TF/TF.jsp" id="PaginationTablePage/TF/TF">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TF/TF.LinkToPane" targetState="PaginationTablePage/TF/TFInTabbedPane"/>
+				<htmlTransition id="PaginationTablePage/TF/TF.LinkToGroup" targetState="PaginationTablePage/TF/TFInGroup"/>
+				<htmlTransition id="PaginationTablePage/TF/TF.ok" targetState="OK"/>
+				<htmlTransition id="PaginationTablePage/TF/TF.group popup" targetState="PaginationTablePage/TF/TFInPopupGroup"/>
+				<htmlTransition id="PaginationTablePage/TF/TF.pane popup" targetState="TFInTabbedPopupPane"/>
 			</transitions>
 		</htmlState>
 
-		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TF/TFInGroup.jsp" id="PaginationTablePage/TF/TFInGroup">
 			<transitions>
-				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt" targetState="PaginationTablePage/FF"/>
+				<htmlTransition id="PaginationTablePage/TF/TFInGroup.returnToTFtable" targetState="PaginationTablePage/TF/TF"/>
 			</transitions>
-		</operationState>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TF/TFInTabbedPane.jsp" id="PaginationTablePage/TF/TFInTabbedPane">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TF/TFInTabbedPane.returnToTFTable" targetState="PaginationTablePage/TF/TF"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/TF/TFInGroup.jsp" id="PaginationTablePage/TF/TFInPopupGroup">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TF/TFInPopupGroup.returnToTFtable" targetState="PaginationTablePage/TF/TF"/>
+			</transitions>
+		</popupPageState>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/TF/TFInTabbedPane.jsp" id="TFInTabbedPopupPane">
+			<transitions>
+				<htmlTransition id="TFInTabbedPopupPane.returnToTFTable" targetState="PaginationTablePage/TF/TF"/>
+			</transitions>
+		</popupPageState>
 	</htmlProcessor>
 
 	<context id="PaginationTFCtx" type="op">
@@ -37,6 +65,41 @@
 			<data id="TF_tableTF_pageNumber" refType="Long"/>
 			<field id="TF_tableTF_pageEvent"/>
 			<data id="TF_tableTF_rowsPerPage" refType="Integer"/>
+			<data id="TFInGroup_tableTF_enableNext" refType="Boolean"/>
+			<data id="TFInGroup_tableTF_enablePrevious" refType="Boolean"/>
+			<data id="TFInGroup_tableTF_totalRowNumber" refType="Integer"/>
+			<data id="TFInGroup_tableTF_errMsg" refType="String"/>
+			<data id="TFInGroup_tableTF_pageNumber" refType="Long"/>
+			<field id="TFInGroup_tableTF_pageEvent"/>
+			<data id="TFInGroup_tableTF_rowsPerPage" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF_enableNext" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF_enablePrevious" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF_totalRowNumber" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF_errMsg" refType="String"/>
+			<data id="TFInTabbedPane_tableTF_pageNumber" refType="Long"/>
+			<field id="TFInTabbedPane_tableTF_pageEvent"/>
+			<data id="TFInTabbedPane_tableTF_rowsPerPage" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF1_enableNext" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF1_enablePrevious" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF1_totalRowNumber" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF1_errMsg" refType="String"/>
+			<data id="TFInTabbedPane_tableTF1_pageNumber" refType="Long"/>
+			<field id="TFInTabbedPane_tableTF1_pageEvent"/>
+			<data id="TFInTabbedPane_tableTF1_rowsPerPage" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF2_enableNext" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF2_enablePrevious" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF2_totalRowNumber" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF2_errMsg" refType="String"/>
+			<data id="TFInTabbedPane_tableTF2_pageNumber" refType="Long"/>
+			<field id="TFInTabbedPane_tableTF2_pageEvent"/>
+			<data id="TFInTabbedPane_tableTF2_rowsPerPage" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF3_enableNext" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF3_enablePrevious" refType="Boolean"/>
+			<data id="TFInTabbedPane_tableTF3_totalRowNumber" refType="Integer"/>
+			<data id="TFInTabbedPane_tableTF3_errMsg" refType="String"/>
+			<data id="TFInTabbedPane_tableTF3_pageNumber" refType="Long"/>
+			<field id="TFInTabbedPane_tableTF3_pageEvent"/>
+			<data id="TFInTabbedPane_tableTF3_rowsPerPage" refType="Integer"/>
 		</kColl>
 		<refData refId="AccountInfoList"/>
 		<refData refId="AccountInfoRecord"/>
@@ -48,6 +111,34 @@
 			<map from="paginationData.totalRowNumber" to="paginationData.TF_tableTF_totalRowNumber"/>
 			<map from="paginationData.errMsg" to="paginationData.TF_tableTF_errMsg"/>
 			<map from="paginationData.pageNumber" to="paginationData.TF_tableTF_pageNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt01">
+		<mapperConverterExpression>
+			<map from="paginationData.totalRowNumber" to="paginationData.TF_tableTF_totalRowNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TF_tableTF_pageNumber"/>
+			<map from="paginationData.rowsPerPage" to="paginationData.TF_tableTF_rowsPerPage"/>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInGroup_tableTF_totalRowNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF_totalRowNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF1_totalRowNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF2_totalRowNumber"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF3_totalRowNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInGroup_tableTF_pageNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF_pageNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF1_pageNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF2_pageNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF3_pageNumber"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="CreatePaginationDataOp-1.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.TFInGroup_tableTF_totalRowNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TFInGroup_tableTF_pageNumber"/>
+			<map from="paginationData.rowsPerPage" to="paginationData.TFInGroup_tableTF_rowsPerPage"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

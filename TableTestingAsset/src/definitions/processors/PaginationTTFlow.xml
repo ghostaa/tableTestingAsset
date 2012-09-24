@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaginationTTFlow>
+
+
+	<htmlProcessor context="PaginationTTCtx" id="PaginationTTFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TT/aTT.jsp" id="PaginationTablePage/TT/TT">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TT/TT.LinkToGroup" targetState="PaginationTablePage/TT/TTInGroup"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.group popup" targetState="PaginationTablePage/TT/TTInGroup-1"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.LinkToPane" targetState="TTInTabbedPane"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.pane popup" targetState="TTInTabbedPanePopup"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.manipulatetable" targetState="OK"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TT/TTInGroup.jsp" id="PaginationTablePage/TT/TTInGroup">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TT/TTInGroup.returnToTFtable" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/TT/TTInTabbedPane.jsp" id="TTInTabbedPane">
+			<transitions>
+				<htmlTransition id="TTInTabbedPane.returnToTFTable" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/TT/TTInGroup.jsp" id="PaginationTablePage/TT/TTInGroup-1">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/TT/TTInGroup-1.returnToTFtable" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</popupPageState>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/TT/TTInTabbedPane.jsp" id="TTInTabbedPanePopup">
+			<transitions>
+				<htmlTransition id="TTInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</popupPageState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+	</htmlProcessor>
+
+	<context id="PaginationTTCtx" type="op">
+		<refKColl refId="PaginationTTRecord"/>
+	</context>
+
+	<kColl id="PaginationTTRecord">
+		<kColl id="paginationData">
+			<data id="aTT_tableTT_enableNext" refType="Boolean"/>
+			<data id="aTT_tableTT_enablePrevious" refType="Boolean"/>
+			<data id="aTT_tableTT_totalRowNumber" value="100" refType="Integer"/>
+			<data id="aTT_tableTT_errMsg" refType="String"/>
+			<data id="aTT_tableTT_pageNumber" refType="Long"/>
+			<field id="aTT_tableTT_pageEvent"/>
+			<data id="aTT_tableTT_rowsPerPage" refType="Integer"/>
+			<data id="TTInGroup_tableTT_enableNext" refType="Boolean"/>
+			<data id="TTInGroup_tableTT_enablePrevious" refType="Boolean"/>
+			<data id="TTInGroup_tableTT_totalRowNumber" value="100" refType="Integer"/>
+			<data id="TTInGroup_tableTT_errMsg" refType="String"/>
+			<data id="TTInGroup_tableTT_pageNumber" refType="Long"/>
+			<field id="TTInGroup_tableTT_pageEvent"/>
+			<data id="TTInGroup_tableTT_rowsPerPage" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT_enableNext" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT_enablePrevious" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT_totalRowNumber" value="100" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT_errMsg" refType="String"/>
+			<data id="TTInTabbedPane_tableTT_pageNumber" refType="Long"/>
+			<field id="TTInTabbedPane_tableTT_pageEvent"/>
+			<data id="TTInTabbedPane_tableTT_rowsPerPage" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT1_enableNext" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT1_enablePrevious" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT1_totalRowNumber" value="100" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT1_errMsg" refType="String"/>
+			<data id="TTInTabbedPane_tableTT1_pageNumber" refType="Long"/>
+			<field id="TTInTabbedPane_tableTT1_pageEvent"/>
+			<data id="TTInTabbedPane_tableTT1_rowsPerPage" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT2_enableNext" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT2_enablePrevious" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT2_totalRowNumber" value="100" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT2_errMsg" refType="String"/>
+			<data id="TTInTabbedPane_tableTT2_pageNumber" refType="Long"/>
+			<field id="TTInTabbedPane_tableTT2_pageEvent"/>
+			<data id="TTInTabbedPane_tableTT2_rowsPerPage" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT3_enableNext" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT3_enablePrevious" refType="Boolean"/>
+			<data id="TTInTabbedPane_tableTT3_totalRowNumber" value="100" refType="Integer"/>
+			<data id="TTInTabbedPane_tableTT3_errMsg" refType="String"/>
+			<data id="TTInTabbedPane_tableTT3_pageNumber" refType="Long"/>
+			<field id="TTInTabbedPane_tableTT3_pageEvent"/>
+			<data id="TTInTabbedPane_tableTT3_rowsPerPage" refType="Integer"/>
+		</kColl>
+		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoRecord"/>
+	</kColl>
+
+	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="paginationData.totalRowNumber" to="paginationData.TT_tableTT_totalRowNumber"/>
+			<map from="paginationData.pageNumber" to="paginationData.TT_tableTT_pageNumber"/>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PaginationTTFlow>

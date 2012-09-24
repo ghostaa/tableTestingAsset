@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PaginationFTFlow>
+
+
+	<htmlProcessor context="PaginationFTCtx" id="PaginationFTFlow">
+		<htmlState id="initial" type="initial">
+			<transitions>
+				<htmlTransition id="initial.start" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FT.jsp" id="PaginationTablePage/FT/FT">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/FT/FT.ok" targetState="OK"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.LinkToGroup" targetState="PaginationTablePage/FT/FTInGroup"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.group popup" targetState="FTInGroup"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.LinkToPane" targetState="FTInTabbedPane"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.pane popup" targetState="FTInTabbedPanePopup"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="PaginationTablePage/FT/FTInGroup">
+			<transitions>
+				<htmlTransition id="PaginationTablePage/FT/FTInGroup.returnToFTtable" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="FTInGroup">
+			<transitions>
+				<htmlTransition id="FTInGroup.returnToTFTable" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</popupPageState>
+
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FTInTabbedPane.jsp" id="FTInTabbedPane">
+			<transitions>
+				<htmlTransition id="FTInTabbedPane.returnToTFTable" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</htmlState>
+
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/FT/FTInTabbedPane.jsp" id="FTInTabbedPanePopup">
+			<transitions>
+				<htmlTransition id="FTInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</popupPageState>
+	</htmlProcessor>
+
+	<context id="PaginationFTCtx" type="op">
+		<refKColl refId="PaginationFTRecord"/>
+	</context>
+
+	<kColl id="PaginationFTRecord">
+		<kColl id="paginationData">
+			<data id="FT_tableFT_enableNext" refType="Boolean"/>
+			<data id="FT_tableFT_enablePrevious" refType="Boolean"/>
+			<data id="FT_tableFT_totalRowNumber" refType="Integer"/>
+			<data id="FT_tableFT_errMsg" refType="String"/>
+			<data id="FT_tableFT_pageNumber" refType="Long"/>
+			<field id="FT_tableFT_pageEvent"/>
+			<data id="FT_tableFT_rowsPerPage" refType="Integer"/>
+			<data id="FTInGroup_tableFT_enableNext" refType="Boolean"/>
+			<data id="FTInGroup_tableFT_enablePrevious" refType="Boolean"/>
+			<data id="FTInGroup_tableFT_totalRowNumber" refType="Integer"/>
+			<data id="FTInGroup_tableFT_errMsg" refType="String"/>
+			<data id="FTInGroup_tableFT_pageNumber" refType="Long"/>
+			<field id="FTInGroup_tableFT_pageEvent"/>
+			<data id="FTInGroup_tableFT_rowsPerPage" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT_enableNext" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT_enablePrevious" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT_totalRowNumber" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT_errMsg" refType="String"/>
+			<data id="FTInTabbedPane_tableFT_pageNumber" refType="Long"/>
+			<field id="FTInTabbedPane_tableFT_pageEvent"/>
+			<data id="FTInTabbedPane_tableFT_rowsPerPage" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT1_enableNext" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT1_enablePrevious" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT1_totalRowNumber" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT1_errMsg" refType="String"/>
+			<data id="FTInTabbedPane_tableFT1_pageNumber" refType="Long"/>
+			<field id="FTInTabbedPane_tableFT1_pageEvent"/>
+			<data id="FTInTabbedPane_tableFT1_rowsPerPage" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT2_enableNext" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT2_enablePrevious" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT2_totalRowNumber" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT2_errMsg" refType="String"/>
+			<data id="FTInTabbedPane_tableFT2_pageNumber" refType="Long"/>
+			<field id="FTInTabbedPane_tableFT2_pageEvent"/>
+			<data id="FTInTabbedPane_tableFT2_rowsPerPage" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT3_enableNext" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT3_enablePrevious" refType="Boolean"/>
+			<data id="FTInTabbedPane_tableFT3_totalRowNumber" refType="Integer"/>
+			<data id="FTInTabbedPane_tableFT3_errMsg" refType="String"/>
+			<data id="FTInTabbedPane_tableFT3_pageNumber" refType="Long"/>
+			<field id="FTInTabbedPane_tableFT3_pageEvent"/>
+			<data id="FTInTabbedPane_tableFT3_rowsPerPage" refType="Integer"/>
+		</kColl>
+		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoRecord"/>
+	</kColl>
+
+	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.enableNext" to="paginationData.FF_tableFF_enableNext"/>
+			<map from="paginationData.enablePrevious" to="paginationData.FF_tableFF_enablePrevious"/>
+			<map from="paginationData.totalRowNumber" to="paginationData.FF_tableFF_totalRowNumber"/>
+			<map from="paginationData.errMsg" to="paginationData.FF_tableFF_errMsg"/>
+			<map from="paginationData.pageNumber" to="paginationData.FF_tableFF_pageNumber"/>
+			<map fromExpression="&apos;next&apos;" to="paginationData.FF_tableFF_pageEvent"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+</PaginationFTFlow>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="GB18030"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'nonEditableTableFlow','ctxName':'nonEditableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTableIsManipulated.js'}">
-  <styles/>
+  <styles>
+    <css file="../../WebContent/css/dijit/main.css"/>
+  </styles>
   <container name="Panel" id="panel">
-    <gridData heightHint="345" verticalAlignment="1" widthHint="597"/>
+    <gridData heightHint="368" verticalAlignment="1" widthHint="597"/>
     <container name="Form" id="form">
-      <gridData heightHint="337" verticalAlignment="1" widthHint="589"/>
+      <gridData heightHint="360" verticalAlignment="1" widthHint="589"/>
       <container name="Panel" id="panel03">
-        <gridData heightHint="32" verticalAlignment="1" widthHint="329"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="329"/>
         <widget name="Link" action="flowEvent=returnToNonEditableTable" id="link_copy" text=" non-editable table">
           <gridData/>
         </widget>
@@ -22,7 +24,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" dataNameForList="nonEditableAccountList" sortEnabled="true" dataName="selectAccountList" selectionRequired="true" id="table" columnReordering="true" selectionMode="multiple">
+      <widget name="Table" dataNameForList="nonEditableAccountList" sortEnabled="true" dataName="selectAccountList" hint="the old hint" selectionRequired="true" id="table" columnReordering="true" selectionMode="multiple">
         <gridData/>
         <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -47,7 +49,7 @@
         </column>
       </widget>
       <container name="Panel" id="visibility">
-        <gridData heightHint="33" verticalAlignment="1" widthHint="222"/>
+        <gridData heightHint="30" verticalAlignment="1" widthHint="222"/>
         <widget name="Button" id="visible" buttonType="button" text="visible">
           <gridData/>
         </widget>
@@ -60,7 +62,7 @@
         <gridLayout numColumns="3"/>
       </container>
       <container name="Panel" id="disabled">
-        <gridData heightHint="33" verticalAlignment="1" widthHint="214"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="214"/>
         <widget name="Label" id="label02" text="disabled:">
           <gridData/>
         </widget>
@@ -73,7 +75,7 @@
         <gridLayout numColumns="3"/>
       </container>
       <container name="Panel" id="readonly">
-        <gridData heightHint="33" verticalAlignment="1" widthHint="221"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="221"/>
         <widget name="Label" id="readonlylabel" text="read only:">
           <gridData/>
         </widget>
@@ -86,7 +88,7 @@
         <gridLayout numColumns="3"/>
       </container>
       <container name="Panel" id="panel02">
-        <gridData heightHint="33" horizontalAlignment="4" verticalAlignment="4" widthHint="279"/>
+        <gridData heightHint="30" horizontalAlignment="4" verticalAlignment="4" widthHint="262"/>
         <widget name="Button" action="flowEvent=to group popup page" id="To group popup page" text="To group popup page">
           <gridData/>
         </widget>
@@ -95,8 +97,18 @@
         </widget>
         <gridLayout numColumns="2"/>
       </container>
-      <widget name="PlaceHolder">
-        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      <container name="Panel" id="panel04">
+        <gridData heightHint="30" verticalAlignment="1" widthHint="334"/>
+        <widget name="Button" id="Change the hint from text" buttonType="button" text="Change the hint from text">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="Change the hint from NLS" buttonType="button" text="Change the hint from NLS">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <widget name="Button" id="Change the CSS" buttonType="button" text="Change the CSS">
+        <gridData/>
       </widget>
       <gridLayout numColumns="1"/>
     </container>
@@ -176,6 +188,39 @@
       <trueActions>
         <action type="widgetProperty" widget="table" property="readOnly">
           <value type="constant" constant="false"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule07">
+      <events>
+        <event widget="Change the hint from text" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="hint">
+          <value type="constant" constant="'new hint from text'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule08">
+      <events>
+        <event widget="Change the hint from NLS" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="hint">
+          <value type="constant" constant="'%nls.testtable/nonEditTableHint'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule09">
+      <events>
+        <event widget="Change the CSS" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="styleClass">
+          <value type="constant" constant="'customStyle'"/>
         </action>
       </trueActions>
       <falseActions/>

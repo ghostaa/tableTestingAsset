@@ -46,6 +46,27 @@ window.NonEditableTableIsManipulated = [{ /* ecaRule */
   onTrue: function(e) {
     this.setPW('NonEditableTableIsManipulated_table', 'readOnly', false);
   }
+}, 
+{ /* ecaRule07 */
+  name: 'ecaRule07',
+  evts: [{ id: 'NonEditableTableIsManipulated_Change the hint from text', e: 'onClick'}],
+  onTrue: function(e) {
+    this.setPW('NonEditableTableIsManipulated_table', 'hint', 'new hint from text');
+  }
+}, 
+{ /* ecaRule08 */
+  name: 'ecaRule08',
+  evts: [{ id: 'NonEditableTableIsManipulated_Change the hint from NLS', e: 'onClick'}],
+  onTrue: function(e) {
+    this.setPW('NonEditableTableIsManipulated_table', 'hint', '%nls.testtable/nonEditTableHint');
+  }
+}, 
+{ /* ecaRule09 */
+  name: 'ecaRule09',
+  evts: [{ id: 'NonEditableTableIsManipulated_Change the CSS', e: 'onClick'}],
+  onTrue: function(e) {
+    this.setPW('NonEditableTableIsManipulated_table', 'class', 'customStyle');
+  }
 }];
 dojo.addOnLoad(function(){
   engine.registerRules(NonEditableTableIsManipulated);

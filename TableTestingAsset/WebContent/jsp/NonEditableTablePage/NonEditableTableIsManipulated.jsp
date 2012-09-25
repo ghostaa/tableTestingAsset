@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by Administrator, on Mon Sep 24 14:25:16 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -23,6 +23,7 @@
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
 @import "js/com/ibm/btt/dijit/templates/Group.css";
 @import "js/com/ibm/btt/dijit/templates/Label.css";
+@import "css/dijit/main.css";
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -94,7 +95,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="NonEditableTableIsManipulated_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" sortEnabled="true" columnReordering="true" selectionMode="multiple" selectionRequired="true" isPageable="false">
+                <bttdojo:table id="NonEditableTableIsManipulated_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" sortEnabled="true" columnReordering="true" hint="the old hint" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
                   <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
@@ -171,7 +172,22 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
+              <td valign="top">
+                  <table id="NonEditableTableIsManipulated_panel04">
+                    <tr>
+                      <td>
+                        <bttdojo:button id="NonEditableTableIsManipulated_Change the hint from text" type="button" text="Change the hint from text"/>
+                      </td>
+                      <td>
+                        <bttdojo:button id="NonEditableTableIsManipulated_Change the hint from NLS" type="button" text="Change the hint from NLS"/>
+                      </td>
+                    </tr>
+                  </table>
+              </td>
+            </tr>
+            <tr>
               <td>
+                <bttdojo:button id="NonEditableTableIsManipulated_Change the CSS" type="button" text="Change the CSS"/>
               </td>
             </tr>
           </table>

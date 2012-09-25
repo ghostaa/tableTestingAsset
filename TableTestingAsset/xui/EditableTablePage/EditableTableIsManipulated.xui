@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="GB18030"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,517,417" dataBinding="{'ctxType':'proc','ctxFile':'editableTableFlow','ctxName':'editableTableCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'EditableTableIsManipulated.js'}">
-  <styles/>
+  <styles>
+    <css file="../../WebContent/css/dijit/main.css"/>
+  </styles>
   <container name="Panel" id="panel">
-    <gridData heightHint="336" verticalAlignment="1" widthHint="1017"/>
+    <gridData heightHint="368" verticalAlignment="1" widthHint="1017"/>
     <container name="Form" id="form">
-      <gridData heightHint="328" verticalAlignment="1" widthHint="1009"/>
+      <gridData heightHint="360" verticalAlignment="1" widthHint="1009"/>
       <container name="Panel" id="panel03">
         <gridData heightHint="31" verticalAlignment="1" widthHint="273"/>
         <widget name="Link" action="flowEvent=returnToEditable" id="link_copy" text="editable table">
@@ -51,7 +53,7 @@
         <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column uncheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+        <column unCheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
@@ -62,7 +64,7 @@
         </column>
       </widget>
       <container name="Panel" id="visibility">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="222"/>
+        <gridData heightHint="30" verticalAlignment="1" widthHint="222"/>
         <widget name="Button" id="visible" buttonType="button" text="visible">
           <gridData/>
         </widget>
@@ -101,7 +103,7 @@
         <gridLayout numColumns="3"/>
       </container>
       <container name="Panel" id="panel02">
-        <gridData heightHint="31" horizontalAlignment="4" verticalAlignment="4" widthHint="463"/>
+        <gridData heightHint="30" horizontalAlignment="4" verticalAlignment="4" widthHint="463"/>
         <widget name="Button" action="flowEvent=to group popup page" id="To group popup page" text="To group popup page">
           <gridData/>
         </widget>
@@ -116,8 +118,18 @@
         </widget>
         <gridLayout numColumns="4"/>
       </container>
-      <widget name="PlaceHolder">
-        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      <container name="Panel" id="panel04">
+        <gridData heightHint="30" verticalAlignment="1" widthHint="334"/>
+        <widget name="Button" id="Change the hint from text" buttonType="button" text="Change the hint from text">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="Change the hint from NLS" buttonType="button" text="Change the hint from NLS">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="2"/>
+      </container>
+      <widget name="Button" id="Change the CSS" buttonType="button" text="Change the CSS">
+        <gridData/>
       </widget>
       <gridLayout numColumns="1"/>
     </container>
@@ -206,6 +218,39 @@
         <event widget="table" event="onFocus"/>
       </events>
       <trueActions/>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule08">
+      <events>
+        <event widget="Change the hint from text" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="hint">
+          <value type="constant" constant="'new hint from text'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule09">
+      <events>
+        <event widget="Change the hint from NLS" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="hint">
+          <value type="constant" constant="'%nls.testtable/EditTableHint'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule10">
+      <events>
+        <event widget="Change the CSS" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="table" property="styleClass">
+          <value type="constant" constant="'customStyle'"/>
+        </action>
+      </trueActions>
       <falseActions/>
     </rule>
   </rules>

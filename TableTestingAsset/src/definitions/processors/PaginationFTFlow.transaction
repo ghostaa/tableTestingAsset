@@ -36,7 +36,7 @@
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7S0NtgX3EeKYzvikqhV7PQ" key="_7S0NtQX3EeKYzvikqhV7PQ" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7S0NuAX3EeKYzvikqhV7PQ" key="_7S0NtwX3EeKYzvikqhV7PQ" value="Override state mapping"/>
       </transitions>
-      <transitions xmi:type="transaction:Transition" xmi:id="_8kw9wAX3EeKYzvikqhV7PQ" tag="Transition" id="PaginationTablePage/FT/FTInGroup.returnToFTtable" target="_WkhXQAXrEeKYzvikqhV7PQ" source="_4GNu0AX3EeKYzvikqhV7PQ">
+      <transitions xmi:type="transaction:Transition" xmi:id="_8kw9wAX3EeKYzvikqhV7PQ" tag="Transition" id="FTInGroup.returnToFTtable" target="_WkhXQAXrEeKYzvikqhV7PQ" source="_4GNu0AX3EeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_8kw9wQX3EeKYzvikqhV7PQ" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_8kw9xAX3EeKYzvikqhV7PQ" name="Output Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_8kw9wwX3EeKYzvikqhV7PQ" name="Input Data Format" type="java.lang.String"/>
@@ -44,7 +44,7 @@
         <attributes xmi:type="transaction:Attribute" xmi:id="_8kw9xQX3EeKYzvikqhV7PQ" name="O2Input Mapping Behaviour" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_8kw9xgX3EeKYzvikqhV7PQ" key="_8kw9xQX3EeKYzvikqhV7PQ" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_8kw9yAX3EeKYzvikqhV7PQ" key="_8kw9xwX3EeKYzvikqhV7PQ" value="Override state mapping"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="__aQ3UAYPEeKlpNbTCnViZQ" key="_8kw9wQX3EeKYzvikqhV7PQ" value="PaginationTablePage/FT/FTInGroup.returnToFTtable"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="__aQ3UAYPEeKlpNbTCnViZQ" key="_8kw9wQX3EeKYzvikqhV7PQ" value="FTInGroup.returnToFTtable"/>
       </transitions>
       <transitions xmi:type="transaction:Transition" xmi:id="_B0DGEAX4EeKYzvikqhV7PQ" tag="Transition" id="PaginationTablePage/FT/FT.group popup" target="_9O78IAX3EeKYzvikqhV7PQ" source="_WkhXQAXrEeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_B0DGEQX4EeKYzvikqhV7PQ" name="id" required="true" type="java.lang.String"/>
@@ -56,13 +56,13 @@
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_B0DGFgX4EeKYzvikqhV7PQ" key="_B0DGFQX4EeKYzvikqhV7PQ" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_B0DGGAX4EeKYzvikqhV7PQ" key="_B0DGFwX4EeKYzvikqhV7PQ" value="Override state mapping"/>
       </transitions>
-      <transitions xmi:type="transaction:Transition" xmi:id="_CWwxkAX4EeKYzvikqhV7PQ" tag="Transition" id="FTInGroup.returnToTFTable" target="_WkhXQAXrEeKYzvikqhV7PQ" source="_9O78IAX3EeKYzvikqhV7PQ">
+      <transitions xmi:type="transaction:Transition" xmi:id="_CWwxkAX4EeKYzvikqhV7PQ" tag="Transition" id="FTInGroupPopup.returnToFTtable" target="_WkhXQAXrEeKYzvikqhV7PQ" source="_9O78IAX3EeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_CWwxkQX4EeKYzvikqhV7PQ" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_CWwxlAX4EeKYzvikqhV7PQ" name="Output Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_CWwxkwX4EeKYzvikqhV7PQ" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_CWwxlwX4EeKYzvikqhV7PQ" name="O1Output Mapping Behaviour" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_CWwxlQX4EeKYzvikqhV7PQ" name="O2Input Mapping Behaviour" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_CWwxkgX4EeKYzvikqhV7PQ" key="_CWwxkQX4EeKYzvikqhV7PQ" value="FTInGroup.returnToTFTable"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_CWwxkgX4EeKYzvikqhV7PQ" key="_CWwxkQX4EeKYzvikqhV7PQ" value="FTInGroupPopup.returnToFTtable"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_CWwxlgX4EeKYzvikqhV7PQ" key="_CWwxlQX4EeKYzvikqhV7PQ" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_CWwxmAX4EeKYzvikqhV7PQ" key="_CWwxlwX4EeKYzvikqhV7PQ" value="Override state mapping"/>
       </transitions>
@@ -138,23 +138,23 @@
         <events xmi:type="transaction:Event" xmi:id="_XcQQhAXrEeKYzvikqhV7PQ" name="manipulatetable" automatic="true"/>
         <events xmi:type="transaction:Event" xmi:id="_ZzplsAXrEeKYzvikqhV7PQ" name="ok"/>
       </children>
-      <children xmi:type="transaction:State" xmi:id="_4GNu0AX3EeKYzvikqhV7PQ" tag="PageState" id="PaginationTablePage/FT/FTInGroup" targetTransitions="_8kw9wAX3EeKYzvikqhV7PQ" sourceTransitions="_7S0NsAX3EeKYzvikqhV7PQ">
+      <children xmi:type="transaction:State" xmi:id="_4GNu0AX3EeKYzvikqhV7PQ" tag="PageState" id="FTInGroup" targetTransitions="_8kw9wAX3EeKYzvikqhV7PQ" sourceTransitions="_7S0NsAX3EeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_4GNu0wX3EeKYzvikqhV7PQ" name="Page" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_4GNu0QX3EeKYzvikqhV7PQ" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_4GNu1QX3EeKYzvikqhV7PQ" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_4GNu1gX3EeKYzvikqhV7PQ" name="Output Data Format" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4GNu0gX3EeKYzvikqhV7PQ" key="_4GNu0QX3EeKYzvikqhV7PQ" value="PaginationTablePage/FT/FTInGroup"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4GNu0gX3EeKYzvikqhV7PQ" key="_4GNu0QX3EeKYzvikqhV7PQ" value="FTInGroup"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_4GNu1AX3EeKYzvikqhV7PQ" key="_4GNu0wX3EeKYzvikqhV7PQ" value="PaginationTablePage/FT/FTInGroup.xui"/>
         <events xmi:type="transaction:Event" xmi:id="_mmQLIAYPEeKlpNbTCnViZQ" name="returnToFTtable" automatic="true"/>
       </children>
-      <children xmi:type="transaction:State" xmi:id="_9O78IAX3EeKYzvikqhV7PQ" tag="PopupPageState" id="FTInGroup" targetTransitions="_CWwxkAX4EeKYzvikqhV7PQ" sourceTransitions="_B0DGEAX4EeKYzvikqhV7PQ">
+      <children xmi:type="transaction:State" xmi:id="_9O78IAX3EeKYzvikqhV7PQ" tag="PopupPageState" id="FTInGroupPopup" targetTransitions="_CWwxkAX4EeKYzvikqhV7PQ" sourceTransitions="_B0DGEAX4EeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_9O78IQX3EeKYzvikqhV7PQ" name="Page" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_9O78IwX3EeKYzvikqhV7PQ" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_9O78JQX3EeKYzvikqhV7PQ" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_9O78JgX3EeKYzvikqhV7PQ" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9O78IgX3EeKYzvikqhV7PQ" key="_9O78IQX3EeKYzvikqhV7PQ" value="PaginationTablePage/FT/FTInGroup.xui"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9O78JAX3EeKYzvikqhV7PQ" key="_9O78IwX3EeKYzvikqhV7PQ" value="FTInGroup"/>
-        <events xmi:type="transaction:Event" xmi:id="_ooXrUAX4EeKYzvikqhV7PQ" name="returnToTFtable" automatic="true"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9O78JAX3EeKYzvikqhV7PQ" key="_9O78IwX3EeKYzvikqhV7PQ" value="FTInGroupPopup"/>
+        <events xmi:type="transaction:Event" xmi:id="_uBOSMAavEeKQTtzRJik_FQ" name="returnToFTtable" automatic="true"/>
       </children>
       <children xmi:type="transaction:State" xmi:id="_C_SxMAX4EeKYzvikqhV7PQ" tag="PageState" id="FTInTabbedPane" targetTransitions="_JV8xQAX4EeKYzvikqhV7PQ" sourceTransitions="_G8dxYAX4EeKYzvikqhV7PQ">
         <attributes xmi:type="transaction:Attribute" xmi:id="_C_SxMwX4EeKYzvikqhV7PQ" name="Page" required="true" type="java.lang.String"/>
@@ -814,7 +814,7 @@
       <styles xmi:type="notation:ArrowStyle" xmi:id="_CWwxnAX4EeKYzvikqhV7PQ" arrowTarget="SolidArrow"/>
       <styles xmi:type="notation:LineStyle" xmi:id="_CWwxnQX4EeKYzvikqhV7PQ"/>
       <styles xmi:type="notation:LineTypeStyle" xmi:id="_CWwxngX4EeKYzvikqhV7PQ"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CWwxnwX4EeKYzvikqhV7PQ" points="[-6, -19, 39, 143]$[-3, -167, 42, -5]"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CWwxnwX4EeKYzvikqhV7PQ" points="[-9, -19, 20, 143]$[-50, -114, -21, 48]$[-46, -125, -17, 37]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CWwxogX4EeKYzvikqhV7PQ" id="(0.10810810810810811,0.2923076923076923)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CWwxowX4EeKYzvikqhV7PQ" id="(0.7627118644067796,0.4307692307692308)"/>
     </edges>

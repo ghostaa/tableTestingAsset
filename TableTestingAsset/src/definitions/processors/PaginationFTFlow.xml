@@ -14,22 +14,22 @@
 		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FT.jsp" id="PaginationTablePage/FT/FT">
 			<transitions>
 				<htmlTransition id="PaginationTablePage/FT/FT.ok" targetState="OK"/>
-				<htmlTransition id="PaginationTablePage/FT/FT.LinkToGroup" targetState="PaginationTablePage/FT/FTInGroup"/>
-				<htmlTransition id="PaginationTablePage/FT/FT.group popup" targetState="FTInGroup"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.LinkToGroup" targetState="FTInGroup"/>
+				<htmlTransition id="PaginationTablePage/FT/FT.group popup" targetState="FTInGroupPopup"/>
 				<htmlTransition id="PaginationTablePage/FT/FT.LinkToPane" targetState="FTInTabbedPane"/>
 				<htmlTransition id="PaginationTablePage/FT/FT.pane popup" targetState="FTInTabbedPanePopup"/>
 			</transitions>
 		</htmlState>
 
-		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="PaginationTablePage/FT/FTInGroup">
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="FTInGroup">
 			<transitions>
-				<htmlTransition id="PaginationTablePage/FT/FTInGroup.returnToFTtable" targetState="PaginationTablePage/FT/FT"/>
+				<htmlTransition id="FTInGroup.returnToFTtable" targetState="PaginationTablePage/FT/FT"/>
 			</transitions>
 		</htmlState>
 
-		<popupPageState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="FTInGroup">
+		<popupPageState type="page" typeIdInfo="PaginationTablePage/FT/FTInGroup.jsp" id="FTInGroupPopup">
 			<transitions>
-				<htmlTransition id="FTInGroup.returnToTFTable" targetState="PaginationTablePage/FT/FT"/>
+				<htmlTransition id="FTInGroupPopup.returnToFTtable" targetState="PaginationTablePage/FT/FT"/>
 			</transitions>
 		</popupPageState>
 

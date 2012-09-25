@@ -1,0 +1,65 @@
+.submitButton{
+	color:red;
+	font-weight: bold;
+}
+.label{
+	font-family:"Times New Roman",Georgia,Serif;
+	color:blue;
+	font-weight: bold;
+	font-style:italic;
+}
+
+.customStyle{
+	text-align:right;
+	color:#FF0000;
+	font-family:"Times New Roman",Georgia,Serif;
+	background-color:#000ffe;
+	font-weight:bold;
+	font-size:20px;
+	font-style:italic
+}
+
+.sessionInfo{
+	color:white;
+	background-color:green;
+}
+
+.sessionInfo2{
+	color:white;
+	background-color:blue;
+}
+
+.sessionInfo3{
+	color:white;
+	background-color:#AA0022;
+}
+
+.sessionInfo4{
+	color:white;
+	background-color:#343434;
+}
+
+.sessionInfo5{
+	color:white;
+	background-color:#9932CC;
+}
+
+.sessionTitle{
+	font-weight: bold;
+}
+.cusFont {
+	font-size: 18px
+}
+
+.cusHidden{
+	overlow:hidden
+}
+.cusScroll{
+	overflow:scroll
+}
+.cusVisible{
+	overflow:visible
+}
+.cusAuto{
+	overflow:auto
+}

@@ -5,17 +5,17 @@
 	<htmlProcessor context="PaginationTTCtx" id="PaginationTTFlow">
 		<htmlState id="initial" type="initial">
 			<transitions>
-				<htmlTransition id="initial.start" targetState="PaginationTablePage/TT/TT"/>
+				<htmlTransition id="initial.start" targetState="InitPaginationDataOp"/>
 			</transitions>
 		</htmlState>
 
 		<htmlState type="page" typeIdInfo="PaginationTablePage/TT/aTT.jsp" id="PaginationTablePage/TT/TT">
 			<transitions>
-				<htmlTransition id="PaginationTablePage/TT/TT.LinkToGroup" targetState="PaginationTablePage/TT/TTInGroup"/>
-				<htmlTransition id="PaginationTablePage/TT/TT.group popup" targetState="PaginationTablePage/TT/TTInGroup-1"/>
 				<htmlTransition id="PaginationTablePage/TT/TT.LinkToPane" targetState="TTInTabbedPane"/>
 				<htmlTransition id="PaginationTablePage/TT/TT.pane popup" targetState="TTInTabbedPanePopup"/>
 				<htmlTransition id="PaginationTablePage/TT/TT.manipulatetable" targetState="OK"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.LinkToGroup" targetState="PaginationTablePage/TT/TTInGroup"/>
+				<htmlTransition id="PaginationTablePage/TT/TT.group popup" targetState="PaginationTablePage/TT/TTInGroup-1"/>
 			</transitions>
 		</htmlState>
 
@@ -44,6 +44,12 @@
 		</popupPageState>
 
 		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+
+		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
+			<transitions>
+				<htmlTransition id="InitPaginationDataOp.ok" targetState="PaginationTablePage/TT/TT"/>
+			</transitions>
+		</operationState>
 	</htmlProcessor>
 
 	<context id="PaginationTTCtx" type="op">
@@ -97,6 +103,9 @@
 		</kColl>
 		<refData refId="AccountInfoList"/>
 		<refData refId="AccountInfoRecord"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">

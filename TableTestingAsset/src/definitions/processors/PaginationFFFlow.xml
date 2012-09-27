@@ -16,6 +16,7 @@
 				<htmlTransition id="PaginationTablePage/FF/FF.groupPopup" targetState="FFInGroupPopup"/>
 				<htmlTransition id="PaginationTablePage/FF/FF.tabbedPane" targetState="FFInTabbedPane"/>
 				<htmlTransition id="PaginationTablePage/FF/FF.tabbedPanePopup" targetState="FFInTabbedPanePopup"/>
+				<htmlTransition id="PaginationTablePage/FF/FF.submit to group" inputMapFmt="PaginationTablePage/FF/FF.submit to group_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
 			</transitions>
 		</htmlState>
 
@@ -50,6 +51,12 @@
 				<htmlTransition id="FFInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePage/FF/FF"/>
 			</transitions>
 		</popupPageState>
+
+		<htmlState typeIdInfo="EidtSelectionResultInGroupFlow" id="EidtSelectionResultInGroupFlow" type="subFlow">
+			<transitions>
+				<htmlTransition id="EidtSelectionResultInGroupFlow.back" targetState="PaginationTablePage/FF/FF"/>
+			</transitions>
+		</htmlState>
 	</htmlProcessor>
 
 	<context id="PaginationFFCtx" type="op">
@@ -103,6 +110,10 @@
 		</kColl>
 		<refData refId="AccountInfoList"/>
 		<refData refId="AccountInfoRecord"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<refData refId="AccountInfoList" alias="AllAccountList"/>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
@@ -119,6 +130,10 @@
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInGroup_tableFF_totalRowNumber"/>
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF_totalRowNumber"/>
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF1_totalRowNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="AccountInfoRecord" to="AccountInfoRecord"/>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF2_totalRowNumber"/>
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF3_totalRowNumber"/>
 			<map from="paginationData.rowsPerPage" to="paginationData.FFInTabbedPane_tableFF3_rowsPerPage"/>
@@ -133,6 +148,15 @@
 			<map from="paginationData.pageNumber" to="paginationData.FFInTabbedPane_tableFF3_pageNumber"/>
 			<map from="paginationData.rowsPerPage" to="paginationData.FFInGroup_tableFF_rowsPerPage"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="PaginationTablePage/FF/FF.submit to group_InputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoRecord" to="AccountInfo"/>
+			<map from="selectAccountList" to="EditableAccountList" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

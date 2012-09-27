@@ -103,6 +103,9 @@
 		</kColl>
 		<refData refId="AccountInfoList"/>
 		<refData refId="AccountInfoRecord"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">

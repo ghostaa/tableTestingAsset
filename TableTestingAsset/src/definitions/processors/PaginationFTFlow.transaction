@@ -627,6 +627,28 @@
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_YFRv1AE_EeKMb93Cp2EOnA" key="_YFRv0gE_EeKMb93Cp2EOnA" value="both"/>
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_aQPLgAE_EeKMb93Cp2EOnA" key="_YFRv0QE_EeKMb93Cp2EOnA" value="AccountInfoRecord"/>
         </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_Dxde8AeuEeKIX_lTQyxf1Q" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde8QeuEeKIX_lTQyxf1Q" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde8geuEeKIX_lTQyxf1Q" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde8weuEeKIX_lTQyxf1Q" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Dxde9AeuEeKIX_lTQyxf1Q" key="_Dxde8geuEeKIX_lTQyxf1Q" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Dxde9QeuEeKIX_lTQyxf1Q" key="_Dxde8QeuEeKIX_lTQyxf1Q" value="AccountTypeForSelect"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_Dxde9geuEeKIX_lTQyxf1Q" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde9weuEeKIX_lTQyxf1Q" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde-AeuEeKIX_lTQyxf1Q" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde-QeuEeKIX_lTQyxf1Q" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Dxde-geuEeKIX_lTQyxf1Q" key="_Dxde-AeuEeKIX_lTQyxf1Q" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_Dxde-weuEeKIX_lTQyxf1Q" key="_Dxde9weuEeKIX_lTQyxf1Q" value="LocaltionForComboBox"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_Dxde_AeuEeKIX_lTQyxf1Q" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde_QeuEeKIX_lTQyxf1Q" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde_geuEeKIX_lTQyxf1Q" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_Dxde_weuEeKIX_lTQyxf1Q" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_DxdfAAeuEeKIX_lTQyxf1Q" key="_Dxde_geuEeKIX_lTQyxf1Q" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_DxdfAQeuEeKIX_lTQyxf1Q" key="_Dxde_QeuEeKIX_lTQyxf1Q" value="AccountInfoList"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_DxdfAgeuEeKIX_lTQyxf1Q" key="_Dxde_weuEeKIX_lTQyxf1Q" value="selectAccountList"/>
+        </elements>
       </dataElements>
     </data>
     <format xmi:type="transaction:FormatCategory" xmi:id="_4j2wdwE-EeKMb93Cp2EOnA">

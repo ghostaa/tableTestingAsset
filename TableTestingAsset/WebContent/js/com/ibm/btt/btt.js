@@ -439,7 +439,11 @@ dojo.declare("com.ibm.btt.dijit.Anchor",[dijit._Widget,dijit._Templated,com.ibm.
 				}
 			}
 		} else {
-			targetUrl = "javascript:void(0)";
+			if (this.action != "") {
+				targetUrl = this.action;
+			} else {
+				targetUrl = "javascript:void(0)";
+			}
 		}
 		this.domNode.href = targetUrl;
 	},
@@ -2111,6 +2115,37 @@ dojo.declare("com.ibm.btt.dijit.DateTextBox", [com.ibm.btt.dijit.RangeBoundTextB
 		} else {
 			return this.inherited(arguments);
 		}
+	},
+	
+	_handleOnChange: function(newValue, priorityChange){
+		if(this._lastValueReported == undefined && (priorityChange === null || !this._onChangeActive)){
+			this._resetValue = this._lastValueReported = newValue;
+		}
+		
+		this._pendingOnChange = this._pendingOnChange
+		|| (typeof newValue != typeof this._lastValueReported) || (this._lastValueReported != null && newValue == null) || (this._lastValueReported == null && newValue != null);
+
+		var compare = this.compare(newValue, this._lastValueReported) != 0;
+		if(newValue == null && null == this._lastValueReported){
+			compare = false;
+		}
+		this._pendingOnChange = this._pendingOnChange || compare;
+		
+		
+		if((this.intermediateChanges || priorityChange || priorityChange === undefined) && this._pendingOnChange){
+			this._lastValueReported = newValue;
+			this._pendingOnChange = false;
+			if(this._onChangeActive){
+				if(this._onChangeHandle){
+					clearTimeout(this._onChangeHandle);
+				}
+				this._onChangeHandle = setTimeout(dojo.hitch(this,
+					function(){
+						this._onChangeHandle = null;
+						this.onChange(newValue);
+					}), 0);
+			}
+		}
 	}
 });
 
@@ -3286,6 +3321,9 @@ dojo.declare("com.ibm.btt.dijit.Form", [ dijit.form.Form,
 						if(this.bttParams && this.bttParams != ""){
 							this.submit();
 						} else {
+							if(evt){
+								dojo.stopEvent(evt);
+							}
 							return false;
 						}
 					} 
@@ -8382,6 +8420,7 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 			delete this._disableCache.columnReordering;
 	 			//refresh table to make the columnReordering work
 	 			this._refresh(true);
+	 			
 	 		}
 	 		
 	 		// Show scrollbars
@@ -8401,7 +8440,7 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 		dojo.removeClass(this.domNode, "dijitDisabled");
 	 		
 	 	}
-	 	
+	 	this._refresh(true);
 	 	this.checkSelectionNum();
 	 	
 	 },
@@ -10636,6 +10675,14 @@ dojo.declare("com.ibm.btt.dijit.ContentPane", [dijit.layout.ContentPane,
 	
 	disabled : false,
 	
+	postCreate : function(){
+		this.inherited(arguments);
+		if (dojo.isIE && dojo.hasAttr(this.domNode, "disabled")) {
+			dojo.removeAttr(this.domNode, "disabled");
+		}
+	},
+	
+	
 	/**
 	 * 
 	 * hook set method for disabled attribute
@@ -11734,6 +11781,7 @@ dojo.declare("com.ibm.btt.dijit.plugins.Pagination", dojox.grid.enhanced._Plugin
 						}
 				}));
 				this.grid._refresh();
+				this.grid._refresh();
 				if (this.mode == "simple") {
 					this._setPageSize(data.totalRowNumber);
 				}
@@ -12816,7 +12864,7 @@ dojo.declare("com.ibm.btt.event.NavigationEngine", [ com.ibm.btt.event.Engine ],
 	},
 
 	createContentPane : function(){
-		return new com.ibm.btt.dijit.ContentPane({'style':'padding:0px;',refreshOnShow: false}, dojo.create("div", null, dojo.body(),"last"));
+		return new com.ibm.btt.dijit.ContentPane({'style':'padding:0px;overflow:auto;',refreshOnShow: false}, dojo.create("div", null, dojo.body(),"last"));
 	},
 	
 	/**

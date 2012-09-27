@@ -2,9 +2,9 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFFFlow','ctxName':'PaginationFFCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="434" verticalAlignment="1" widthHint="617"/>
+    <gridData heightHint="437" verticalAlignment="1" widthHint="937"/>
     <container name="Form" defaultAction="flowEvent=" id="form">
-      <gridData heightHint="426" verticalAlignment="1" widthHint="609"/>
+      <gridData heightHint="429" verticalAlignment="1" widthHint="929"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="31" verticalAlignment="1" widthHint="58"/>
         <widget name="Label" id="label" text="FFtable">
@@ -12,34 +12,46 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'false','initialInputMapping':'','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFF">
+      <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'false','initialInputMapping':'','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" selectionRequired="true" id="tableFF" selectionMode="multiple">
         <gridData/>
-        <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+        <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+        <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+        <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+        <column widget="TextBox" editable="true" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+        <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+        <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+        <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/tradeTimeForCombo.js" text="%nls.testtable/Rate">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column unCheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="" text="%nls.testtable/accountAttribution">
+          <tableColumnAlignment>16384</tableColumnAlignment>
+        </column>
+        <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="283" verticalAlignment="1" widthHint="283"/>
+        <gridData heightHint="286" verticalAlignment="1" widthHint="283"/>
         <container name="Group" id="group" text="Test in group">
-          <gridData heightHint="106" verticalAlignment="1" widthHint="216"/>
+          <gridData heightHint="109" verticalAlignment="1" widthHint="253"/>
           <widget name="Link" action="flowEvent=group" id="link" text="Link to 'FFtable in group'">
             <gridData/>
           </widget>
@@ -47,12 +59,12 @@
             <gridData/>
           </widget>
           <container name="Panel" id="panel04">
-            <gridData heightHint="28" verticalAlignment="1" widthHint="50"/>
-            <widget name="PlaceHolder">
-              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+            <gridData heightHint="31" verticalAlignment="1" widthHint="225"/>
+            <widget name="Button" action="flowEvent=submit to group" id="button01" text="Submit to group">
+              <gridData/>
             </widget>
-            <widget name="PlaceHolder">
-              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+            <widget name="Button" id="button" text="Submit to group popup">
+              <gridData/>
             </widget>
             <gridLayout numColumns="2"/>
           </container>

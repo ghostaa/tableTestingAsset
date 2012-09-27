@@ -28,6 +28,7 @@
 				<htmlTransition id="EditableTablePage/EditableTable.pane popup" targetState="PopupEditableTableInTabbedPane"/>
 				<htmlTransition id="EditableTablePage/EditableTable.submit to group popup page" inputMapFmt="EditableTablePage/EditableTable.submit to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
 				<htmlTransition id="EditableTablePage/EditableTable.submit to pane popup page" inputMapFmt="EditableTablePage/EditableTable.submit to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTable.selection and combo box" targetState="EditableTablePage/EditableTableSelectCombo"/>
 			</transitions>
 		</htmlState>
 
@@ -95,6 +96,16 @@
 		<htmlState typeIdInfo="EditSelectionResultInPanePopupFlow" id="EditSelectionResultInPanePopupFlow" type="subFlow">
 			<transitions>
 				<htmlTransition id="EditSelectionResultInPanePopupFlow.back" targetState="EditableTablePage/EditableTable"/>
+			</transitions>
+		</htmlState>
+
+		<htmlState type="page" typeIdInfo="EditableTablePage/EditableTableSelectCombo.jsp" id="EditableTablePage/EditableTableSelectCombo">
+			<transitions>
+				<htmlTransition id="EditableTablePage/EditableTableSelectCombo.returnToEditable" targetState="EditableTablePage/EditableTable"/>
+				<htmlTransition id="EditableTablePage/EditableTableSelectCombo.to pane page" inputMapFmt="EditableTablePage/EditableTableSelectCombo.to pane page_InputFmt" targetState="EditSelectionResultInPaneFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableSelectCombo.to group page" inputMapFmt="EditableTablePage/EditableTableSelectCombo.to group page_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableSelectCombo.to group popup page" inputMapFmt="EditableTablePage/EditableTableSelectCombo.to group popup page_InputFmt" targetState="EditSelectionResultInGroupPopupFlow"/>
+				<htmlTransition id="EditableTablePage/EditableTableSelectCombo.to pane popup page" inputMapFmt="EditableTablePage/EditableTableSelectCombo.to pane popup page_InputFmt" targetState="EditSelectionResultInPanePopupFlow"/>
 			</transitions>
 		</htmlState>
 	</htmlProcessor>
@@ -210,6 +221,30 @@
 	</fmtDef>
 
 	<fmtDef id="EditableTablePage/EditableTableIsManipulated.to pane page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableSelectCombo.to pane popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableSelectCombo.to group page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableSelectCombo.to group popup page_InputFmt">
+		<mapperConverterExpression>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="EditableTablePage/EditableTableSelectCombo.to pane page_InputFmt">
 		<mapperConverterExpression>
 			<map from="selectAccountList" to="selectAccountList" append="false"/>
 		</mapperConverterExpression>

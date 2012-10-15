@@ -11,10 +11,10 @@
       <widget name="Link" action="flowId=sampleFlow;flowEvent=" id="link" text="%nls.bttsample/Click_Link_Run_Flow">
         <gridData/>
       </widget>
-      <widget name="Link" action="flowId=nonEditableTableFlow;flowEvent=start" id="link02" text="nonEditable">
+      <widget name="Link" action="flowId=nonEditableTableFlow;flowEvent=" id="link02" text="nonEditable">
         <gridData/>
       </widget>
-      <widget name="Link" action="flowId=editableTableFlow;flowEvent=start" id="link01" text="editable">
+      <widget name="Link" action="flowId=editableTableFlow;flowEvent=" id="link01" text="editable">
         <gridData/>
       </widget>
       <container name="Group" id="group" text="PaginationIndex">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="Cp1252"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFTFlow','ctxName':'PaginationFTCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFTFlow','ctxName':'PaginationFTCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'FT.js'}">
   <styles/>
   <container name="Panel" id="panel">
     <gridData heightHint="434" verticalAlignment="1" widthHint="937"/>
@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT">
+      <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'800000','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" selectionRequired="true" id="tableFT" selectionMode="multiple">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -113,6 +113,40 @@
     </container>
     <gridLayout numColumns="1"/>
   </container>
-  <rules/>
+  <rules>
+    <rule name="ecaRule" description="">
+      <events>
+        <event widget="tableFT" event="onSelected"/>
+      </events>
+      <condition>
+        <value type="expression">
+          <leftValue type="widgetProperty" widget="tableFT" property="readOnly"/>
+          <operator name="and"/>
+          <rightValue type="constant" constant="true"/>
+        </value>
+      </condition>
+      <trueActions>
+        <action type="widgetFunction" widget="tableFT">
+          <function name="getLengthOfSelectedRows"/>
+        </action>
+      </trueActions>
+      <falseActions>
+        <action type="widgetFunction" widget="link">
+          <function name="focus"/>
+        </action>
+      </falseActions>
+    </rule>
+    <rule name="ecaRule01">
+      <events>
+        <event widget="tableFT" event="onFocus"/>
+      </events>
+      <trueActions>
+        <action type="widgetFunction" widget="link02">
+          <function name="focus"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+  </rules>
   <groups/>
 </XUI>

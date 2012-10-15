@@ -49,7 +49,7 @@
           <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="" text="%nls.testtable/accountAttribution">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Localtion">
+          <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
         </widget>

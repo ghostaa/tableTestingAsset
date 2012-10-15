@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="Cp1252"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFFFlow','ctxName':'PaginationFFCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'NonEditableTable.js'}">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFFFlow','ctxName':'PaginationFFCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'FF.js'}">
   <styles/>
   <container name="Panel" id="panel">
     <gridData heightHint="437" verticalAlignment="1" widthHint="937"/>
@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'false','initialInputMapping':'','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" selectionRequired="true" id="tableFF" selectionMode="multiple">
+      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" isActionable="true" id="tableFF">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -49,7 +49,7 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="286" verticalAlignment="1" widthHint="283"/>
+        <gridData heightHint="286" verticalAlignment="1" widthHint="304"/>
         <container name="Group" id="group" text="Test in group">
           <gridData heightHint="109" verticalAlignment="1" widthHint="253"/>
           <widget name="Link" action="flowEvent=group" id="link" text="Link to 'FFtable in group'">
@@ -94,13 +94,16 @@
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Panel" id="panel03">
-          <gridData heightHint="59" verticalAlignment="1" widthHint="202"/>
+          <gridData heightHint="59" verticalAlignment="1" widthHint="274"/>
           <container name="Group" id="group02" text="Test in manipulate table">
-            <gridData heightHint="51" verticalAlignment="1" widthHint="194"/>
+            <gridData heightHint="51" verticalAlignment="1" widthHint="266"/>
             <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate TFtable'">
               <gridData/>
             </widget>
-            <gridLayout numColumns="1"/>
+            <widget name="Button" id="button02" text="Button">
+              <gridData/>
+            </widget>
+            <gridLayout numColumns="2"/>
           </container>
           <gridLayout numColumns="1"/>
         </container>
@@ -113,6 +116,21 @@
     </container>
     <gridLayout numColumns="1"/>
   </container>
-  <rules/>
+  <rules>
+    <rule name="ecaRule">
+      <events>
+        <event widget="tableFF" event="onMouseUp"/>
+      </events>
+      <condition>
+        <value type="widgetProperty" widget="tableFF" property="readOnly"/>
+      </condition>
+      <trueActions>
+        <action type="widgetProperty" widget="tableFF" property="disabled">
+          <value type="constant" constant="'%nls.testtable/AccountTypeValue'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+  </rules>
   <groups/>
 </XUI>

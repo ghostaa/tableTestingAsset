@@ -17,7 +17,7 @@
       </container>
       <container name="Group" id="group" text="Group">
         <gridData heightHint="128" verticalAlignment="1" widthHint="929"/>
-        <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'true','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'','directInputMapping':'directInputMapping'}" dataNameForList="AccountInfoList" isPageable="true" id="tableTF">
+        <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'500000','directPagination':'true','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'','paginationWhenLoading':'false','initialInputMapping':'','previousInputMapping':'','directInputMapping':'directInputMapping'}" dataNameForList="AccountInfoList" isPageable="true" id="tableTF">
           <gridData verticalAlignment="1"/>
           <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
             <tableColumnAlignment>16384</tableColumnAlignment>

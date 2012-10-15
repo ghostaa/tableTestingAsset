@@ -19,7 +19,7 @@
         <gridData verticalAlignment="1"/>
         <container name="ContentPane" title="NormalTab" id="ContentPane01">
           <gridData heightHint="108" horizontalAlignment="4" verticalAlignment="4" widthHint="929"/>
-          <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT">
+          <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'700000','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT">
             <gridData/>
             <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
               <tableColumnAlignment>16384</tableColumnAlignment>
@@ -60,7 +60,7 @@
         <container name="ContentPane" title="Group" id="ContentPane02">
           <container name="Group" id="group" text="Group">
             <gridData heightHint="128" verticalAlignment="1" widthHint="949"/>
-            <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT1">
+            <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'8000000','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT1">
               <gridData/>
               <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
                 <tableColumnAlignment>16384</tableColumnAlignment>
@@ -108,7 +108,7 @@
               <widget name="Label" id="label01" text="tab01">
                 <gridData/>
               </widget>
-              <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT2">
+              <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'800000','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT2">
                 <gridData/>
                 <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
                   <tableColumnAlignment>16384</tableColumnAlignment>
@@ -150,7 +150,7 @@
               <widget name="Label" id="label02" text="tab02">
                 <gridData/>
               </widget>
-              <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT3">
+              <widget name="Table" paginationParams="{'operationNameForPagination':'CreatePaginationDataOp','timeout':'8080000','directPagination':'false','rowsPerPage':'10','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','paginationWhenLoading':'true','initialInputMapping':'initialInputMapping','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT3">
                 <gridData/>
                 <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
                   <tableColumnAlignment>16384</tableColumnAlignment>

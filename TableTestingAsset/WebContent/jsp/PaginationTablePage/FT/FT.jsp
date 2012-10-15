@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FT.xui by Administrator, on Mon Sep 24 09:57:26 CST 2012 -->
+<!-- Generated from FT.xui by Administrator, on Thu Oct 11 17:00:17 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,11 +61,12 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
+<script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/PaginationTablePage/FT/FT.js"> </script>
   <table id="FT_panel">
     <tr>
       <td valign="top">
         <bttdojo:form id="FT_form" errorPage="PaginationTablePage/FT/FT.jsp">
-          <table id="FT_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="FT_panel01">
@@ -79,14 +80,18 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="FT_tableFT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FT$FT_tableFT" directPagination="false" paginationWhenLoading="true" rowsPerPage="10">
-                  <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
-                  <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
-                  <bttdojo:column align="left" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount"/>
-                  <bttdojo:column align="left" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate"/>
-                  <bttdojo:column align="left" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance"/>
-                  <bttdojo:column align="left" dataName="Rate" width="80" text="%nls.testtable/Rate"/>
-                  <bttdojo:column align="left" dataName="Usable" width="80" text="%nls.testtable/Usable"/>
+                <bttdojo:table id="FT_tableFT" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" selectionMode="multiple" selectionRequired="true" operationName="PAG_PaginationTablePage$FT$FT_tableFT" directPagination="false" paginationWhenLoading="true" rowsPerPage="10" timeout="800000">
+                  <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
+                  <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
+                  <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
+                  <bttdojo:column numberType="bigDecimal" widget="TextBox" align="left" dataName="MaximumAmount" width="80" type="Number" decimalPlaces="3" text="%nls.testtable/MaximumAmount"/>
+                  <bttdojo:column pattern="yyyy-MM-dd" widget="TextBox" align="left" dataName="AccountOpeningDate" width="100" type="Date" text="%nls.testtable/AccountOpeningDate"/>
+                  <bttdojo:column currency="EUR" numberType="bigDecimal" widget="TextBox" align="left" dataName="AccountBlance" width="80" type="Currency" text="%nls.testtable/AccountBlance"/>
+                  <bttdojo:column dataNameForList="LocaltionForComboBox" widget="ComboBox" align="left" dataName="Localtion" width="80" labelField="labelField" text="%nls.testtable/Localtion"/>
+                  <bttdojo:column widget="ComboBox" align="left" dataName="Rate" width="80" text="%nls.testtable/Rate" storeURL="listFiles/tradeTimeForCombo.js"/>
+                  <bttdojo:column unCheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
+                  <bttdojo:column widget="LabelFromList" align="left" dataName="accountAttribution" width="80" text="%nls.testtable/accountAttribution"/>
+                  <bttdojo:column widget="Image" align="left" dataName="ImageField" width="80" text="%nls.testtable/Image"/>
                 </bttdojo:table>
               </td>
             </tr>
@@ -96,7 +101,7 @@ dojo.addOnLoad(function(){
                     <tr>
                       <td valign="top">
                         <bttdojo:group id="FT_group" text="Test in group">
-                          <table id="FT_group">
+                          <table>
                             <tr>
                               <td>
                                 <bttdojo:a id="FT_link" text="Link to \'FTtable in group\'" flowEvent="LinkToGroup"/>
@@ -128,7 +133,7 @@ dojo.addOnLoad(function(){
                     <tr>
                       <td valign="top">
                         <bttdojo:group id="FT_group01" text="Test in Tabbedpane">
-                          <table id="FT_group01">
+                          <table>
                             <tr>
                               <td>
                                 <bttdojo:a id="FT_link01" text="Link to \'FTtable in TabbedPane\'" flowEvent="LinkToPane"/>
@@ -161,7 +166,7 @@ dojo.addOnLoad(function(){
                             <tr>
                               <td valign="top">
                                 <bttdojo:group id="FT_group02" text="Test in manipulate table">
-                                  <table id="FT_group02">
+                                  <table>
                                     <tr>
                                       <td>
                                         <bttdojo:a id="FT_link03" text="Link to \'manipulate TFtable\'" flowEvent="manipulatetable"/>

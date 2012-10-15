@@ -20,7 +20,7 @@
 			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
 			<field id="directPagination" value="false"/>
 			<!-- this four fields corresponds to four columns on table -->
-			<field id="tableColumnIDs" value="AccountName,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Usable"/>
+			<field id="tableColumnIDs" value="AccountName,TradeTime,AccountType,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Localtion,Usable,accountAttribution,ImageField"/>
 		</kColl>
 		<kColl id="pageRequest">
 			<!-- candidate value should be "initial", "next", "prev", "page" -->
@@ -48,8 +48,11 @@
 		<mapperConverterExpression>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 			<map from="paginationData.FFInGroup_tableFF_totalRowNumber" to="paginationData.totalRowNumber"/>
+			<map from="paginationData.FFInGroup_tableFF_pageNumber" to="currentPageNum"/>
 			<map from="paginationData.FFInGroup_tableFF_rowsPerPage" to="paginationData.rowsPerPage"/>
 			<map fromExpression="paginationData$FFInGroup_tableFF_pageNumber + 1" to="paginationData.pageNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
@@ -59,6 +62,9 @@
 			<map from="paginationData.FFInGroup_tableFF_rowsPerPage" to="paginationData.rowsPerPage"/>
 			<map from="paginationData.FFInGroup_tableFF_totalRowNumber" to="paginationData.totalRowNumber"/>
 			<map fromExpression="paginationData$FFInGroup_tableFF_pageNumber - 1" to="paginationData.pageNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="currentPageNum" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
@@ -70,6 +76,8 @@
 			<map from="paginationData.totalRowNumber" to="paginationData.FFInGroup_tableFF_totalRowNumber"/>
 			<map from="paginationData.enablePrevious" to="paginationData.FFInGroup_tableFF_enablePrevious"/>
 			<map from="paginationData.enableNext" to="paginationData.FFInGroup_tableFF_enableNext"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

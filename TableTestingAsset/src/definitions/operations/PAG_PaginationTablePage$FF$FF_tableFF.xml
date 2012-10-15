@@ -14,13 +14,13 @@
 	<kColl id="pagOpData">
 		<kColl id="tableProperties">
 			<field id="tableId" value="tableFF"/>
-			<field id="dataName"/>
+			<field id="dataName" value="selectAccountList"/>
 			<field id="dataNameForList" value="AccountInfoList"/>
 			<field id="rowsPerPage" value="10"/>
 			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
 			<field id="directPagination" value="false"/>
 			<!-- this four fields corresponds to four columns on table -->
-			<field id="tableColumnIDs" value="AccountName,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Usable"/>
+			<field id="tableColumnIDs" value="AccountName,TradeTime,AccountType,MaximumAmount,AccountOpeningDate,AccountBlance,Localtion,Rate,Usable,accountAttribution,ImageField"/>
 		</kColl>
 		<kColl id="pageRequest">
 			<!-- candidate value should be "initial", "next", "prev", "page" -->
@@ -47,18 +47,24 @@
 	<fmtDef id="nextInputMapping">
 		<mapperConverterExpression>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
-			<map from="paginationData.FF_tableFF_totalRowNumber" to="paginationData.totalRowNumber"/>
-			<map from="paginationData.FF_tableFF_rowsPerPage" to="paginationData.rowsPerPage"/>
+			<map fromExpression="100" to="paginationData.totalRowNumber"/>
+			<map fromExpression="10" to="paginationData.rowsPerPage"/>
 			<map fromExpression="paginationData$FF_tableFF_pageNumber + 1" to="paginationData.pageNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="paginationData.FF_tableFF_pageNumber" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
 	<fmtDef id="previousInputMapping">
 		<mapperConverterExpression>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
-			<map from="paginationData.FF_tableFF_totalRowNumber" to="paginationData.totalRowNumber"/>
-			<map from="paginationData.FF_tableFF_rowsPerPage" to="paginationData.rowsPerPage"/>
+			<map fromExpression="100" to="paginationData.totalRowNumber"/>
+			<map fromExpression="10" to="paginationData.rowsPerPage"/>
 			<map fromExpression="paginationData$FF_tableFF_pageNumber - 1" to="paginationData.pageNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="paginationData.FF_tableFF_pageNumber" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
@@ -70,6 +76,9 @@
 			<map from="paginationData.enableNext" to="paginationData.FF_tableFF_enableNext"/>
 			<map from="paginationData.enablePrevious" to="paginationData.FF_tableFF_enablePrevious"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="paginationData.pageNumber" to="currentPageNum"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

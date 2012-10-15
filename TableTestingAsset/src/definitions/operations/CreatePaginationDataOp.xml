@@ -18,6 +18,14 @@
 			<data id="rowsPerPage" value="10" refType="Integer"/>
 		</kColl>
 		<refData refId="AccountInfoList"/>
+		<refData refId="AccountInfoRecord"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
+		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<data id="currentPageNum" value="1" refType="Integer"/>
+		<iColl id="AllAccountList">
+			<refData refId="AccountInfoRecord"/>
+		</iColl>
 	</kColl>
 
 </CreatePaginationDataOp>

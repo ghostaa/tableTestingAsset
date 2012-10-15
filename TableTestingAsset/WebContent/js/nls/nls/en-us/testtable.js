@@ -8,7 +8,10 @@
 "AccountOpeningDate":"AccountOpeningDate",
 "AccountBlance":"AccountBlance",
 "TradeTimeValue":"TradeTimeValue",
+"EditTableHint":"new hint from NLS",
 "MaximumAmount":"MaximumAmount",
+"nonEditTableHint":"new hint from NLS",
 "AccountType":"AccountType",
 "AccountTypeValue":"AccountTypeValue",
-"Rate":"Rate"})
+"Rate":"Rate",
+"LocaltionTypeValue":"LocaltionTypeValue"})

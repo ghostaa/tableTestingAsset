@@ -8,7 +8,10 @@
 "AccountOpeningDate":"\u5f00\u6237\u65e5\u671f",
 "AccountBlance":"\u8d26\u6237\u4f59\u989d",
 "TradeTimeValue":"\u4ea4\u6613\u6b21\u6570\u503c",
+"EditTableHint":"\u4ece NLS\u83b7\u5f97hint",
 "MaximumAmount":"\u6700\u5927\u6570\u91cf",
+"nonEditTableHint":"\u4eceNLS\u83b7\u5f97hint",
 "AccountType":"\u7528\u6237\u7c7b\u578b",
 "AccountTypeValue":"\u8d26\u6237\u7c7b\u578b\u503c",
-"Rate":"\u5229\u7387"})
+"Rate":"\u5229\u7387",
+"LocaltionTypeValue":"\u4f4d\u7f6e\u7684\u503c"})

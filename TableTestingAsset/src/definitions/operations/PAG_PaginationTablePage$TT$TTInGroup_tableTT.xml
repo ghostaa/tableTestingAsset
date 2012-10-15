@@ -20,7 +20,7 @@
 			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
 			<field id="directPagination" value="true"/>
 			<!-- this four fields corresponds to four columns on table -->
-			<field id="tableColumnIDs" value="AccountName,TradeTime,Rate,TradeTime"/>
+			<field id="tableColumnIDs" value="AccountName,AccountType,TradeTime,MaximumAmount,AccountOpeningDate,Rate,Localtion,Usable,accountAttribution,ImageField"/>
 		</kColl>
 		<kColl id="pageRequest">
 			<!-- candidate value should be "initial", "next", "prev", "page" -->
@@ -49,6 +49,9 @@
 			<map from="paginationData.TTInGroup_tableTT_totalRowNumber" to="paginationData.totalRowNumber"/>
 			<map from="paginationData.TTInGroup_tableTT_pageNumber" to="paginationData.pageNumber"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="currentPageNum" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
@@ -59,16 +62,22 @@
 			<map from="paginationData.enableNext" to="paginationData.TTInGroup_tableTT_enableNext"/>
 			<map from="paginationData.enablePrevious" to="paginationData.TTInGroup_tableTT_enablePrevious"/>
 			<map from="paginationData.pageNumber" to="paginationData.TTInGroup_tableTT_pageNumber"/>
+			<map from="paginationData.pageNumber" to="currentPageNum"/>
 			<map from="paginationData.rowsPerPage" to="paginationData.TTInGroup_tableTT_rowsPerPage"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
 	<fmtDef id="initialInputMapping">
 		<mapperConverterExpression>
 			<map fromExpression="1" to="paginationData.pageNumber"/>
+			<map fromExpression="1" to="currentPageNum"/>
 			<map fromExpression="10" to="paginationData.rowsPerPage"/>
 			<map fromExpression="100" to="paginationData.totalRowNumber"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

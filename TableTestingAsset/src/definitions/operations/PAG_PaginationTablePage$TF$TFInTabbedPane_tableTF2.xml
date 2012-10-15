@@ -19,7 +19,7 @@
 			<field id="operationNameForPagination" value="CreatePaginationDataOp"/>
 			<field id="directPagination" value="true"/>
 			<!-- this four fields corresponds to four columns on table -->
-			<field id="tableColumnIDs" value="AccountName,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Usable"/>
+			<field id="tableColumnIDs" value="AccountName,AccountType,TradeTime,MaximumAmount,AccountOpeningDate,AccountBlance,Rate,Localtion,Usable,accountAttribution,ImageField"/>
 		</kColl>
 		<kColl id="pageRequest">
 			<!-- candidate value should be "initial", "next", "prev", "page" -->
@@ -49,6 +49,9 @@
 			<map from="paginationData.TFInTabbedPane_tableTF2_totalRowNumber" to="paginationData.totalRowNumber"/>
 			<map from="paginationData.TFInTabbedPane_tableTF2_rowsPerPage" to="paginationData.rowsPerPage"/>
 			<map from="paginationData.TFInTabbedPane_tableTF2_pageNumber" to="paginationData.pageNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="currentPageNum" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 
@@ -57,7 +60,10 @@
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 			<map from="paginationData.rowsPerPage" to="paginationData.TFInTabbedPane_tableTF2_rowsPerPage"/>
 			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF2_pageNumber"/>
+			<map from="paginationData.pageNumber" to="currentPageNum"/>
 			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF2_totalRowNumber"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

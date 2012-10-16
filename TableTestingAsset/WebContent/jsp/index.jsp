@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by Administrator, on Mon Sep 24 09:58:30 CST 2012 -->
+<!-- Generated from index.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="index_form" errorPage="index.jsp">
-          <table style="width:375px;height:361px;" id="index_form">
+          <table style="width:375px;height:361px;">
             <tr>
               <td>
                 <bttdojo:label id="index_label" text="%nls.bttsample/Welcome_To_Btt_Sample"/>
@@ -78,18 +78,18 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow" flowEvent="start"/>
+                <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow"/>
               </td>
             </tr>
             <tr>
               <td>
-                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow" flowEvent="start"/>
+                <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow"/>
               </td>
             </tr>
             <tr>
               <td valign="top">
                 <bttdojo:group id="index_group" text="PaginationIndex">
-                  <table id="index_group">
+                  <table>
                     <tr>
                       <td>
                       </td>

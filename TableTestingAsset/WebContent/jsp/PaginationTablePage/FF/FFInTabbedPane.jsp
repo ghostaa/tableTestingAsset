@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FFInTabbedPane.xui by Administrator, on Thu Sep 27 10:04:20 CST 2012 -->
+<!-- Generated from FFInTabbedPane.xui by ghost, on Tue Oct 16 16:56:49 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="FFInTabbedPane_form" errorPage="PaginationTablePage/FF/FFInTabbedPane.jsp">
-          <table id="FFInTabbedPane_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="FFInTabbedPane_panel01">
@@ -84,7 +84,7 @@ dojo.addOnLoad(function(){
               <td valign="top">
                 <bttdojo:tabbedpane id="FFInTabbedPane_tabbedPane">
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane01" title="NormalTab">
-                    <table id="FFInTabbedPane_ContentPane01" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td>
                           <bttdojo:table id="FFInTabbedPane_tableFF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
@@ -105,11 +105,11 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane02" title="Group">
-                    <table id="FFInTabbedPane_ContentPane02" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:group id="FFInTabbedPane_group" text="Group">
-                            <table id="FFInTabbedPane_group">
+                            <table>
                               <tr>
                                 <td>
                                   <bttdojo:table id="FFInTabbedPane_tableFF1" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF1" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
@@ -134,12 +134,12 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane03" title="Pane">
-                    <table id="FFInTabbedPane_ContentPane03" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:tabbedpane id="FFInTabbedPane_tabbedPane01">
                             <bttdojo:contentpane id="FFInTabbedPane_ContentPane04" title="Tab01">
-                              <table id="FFInTabbedPane_ContentPane04" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="FFInTabbedPane_label01" text="tab01"/>
@@ -165,7 +165,7 @@ dojo.addOnLoad(function(){
                               </table>
                             </bttdojo:contentpane>
                             <bttdojo:contentpane id="FFInTabbedPane_ContentPane05" title="Tab02">
-                              <table id="FFInTabbedPane_ContentPane05" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="FFInTabbedPane_label02" text="tab02"/>

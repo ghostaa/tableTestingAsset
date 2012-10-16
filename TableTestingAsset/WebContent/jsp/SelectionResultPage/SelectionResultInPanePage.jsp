@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultInPanePage.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from SelectionResultInPanePage.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="SelectionResultInPanePage_form" errorPage="SelectionResultPage/SelectionResultInPanePage.jsp">
-          <table id="SelectionResultInPanePage_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="SelectionResultInPanePage_panel01">
@@ -84,7 +84,7 @@ dojo.addOnLoad(function(){
               <td valign="top">
                 <bttdojo:tabbedpane id="SelectionResultInPanePage_tabbedPane">
                   <bttdojo:contentpane id="SelectionResultInPanePage_ContentPane01" title="multi-selection result">
-                    <table id="SelectionResultInPanePage_ContentPane01" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td>
                           <bttdojo:table id="SelectionResultInPanePage_table" dataNameForList="selectAccountList" isPageable="false">
@@ -101,7 +101,7 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="SelectionResultInPanePage_ContentPane02" title="single-selection result">
-                    <table id="SelectionResultInPanePage_ContentPane02" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td>
                           <bttdojo:label id="SelectionResultInPanePage_label08" text="AccountName"/>

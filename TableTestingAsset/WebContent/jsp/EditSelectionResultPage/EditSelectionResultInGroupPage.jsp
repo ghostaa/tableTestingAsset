@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Sat Sep 15 16:44:54 CST 2012 -->
+<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Tue Oct 16 16:56:44 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="EditSelectionResultInGroupPage_form" errorPage="EditSelectionResultPage/EditSelectionResultInGroupPage.jsp">
-          <table id="EditSelectionResultInGroupPage_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="EditSelectionResultInGroupPage_panel01">
@@ -83,7 +83,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="EditSelectionResultInGroupPage_group" text="multi-selection result">
-                  <table id="EditSelectionResultInGroupPage_group">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:table id="EditSelectionResultInGroupPage_table" dataNameForList="selectAccountList" isPageable="false">
@@ -96,7 +96,7 @@ dojo.addOnLoad(function(){
                           <bttdojo:column currency="EUR" numberType="bigDecimal" widget="TextBox" align="left" dataName="AccountBlance" width="80" type="Currency" text="%nls.testtable/AccountBlance"/>
                           <bttdojo:column widget="ComboBox" align="left" dataName="Rate" width="80" text="%nls.testtable/Rate" storeURL="listFiles/rateForCombo.js"/>
                           <bttdojo:column dataNameForList="LocaltionForComboBox" widget="ComboBox" align="left" dataName="Localtion" width="80" labelField="labelField" text="%nls.testtable/Localtion"/>
-                          <bttdojo:column uncheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
+                          <bttdojo:column unCheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
                           <bttdojo:column widget="LabelFromList" align="left" dataName="accountAttribution" width="80" text="%nls.testtable/accountAttribution" storeURL="listFiles/accountAttribution.js"/>
                           <bttdojo:column widget="Image" align="left" dataName="ImageField" width="80" text="%nls.testtable/Image"/>
                         </bttdojo:table>
@@ -109,7 +109,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="EditSelectionResultInGroupPage_group01" text="single-selection result">
-                  <table id="EditSelectionResultInGroupPage_group01">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label08" text="AccountName"/>

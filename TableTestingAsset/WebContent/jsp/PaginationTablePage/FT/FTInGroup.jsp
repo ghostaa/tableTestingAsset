@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FTInGroup.xui by Administrator, on Thu Sep 27 08:53:31 CST 2012 -->
+<!-- Generated from FTInGroup.xui by ghost, on Tue Oct 16 16:56:50 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="FTInGroup_form" errorPage="PaginationTablePage/FT/FTInGroup.jsp">
-          <table id="FTInGroup_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="FTInGroup_panel01">
@@ -83,7 +83,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="FTInGroup_group" text="Group">
-                  <table id="FTInGroup_group">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:table id="FTInGroup_tableFT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FT$FTInGroup_tableFT" directPagination="false" paginationWhenLoading="true" rowsPerPage="10">

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Tue Oct 16 16:56:48 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="NonEditableTableInTabbedPane_form" errorPage="NonEditableTablePage/NonEditableTableInTabbedPane.jsp">
-          <table id="NonEditableTableInTabbedPane_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="NonEditableTableInTabbedPane_panel01">
@@ -84,7 +84,7 @@ dojo.addOnLoad(function(){
               <td valign="top">
                 <bttdojo:tabbedpane id="NonEditableTableInTabbedPane_tabbedPane">
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane01" title="NormalTab">
-                    <table id="NonEditableTableInTabbedPane_ContentPane01" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td>
                           <bttdojo:table id="NonEditableTableInTabbedPane_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
@@ -115,11 +115,11 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane02" title="Group">
-                    <table id="NonEditableTableInTabbedPane_ContentPane02" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:group id="NonEditableTableInTabbedPane_group" text="Group">
-                            <table id="NonEditableTableInTabbedPane_group">
+                            <table>
                               <tr>
                                 <td>
                                   <bttdojo:table id="NonEditableTableInTabbedPane_table_copy" dataNameForList="nonEditableAccountList" isPageable="false">
@@ -140,12 +140,12 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane03" title="Pane">
-                    <table id="NonEditableTableInTabbedPane_ContentPane03" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:tabbedpane id="NonEditableTableInTabbedPane_tabbedPane01">
                             <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane04" title="Tab01">
-                              <table id="NonEditableTableInTabbedPane_ContentPane04" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="NonEditableTableInTabbedPane_label01" text="tab01"/>
@@ -167,7 +167,7 @@ dojo.addOnLoad(function(){
                               </table>
                             </bttdojo:contentpane>
                             <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane05" title="Tab02">
-                              <table id="NonEditableTableInTabbedPane_ContentPane05" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="NonEditableTableInTabbedPane_label02" text="tab02"/>

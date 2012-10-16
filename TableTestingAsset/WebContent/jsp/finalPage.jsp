@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from finalPage.xui by ghost, on Sat Sep 15 16:44:58 CST 2012 -->
+<!-- Generated from finalPage.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="finalPage_form" errorPage="finalPage.jsp">
-          <table style="width:329px;height:258px;" id="finalPage_form">
+          <table style="width:329px;height:258px;">
             <tr>
               <td>
                 <bttdojo:label id="finalPage_label" text="%nls.bttsample/Final_Page_Flow"/>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultInGroupPage.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from SelectionResultInGroupPage.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="SelectionResultInGroupPage_form" errorPage="SelectionResultPage/SelectionResultInGroupPage.jsp">
-          <table id="SelectionResultInGroupPage_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="SelectionResultInGroupPage_panel01">
@@ -83,7 +83,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="SelectionResultInGroupPage_group" text="multi-selection result">
-                  <table id="SelectionResultInGroupPage_group">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:table id="SelectionResultInGroupPage_table" dataNameForList="selectAccountList" isPageable="false">
@@ -108,7 +108,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="SelectionResultInGroupPage_group01" text="single-selection result">
-                  <table id="SelectionResultInGroupPage_group01">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:label id="SelectionResultInGroupPage_label08" text="AccountName"/>

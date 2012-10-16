@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="Cp1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFFFlow','ctxName':'PaginationFFCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
@@ -27,7 +27,7 @@
             <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
-            <column widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
+            <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" text="%nls.testtable/TradeTime">
               <tableColumnAlignment>16384</tableColumnAlignment>
             </column>
             <column widget="TextBox" editable="true" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">

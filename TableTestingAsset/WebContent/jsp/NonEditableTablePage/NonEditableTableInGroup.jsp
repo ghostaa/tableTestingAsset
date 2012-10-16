@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInGroup.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from NonEditableTableInGroup.xui by ghost, on Tue Oct 16 16:56:47 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="NonEditableTableInGroup_form" errorPage="NonEditableTablePage/NonEditableTableInGroup.jsp">
-          <table id="NonEditableTableInGroup_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="NonEditableTableInGroup_panel01">
@@ -83,7 +83,7 @@ dojo.addOnLoad(function(){
             <tr>
               <td valign="top">
                 <bttdojo:group id="NonEditableTableInGroup_group" text="Group">
-                  <table id="NonEditableTableInGroup_group">
+                  <table>
                     <tr>
                       <td>
                         <bttdojo:table id="NonEditableTableInGroup_table" dataName="AccountInfo" dataNameForList="nonEditableAccountList" selectionMode="single" selectionRequired="true" isPageable="false">

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditableTableSelectCombo.xui by ghost, on Thu Sep 27 19:22:56 CST 2012 -->
+<!-- Generated from EditableTableSelectCombo.xui by ghost, on Tue Oct 16 16:56:47 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -67,7 +67,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="EditableTableSelectCombo_form" errorPage="EditableTablePage/EditableTableSelectCombo.jsp">
-          <table id="EditableTableSelectCombo_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="EditableTableSelectCombo_panel03">

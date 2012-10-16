@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by Administrator, on Mon Sep 24 14:25:16 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Tue Oct 16 16:56:48 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -67,7 +67,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="NonEditableTableIsManipulated_form" errorPage="NonEditableTablePage/NonEditableTableIsManipulated.jsp">
-          <table id="NonEditableTableIsManipulated_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="NonEditableTableIsManipulated_panel03">

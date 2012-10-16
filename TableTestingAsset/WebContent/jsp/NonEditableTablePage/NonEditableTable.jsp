@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTable.xui by ghost, on Sat Sep 15 16:44:57 CST 2012 -->
+<!-- Generated from NonEditableTable.xui by ghost, on Tue Oct 16 16:56:47 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="NonEditableTable_form" errorPage="NonEditableTablePage/NonEditableTable.jsp">
-          <table id="NonEditableTable_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="NonEditableTable_panel01">
@@ -96,7 +96,7 @@ dojo.addOnLoad(function(){
                     <tr>
                       <td valign="top">
                         <bttdojo:group id="NonEditableTable_group" text="Test in group">
-                          <table id="NonEditableTable_group">
+                          <table>
                             <tr>
                               <td>
                                 <bttdojo:a id="NonEditableTable_link" text="Link to \'table in group\' page" flowEvent="LinkToGroup"/>
@@ -130,7 +130,7 @@ dojo.addOnLoad(function(){
                     <tr>
                       <td valign="top">
                         <bttdojo:group id="NonEditableTable_group01" text="Test inTabbedpane">
-                          <table id="NonEditableTable_group01">
+                          <table>
                             <tr>
                               <td>
                                 <bttdojo:a id="NonEditableTable_link01" text="Link to \'table in TabbedPane\' page" flowEvent="LinkToPane"/>
@@ -167,7 +167,7 @@ dojo.addOnLoad(function(){
                             <tr>
                               <td valign="top">
                                 <bttdojo:group id="NonEditableTable_group02" text="Test in \'manipulate table\'">
-                                  <table id="NonEditableTable_group02">
+                                  <table>
                                     <tr>
                                       <td>
                                         <bttdojo:a id="NonEditableTable_link03" text="Link to \'manipulate table\' page" flowEvent="manipulatetable"/>

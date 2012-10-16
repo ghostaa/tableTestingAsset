@@ -22,7 +22,7 @@ public class CreateAccountInfoOp extends BTTServerOperation {
   public void execute() throws Exception {
 	  	System.out.println("CreateAccountInfoOp + execute");
 	  	
-		String img[] = {"img/JPG.JPG","img/PNG.png","img/BMP.bmp","img/GIF.gif","img/ICO.ico"};
+		String img[] = {"img/JPG.JPG","img/PNG.png","img/BMP.bmp","img/GIF.gif"};
 
 		KeyedCollection opData = this.getContext().getKeyedCollection();
 		IndexedCollection accountTable = (IndexedCollection) opData.getElementAt("AccountInfoList");
@@ -47,7 +47,7 @@ public class CreateAccountInfoOp extends BTTServerOperation {
 			accountTable.setValueAt(i+".Localtion",rand.nextBoolean()?"CHINA":"SPAIN");
 			accountTable.setValueAt(i+".Usable",rand.nextBoolean());
 			accountTable.setValueAt(i+".accountAttribution", rand.nextBoolean()?0:1);				
-			accountTable.setValueAt(i+".ImageField", img[rand.nextInt(5)]);			
+			accountTable.setValueAt(i+".ImageField", img[rand.nextInt(4)]);			
 			
 		}
 		for (int i = 0; i < 4; i++) {

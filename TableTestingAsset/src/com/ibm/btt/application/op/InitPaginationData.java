@@ -20,7 +20,7 @@ public class InitPaginationData extends BTTServerOperation
 	public void execute() throws Exception
 	{
 		// TODO Auto-generated method stub
-		String img[] = { "img/JPG.JPG", "img/PNG.png", "img/BMP.bmp", "img/GIF.gif", "img/ICO.ico" };
+		String img[] = { "img/JPG.JPG", "img/PNG.png", "img/BMP.bmp", "img/GIF.gif" };
 		KeyedCollection opData = this.getContext().getKeyedCollection();
 		IndexedCollection allAccountList = (IndexedCollection) opData.getElementAt("AllAccountList");
 		IndexedCollection accountInfoList = (IndexedCollection) opData.getElementAt("AccountInfoList");
@@ -45,7 +45,7 @@ public class InitPaginationData extends BTTServerOperation
 			allAccountList.setValueAt(i + ".Localtion", rand.nextBoolean() ? "CHINA" : "SPAIN");
 			allAccountList.setValueAt(i + ".Usable", rand.nextBoolean());
 			allAccountList.setValueAt(i + ".accountAttribution", rand.nextBoolean() ? 0 : 1);
-			allAccountList.setValueAt(i + ".ImageField", img[1]);
+			allAccountList.setValueAt(i + ".ImageField", img[rand.nextInt(4)]);
 		}
 
 		for (int i = 0; i < 4; i++)

@@ -41,7 +41,7 @@
         <column unCheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
-        <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="" text="%nls.testtable/accountAttribution">
+        <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="listFiles/accountAttribution.js" text="%nls.testtable/accountAttribution">
           <tableColumnAlignment>16384</tableColumnAlignment>
         </column>
         <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">

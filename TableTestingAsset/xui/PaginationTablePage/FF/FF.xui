@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" id="tableFF">
+      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" isActionable="true" id="tableFF" selectionMode="multiple">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -109,21 +109,6 @@
     </container>
     <gridLayout numColumns="1"/>
   </container>
-  <rules>
-    <rule name="ecaRule">
-      <events>
-        <event widget="tableFF" event="onMouseUp"/>
-      </events>
-      <condition>
-        <value type="widgetProperty" widget="tableFF" property="readOnly"/>
-      </condition>
-      <trueActions>
-        <action type="widgetProperty" widget="tableFF" property="disabled">
-          <value type="constant" constant="'%nls.testtable/AccountTypeValue'"/>
-        </action>
-      </trueActions>
-      <falseActions/>
-    </rule>
-  </rules>
+  <rules/>
   <groups/>
 </XUI>

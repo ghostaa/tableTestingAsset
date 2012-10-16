@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FF.xui by ghost, on Tue Oct 16 16:16:01 CST 2012 -->
+<!-- Generated from FF.xui by ghost, on Tue Oct 16 16:56:11 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,7 +61,6 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-<script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/PaginationTablePage/FF/FF.js"> </script>
   <table id="FF_panel">
     <tr>
       <td valign="top">
@@ -80,7 +79,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" isActionable="true" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
+                <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" selectionMode="multiple" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
                   <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>

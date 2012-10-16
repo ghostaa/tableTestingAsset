@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" isActionable="true" id="tableFF">
+      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" id="tableFF">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>

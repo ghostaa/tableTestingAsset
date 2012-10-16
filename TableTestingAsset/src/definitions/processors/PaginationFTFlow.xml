@@ -5,7 +5,7 @@
 	<htmlProcessor context="PaginationFTCtx" id="PaginationFTFlow">
 		<htmlState id="initial" type="initial">
 			<transitions>
-				<htmlTransition id="initial.start" targetState="PaginationTablePage/FT/FT"/>
+				<htmlTransition id="initial.start" targetState="InitPaginationDataOp"/>
 			</transitions>
 		</htmlState>
 
@@ -44,6 +44,12 @@
 				<htmlTransition id="FTInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePage/FT/FT"/>
 			</transitions>
 		</popupPageState>
+
+		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
+			<transitions>
+				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="InitPaginationDataOp.ok_OutputFmt" targetState="PaginationTablePage/FT/FT"/>
+			</transitions>
+		</operationState>
 	</htmlProcessor>
 
 	<context id="PaginationFTCtx" type="op">
@@ -100,6 +106,10 @@
 		<refData refId="AccountTypeForSelect"/>
 		<refData refId="LocaltionForComboBox"/>
 		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<data id="currentPageNum" value="1" refType="Integer"/>
+		<iColl id="AllAccountList" size="100">
+			<refData refId="AccountInfoRecord"/>
+		</iColl>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
@@ -111,6 +121,33 @@
 			<map from="paginationData.errMsg" to="paginationData.FF_tableFF_errMsg"/>
 			<map from="paginationData.pageNumber" to="paginationData.FF_tableFF_pageNumber"/>
 			<map fromExpression="&apos;next&apos;" to="paginationData.FF_tableFF_pageEvent"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="InitPaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map fromExpression="1" to="paginationData.FT_tableFT_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FTInGroup_tableFT_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FTInTabbedPane_tableFT_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FTInTabbedPane_tableFT1_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FTInTabbedPane_tableFT2_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FTInTabbedPane_tableFT3_pageNumber"/>
+			<map fromExpression="1" to="currentPageNum"/>
+			<map fromExpression="10" to="paginationData.FT_tableFT_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FTInGroup_tableFT_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FTInTabbedPane_tableFT_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FTInTabbedPane_tableFT1_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FTInTabbedPane_tableFT2_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FTInTabbedPane_tableFT3_rowsPerPage"/>
+			<map fromExpression="100" to="paginationData.FTInTabbedPane_tableFT3_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FTInTabbedPane_tableFT2_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FTInTabbedPane_tableFT1_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FTInTabbedPane_tableFT_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FTInGroup_tableFT_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FT_tableFT_totalRowNumber"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

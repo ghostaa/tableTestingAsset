@@ -5,7 +5,7 @@
 	<htmlProcessor context="PaginationFFCtx" id="PaginationFFFlow">
 		<htmlState id="initial" type="initial">
 			<transitions>
-				<htmlTransition id="initial.start" targetState="CreatePaginationDataOp"/>
+				<htmlTransition id="initial.start" targetState="InitPaginationDataOp"/>
 			</transitions>
 		</htmlState>
 
@@ -22,9 +22,9 @@
 
 		<htmlState typeIdInfo="OK" id="OK" type="final"/>
 
-		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
+		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
 			<transitions>
-				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/FF/FF"/>
 			</transitions>
 		</operationState>
 
@@ -65,8 +65,8 @@
 
 	<kColl id="PaginationFFRecord">
 		<kColl id="paginationData">
-			<data id="FF_tableFF_enableNext" refType="Boolean"/>
-			<data id="FF_tableFF_enablePrevious" refType="Boolean"/>
+			<data id="FF_tableFF_enableNext" value="true" refType="Boolean"/>
+			<data id="FF_tableFF_enablePrevious" value="true" refType="Boolean"/>
 			<data id="FF_tableFF_totalRowNumber" refType="Integer"/>
 			<data id="FF_tableFF_errMsg" refType="String"/>
 			<data id="FF_tableFF_pageNumber" refType="Long"/>
@@ -113,7 +113,10 @@
 		<refData refId="AccountTypeForSelect"/>
 		<refData refId="LocaltionForComboBox"/>
 		<refData refId="AccountInfoList" alias="selectAccountList"/>
-		<refData refId="AccountInfoList" alias="AllAccountList"/>
+		<data id="currentPageNum" value="1" refType="Integer"/>
+		<iColl id="AllAccountList" size="100">
+			<refData refId="AccountInfoRecord"/>
+		</iColl>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
@@ -126,28 +129,27 @@
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt01">
 		<mapperConverterExpression>
-			<map from="paginationData.totalRowNumber" to="paginationData.FF_tableFF_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.FFInGroup_tableFF_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF1_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FF_tableFF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FFInGroup_tableFF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FFInTabbedPane_tableFF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FFInTabbedPane_tableFF1_totalRowNumber"/>
 			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
-			<map from="AccountInfoRecord" to="AccountInfoRecord"/>
-			<map from="selectAccountList" to="selectAccountList" append="false"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF2_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.FFInTabbedPane_tableFF3_totalRowNumber"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.FFInTabbedPane_tableFF3_rowsPerPage"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.FFInTabbedPane_tableFF2_rowsPerPage"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.FFInTabbedPane_tableFF1_rowsPerPage"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.FFInTabbedPane_tableFF_rowsPerPage"/>
-			<map from="paginationData.pageNumber" to="paginationData.FF_tableFF_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.FFInGroup_tableFF_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.FFInTabbedPane_tableFF_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.FFInTabbedPane_tableFF1_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.FFInTabbedPane_tableFF2_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.FFInTabbedPane_tableFF3_pageNumber"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.FFInGroup_tableFF_rowsPerPage"/>
+			<map fromExpression="100" to="paginationData.FFInTabbedPane_tableFF2_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.FFInTabbedPane_tableFF3_totalRowNumber"/>
+			<map fromExpression="10" to="paginationData.FFInTabbedPane_tableFF3_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FFInTabbedPane_tableFF2_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FFInTabbedPane_tableFF1_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.FFInTabbedPane_tableFF_rowsPerPage"/>
+			<map fromExpression="1" to="paginationData.FF_tableFF_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FFInGroup_tableFF_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FFInTabbedPane_tableFF_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FFInTabbedPane_tableFF1_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FFInTabbedPane_tableFF2_pageNumber"/>
+			<map fromExpression="1" to="paginationData.FFInTabbedPane_tableFF3_pageNumber"/>
+			<map fromExpression="10" to="paginationData.FFInGroup_tableFF_rowsPerPage"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+			<map fromExpression="1" to="currentPageNum"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

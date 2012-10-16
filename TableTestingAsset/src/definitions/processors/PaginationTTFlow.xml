@@ -47,7 +47,7 @@
 
 		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
 			<transitions>
-				<htmlTransition id="InitPaginationDataOp.ok" targetState="PaginationTablePage/TT/TT"/>
+				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="InitPaginationDataOp.ok_OutputFmt" targetState="PaginationTablePage/TT/TT"/>
 			</transitions>
 		</operationState>
 	</htmlProcessor>
@@ -106,12 +106,25 @@
 		<refData refId="AccountTypeForSelect"/>
 		<refData refId="LocaltionForComboBox"/>
 		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<data id="currentPageNum" value="1" refType="Integer"/>
+		<iColl id="AllAccountList" size="100">
+			<refData refId="AccountInfoRecord"/>
+		</iColl>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
 		<mapperConverterExpression>
 			<map from="paginationData.totalRowNumber" to="paginationData.TT_tableTT_totalRowNumber"/>
 			<map from="paginationData.pageNumber" to="paginationData.TT_tableTT_pageNumber"/>
+			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
+		</mapperConverterExpression>
+	</fmtDef>
+
+	<fmtDef id="InitPaginationDataOp.ok_OutputFmt">
+		<mapperConverterExpression>
+			<map from="AllAccountList" to="AllAccountList" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 		</mapperConverterExpression>
 	</fmtDef>

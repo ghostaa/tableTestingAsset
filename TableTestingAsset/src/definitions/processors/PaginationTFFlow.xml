@@ -5,13 +5,13 @@
 	<htmlProcessor context="PaginationTFCtx" id="PaginationTFFlow">
 		<htmlState id="initial" type="initial">
 			<transitions>
-				<htmlTransition id="initial.start" targetState="CreatePaginationDataOp"/>
+				<htmlTransition id="initial.start" targetState="InitPaginationDataOp"/>
 			</transitions>
 		</htmlState>
 
-		<operationState typeIdInfo="CreatePaginationDataOp" id="CreatePaginationDataOp" type="operation">
+		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
 			<transitions>
-				<htmlTransition id="CreatePaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/TF/TF"/>
+				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/TF/TF"/>
 			</transitions>
 		</operationState>
 
@@ -106,6 +106,10 @@
 		<refData refId="AccountTypeForSelect"/>
 		<refData refId="LocaltionForComboBox"/>
 		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<data id="currentPageNum" value="1" refType="Integer"/>
+		<iColl id="AllAccountList" size="100">
+			<refData refId="AccountInfoRecord"/>
+		</iColl>
 	</kColl>
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt">
@@ -119,20 +123,28 @@
 
 	<fmtDef id="CreatePaginationDataOp.ok_OutputFmt01">
 		<mapperConverterExpression>
-			<map from="paginationData.totalRowNumber" to="paginationData.TF_tableTF_totalRowNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TF_tableTF_pageNumber"/>
-			<map from="paginationData.rowsPerPage" to="paginationData.TF_tableTF_rowsPerPage"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.TFInGroup_tableTF_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF1_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF2_totalRowNumber"/>
-			<map from="paginationData.totalRowNumber" to="paginationData.TFInTabbedPane_tableTF3_totalRowNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TFInGroup_tableTF_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF1_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF2_pageNumber"/>
-			<map from="paginationData.pageNumber" to="paginationData.TFInTabbedPane_tableTF3_pageNumber"/>
+			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
+			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
+			<map fromExpression="1" to="paginationData.TF_tableTF_pageNumber"/>
+			<map fromExpression="1" to="currentPageNum"/>
+			<map fromExpression="1" to="paginationData.TFInGroup_tableTF_pageNumber"/>
+			<map fromExpression="1" to="paginationData.TFInTabbedPane_tableTF_pageNumber"/>
+			<map fromExpression="1" to="paginationData.TFInTabbedPane_tableTF1_pageNumber"/>
+			<map fromExpression="1" to="paginationData.TFInTabbedPane_tableTF2_pageNumber"/>
+			<map fromExpression="1" to="paginationData.TFInTabbedPane_tableTF3_pageNumber"/>
+			<map fromExpression="10" to="paginationData.TFInTabbedPane_tableTF3_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.TFInTabbedPane_tableTF2_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.TFInTabbedPane_tableTF1_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.TFInTabbedPane_tableTF_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.TFInGroup_tableTF_rowsPerPage"/>
+			<map fromExpression="10" to="paginationData.TF_tableTF_rowsPerPage"/>
+			<map fromExpression="100" to="paginationData.TF_tableTF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.TFInGroup_tableTF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.TFInTabbedPane_tableTF_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.TFInTabbedPane_tableTF1_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.TFInTabbedPane_tableTF2_totalRowNumber"/>
+			<map fromExpression="100" to="paginationData.TFInTabbedPane_tableTF3_totalRowNumber"/>
 		</mapperConverterExpression>
 	</fmtDef>
 

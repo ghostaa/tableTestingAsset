@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="Cp1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFFFlow','ctxName':'PaginationFFCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'FF.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="437" verticalAlignment="1" widthHint="937"/>
+    <gridData heightHint="408" verticalAlignment="1" widthHint="937"/>
     <container name="Form" defaultAction="flowEvent=" id="form">
-      <gridData heightHint="429" verticalAlignment="1" widthHint="929"/>
+      <gridData heightHint="400" verticalAlignment="1" widthHint="929"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="31" verticalAlignment="1" widthHint="58"/>
         <widget name="Label" id="label" text="FFtable">
@@ -49,9 +49,9 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="286" verticalAlignment="1" widthHint="304"/>
+        <gridData heightHint="257" verticalAlignment="1" widthHint="310"/>
         <container name="Group" id="group" text="Test in group">
-          <gridData heightHint="109" verticalAlignment="1" widthHint="253"/>
+          <gridData heightHint="111" verticalAlignment="1" widthHint="280"/>
           <widget name="Link" action="flowEvent=group" id="link" text="Link to 'FFtable in group'">
             <gridData/>
           </widget>
@@ -59,7 +59,7 @@
             <gridData/>
           </widget>
           <container name="Panel" id="panel04">
-            <gridData heightHint="31" verticalAlignment="1" widthHint="225"/>
+            <gridData heightHint="33" verticalAlignment="1" widthHint="252"/>
             <widget name="Button" action="flowEvent=submit to group" id="button01" text="Submit to group">
               <gridData/>
             </widget>
@@ -94,17 +94,10 @@
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Panel" id="panel03">
-          <gridData heightHint="59" verticalAlignment="1" widthHint="274"/>
-          <container name="Group" id="group02" text="Test in manipulate table">
-            <gridData heightHint="51" verticalAlignment="1" widthHint="266"/>
-            <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate TFtable'">
-              <gridData/>
-            </widget>
-            <widget name="Button" id="button02" text="Button">
-              <gridData/>
-            </widget>
-            <gridLayout numColumns="2"/>
-          </container>
+          <gridData heightHint="28" verticalAlignment="1" widthHint="28"/>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
           <gridLayout numColumns="1"/>
         </container>
         <widget name="PlaceHolder">

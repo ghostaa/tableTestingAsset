@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="Cp1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationTTFlow','ctxName':'PaginationTTCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'aTT.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="434" verticalAlignment="1" widthHint="937"/>
+    <gridData heightHint="403" verticalAlignment="1" widthHint="937"/>
     <container name="Form" defaultAction="flowEvent=" id="form">
-      <gridData heightHint="426" verticalAlignment="1" widthHint="929"/>
+      <gridData heightHint="395" verticalAlignment="1" widthHint="929"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="31" verticalAlignment="1" widthHint="64"/>
         <widget name="Label" id="label" text=" TTtable">
@@ -49,7 +49,7 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="283" verticalAlignment="1" widthHint="285"/>
+        <gridData heightHint="252" verticalAlignment="1" widthHint="285"/>
         <container name="Group" id="group" text="Test in group">
           <gridData heightHint="106" verticalAlignment="1" widthHint="218"/>
           <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'TTtable in group'">
@@ -94,16 +94,12 @@
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Panel" id="panel03">
-          <gridData heightHint="59" verticalAlignment="1" widthHint="244"/>
-          <container name="Group" id="group02" text="Test in manipulate table">
-            <gridData heightHint="51" verticalAlignment="1" widthHint="194"/>
-            <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate TFtable'">
-              <gridData/>
-            </widget>
-            <gridLayout numColumns="1"/>
-          </container>
-          <widget name="Label" id="label01" text="Label">
-            <gridData/>
+          <gridData heightHint="28" verticalAlignment="1" widthHint="50"/>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
           </widget>
           <gridLayout numColumns="2"/>
         </container>
@@ -116,46 +112,6 @@
     </container>
     <gridLayout numColumns="1"/>
   </container>
-  <rules>
-    <rule name="ecaRule">
-      <events>
-        <event widget="tableTT" event="onSelected"/>
-      </events>
-      <trueActions>
-        <action type="widgetProperty" widget="label" property="text">
-          <value type="widgetFunction" widget="tableTT">
-            <function name="getValueInFirstSelectedItem">
-              <parameter>
-                <value type="constant" constant="'AccountName'"/>
-              </parameter>
-            </function>
-          </value>
-        </action>
-      </trueActions>
-      <falseActions/>
-    </rule>
-    <rule name="ecaRule01">
-      <events>
-        <event widget="tableTT" event="onFocus"/>
-      </events>
-      <trueActions>
-        <action type="widgetProperty" widget="label01" property="text">
-          <value type="constant" constant="'table'"/>
-        </action>
-      </trueActions>
-      <falseActions/>
-    </rule>
-    <rule name="ecaRule02">
-      <events>
-        <event widget="link" event="onFocus"/>
-      </events>
-      <trueActions>
-        <action type="widgetProperty" widget="label01" property="text">
-          <value type="constant" constant="'lable111'"/>
-        </action>
-      </trueActions>
-      <falseActions/>
-    </rule>
-  </rules>
+  <rules/>
   <groups/>
 </XUI>

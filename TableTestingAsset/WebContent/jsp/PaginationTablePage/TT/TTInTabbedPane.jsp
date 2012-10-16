@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from TTInTabbedPane.xui by Administrator, on Thu Sep 27 09:45:23 CST 2012 -->
+<!-- Generated from TTInTabbedPane.xui by ghost, on Tue Oct 16 16:22:01 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,7 +65,7 @@ dojo.addOnLoad(function(){
     <tr>
       <td valign="top">
         <bttdojo:form id="TTInTabbedPane_form" errorPage="PaginationTablePage/TT/TTInTabbedPane.jsp">
-          <table id="TTInTabbedPane_form">
+          <table>
             <tr>
               <td valign="top">
                   <table id="TTInTabbedPane_panel01">
@@ -84,10 +84,10 @@ dojo.addOnLoad(function(){
               <td valign="top">
                 <bttdojo:tabbedpane id="TTInTabbedPane_tabbedPane">
                   <bttdojo:contentpane id="TTInTabbedPane_ContentPane01" title="NormalTab">
-                    <table id="TTInTabbedPane_ContentPane01" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td>
-                          <bttdojo:table id="TTInTabbedPane_tableTT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
+                          <bttdojo:table id="TTInTabbedPane_tableTT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT" directPagination="true" paginationWhenLoading="true" rowsPerPage="10" timeout="9999999999">
                             <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                             <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
                             <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -105,14 +105,14 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="TTInTabbedPane_ContentPane02" title="Group">
-                    <table id="TTInTabbedPane_ContentPane02" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:group id="TTInTabbedPane_group" text="Group">
-                            <table id="TTInTabbedPane_group">
+                            <table>
                               <tr>
                                 <td>
-                                  <bttdojo:table id="TTInTabbedPane_tableTT1" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT1" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
+                                  <bttdojo:table id="TTInTabbedPane_tableTT1" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT1" directPagination="true" paginationWhenLoading="true" rowsPerPage="10" timeout="9999999999">
                                     <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                     <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
                                     <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -134,12 +134,12 @@ dojo.addOnLoad(function(){
                     </table>
                   </bttdojo:contentpane>
                   <bttdojo:contentpane id="TTInTabbedPane_ContentPane03" title="Pane">
-                    <table id="TTInTabbedPane_ContentPane03" style="table-layout:fixed">
+                    <table style="table-layout:fixed">
                       <tr>
                         <td valign="top">
                           <bttdojo:tabbedpane id="TTInTabbedPane_tabbedPane01">
                             <bttdojo:contentpane id="TTInTabbedPane_ContentPane04" title="Tab01">
-                              <table id="TTInTabbedPane_ContentPane04" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="TTInTabbedPane_label01" text="tab01"/>
@@ -147,7 +147,7 @@ dojo.addOnLoad(function(){
                                 </tr>
                                 <tr>
                                   <td>
-                                    <bttdojo:table id="TTInTabbedPane_tableTT2" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT2" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
+                                    <bttdojo:table id="TTInTabbedPane_tableTT2" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT2" directPagination="true" paginationWhenLoading="true" rowsPerPage="10" timeout="999999999">
                                       <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
                                       <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -165,7 +165,7 @@ dojo.addOnLoad(function(){
                               </table>
                             </bttdojo:contentpane>
                             <bttdojo:contentpane id="TTInTabbedPane_ContentPane05" title="Tab02">
-                              <table id="TTInTabbedPane_ContentPane05" style="table-layout:fixed">
+                              <table style="table-layout:fixed">
                                 <tr>
                                   <td>
                                     <bttdojo:label id="TTInTabbedPane_label02" text="tab02"/>
@@ -173,7 +173,7 @@ dojo.addOnLoad(function(){
                                 </tr>
                                 <tr>
                                   <td>
-                                    <bttdojo:table id="TTInTabbedPane_tableTT3" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT3" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
+                                    <bttdojo:table id="TTInTabbedPane_tableTT3" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInTabbedPane_tableTT3" directPagination="true" paginationWhenLoading="true" rowsPerPage="10" timeout="9999999999">
                                       <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
                                       <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>

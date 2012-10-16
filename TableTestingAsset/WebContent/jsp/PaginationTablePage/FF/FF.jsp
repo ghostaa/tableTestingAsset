@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FF.xui by Administrator, on Mon Oct 15 15:53:33 CST 2012 -->
+<!-- Generated from FF.xui by ghost, on Tue Oct 16 16:16:01 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -80,7 +80,7 @@ dojo.addOnLoad(function(){
             </tr>
             <tr>
               <td>
-                <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
+                <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" isActionable="true" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
                   <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -166,19 +166,7 @@ dojo.addOnLoad(function(){
                       <td valign="top">
                           <table id="FF_panel03">
                             <tr>
-                              <td valign="top">
-                                <bttdojo:group id="FF_group02" text="Test in manipulate table">
-                                  <table>
-                                    <tr>
-                                      <td>
-                                        <bttdojo:a id="FF_link03" text="Link to \'manipulate TFtable\'" flowEvent="manipulatetable"/>
-                                      </td>
-                                      <td>
-                                        <bttdojo:button id="FF_button02" type="submit" text="Button"/>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </bttdojo:group>
+                              <td>
                               </td>
                             </tr>
                           </table>

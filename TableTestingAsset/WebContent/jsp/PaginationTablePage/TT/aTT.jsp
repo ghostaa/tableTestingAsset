@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from aTT.xui by Administrator, on Thu Oct 11 17:44:59 CST 2012 -->
+<!-- Generated from aTT.xui by ghost, on Tue Oct 16 16:19:57 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -61,7 +61,6 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body class="claro" style="visibility:hidden">
-<script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/PaginationTablePage/TT/aTT.js"> </script>
   <table id="aTT_panel">
     <tr>
       <td valign="top">
@@ -164,19 +163,9 @@ dojo.addOnLoad(function(){
                       <td valign="top">
                           <table id="aTT_panel03">
                             <tr>
-                              <td valign="top">
-                                <bttdojo:group id="aTT_group02" text="Test in manipulate table">
-                                  <table>
-                                    <tr>
-                                      <td>
-                                        <bttdojo:a id="aTT_link03" text="Link to \'manipulate TFtable\'" flowEvent="manipulatetable"/>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </bttdojo:group>
+                              <td>
                               </td>
                               <td>
-                                <bttdojo:label id="aTT_label01" text="Label"/>
                               </td>
                             </tr>
                           </table>

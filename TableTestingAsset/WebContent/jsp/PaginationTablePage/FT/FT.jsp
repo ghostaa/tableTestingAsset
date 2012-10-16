@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FT.xui by Administrator, on Thu Oct 11 17:00:17 CST 2012 -->
+<!-- Generated from FT.xui by ghost, on Tue Oct 16 16:16:02 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -164,16 +164,7 @@ dojo.addOnLoad(function(){
                       <td valign="top">
                           <table id="FT_panel03">
                             <tr>
-                              <td valign="top">
-                                <bttdojo:group id="FT_group02" text="Test in manipulate table">
-                                  <table>
-                                    <tr>
-                                      <td>
-                                        <bttdojo:a id="FT_link03" text="Link to \'manipulate TFtable\'" flowEvent="manipulatetable"/>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </bttdojo:group>
+                              <td>
                               </td>
                             </tr>
                           </table>

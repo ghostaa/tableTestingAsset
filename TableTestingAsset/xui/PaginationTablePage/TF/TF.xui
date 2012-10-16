@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="Cp1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationTFFlow','ctxName':'PaginationTFCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'TF.js'}">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="374" verticalAlignment="1" widthHint="937"/>
+    <gridData heightHint="343" verticalAlignment="1" widthHint="937"/>
     <container name="Form" defaultAction="flowEvent=" id="form">
-      <gridData heightHint="366" verticalAlignment="1" widthHint="929"/>
+      <gridData heightHint="335" verticalAlignment="1" widthHint="929"/>
       <container name="Panel" id="panel01">
         <gridData heightHint="31" verticalAlignment="1" widthHint="59"/>
         <widget name="Label" id="label" text="TFtable">
@@ -49,7 +49,7 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="223" verticalAlignment="1" widthHint="284"/>
+        <gridData heightHint="192" verticalAlignment="1" widthHint="284"/>
         <container name="Group" id="group" text="Test in group">
           <gridData heightHint="76" verticalAlignment="1" widthHint="217"/>
           <widget name="Link" action="flowEvent=LinkToGroup" id="link" text="Link to 'TFtable in group'">
@@ -77,14 +77,10 @@
           <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
         </widget>
         <container name="Panel" id="panel03">
-          <gridData heightHint="59" verticalAlignment="1" widthHint="202"/>
-          <container name="Group" id="group02" text="Test in manipulate table">
-            <gridData heightHint="51" verticalAlignment="1" widthHint="194"/>
-            <widget name="Link" action="flowEvent=manipulatetable" id="link03" text="Link to 'manipulate TFtable'">
-              <gridData/>
-            </widget>
-            <gridLayout numColumns="1"/>
-          </container>
+          <gridData heightHint="28" verticalAlignment="1" widthHint="28"/>
+          <widget name="PlaceHolder">
+            <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          </widget>
           <gridLayout numColumns="1"/>
         </container>
         <widget name="PlaceHolder">

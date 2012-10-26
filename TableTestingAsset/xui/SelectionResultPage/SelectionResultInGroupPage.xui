@@ -2,11 +2,11 @@
 <XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInGroupFlow','ctxName':'SelectionResultInGroupCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="403" verticalAlignment="1" widthHint="625"/>
+    <gridData heightHint="402" verticalAlignment="1" widthHint="625"/>
     <container name="Form" id="form">
-      <gridData heightHint="395" verticalAlignment="1" widthHint="617"/>
+      <gridData heightHint="394" verticalAlignment="1" widthHint="617"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="32" verticalAlignment="1" widthHint="297"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="297"/>
         <widget name="Link" action="flowEvent=back" id="link_copy" text="non-editable table">
           <gridData/>
         </widget>
@@ -51,43 +51,43 @@
         <widget name="Label" id="label08" text="AccountName">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.AccountName" id="label01" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.AccountName" id="label01" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label09" text="TradeTime">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.TradeTime" id="label02" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.TradeTime" id="label02" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label10" text="MaximumAmount">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.MaximumAmount" id="label03" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.MaximumAmount" id="label03" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label11" text="AccountOpeningDate">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.AccountOpeningDate" id="label04" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.AccountOpeningDate" id="label04" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label12" text="AccountBlance">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.AccountBlance" id="label05" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.AccountBlance" id="label05" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label13" text="Rate">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.Rate" id="label06" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.Rate" id="label06" text="Label">
           <gridData/>
         </widget>
         <widget name="Label" id="label14" text="Usable">
           <gridData/>
         </widget>
-        <widget name="Label" dataName="AccountInfo.Usable" id="label07" text="Label">
+        <widget name="Label" dataName="AccountInfoRecord.Usable" id="label07" text="Label">
           <gridData/>
         </widget>
         <gridLayout numColumns="2"/>

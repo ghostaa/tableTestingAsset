@@ -2306,7 +2306,11 @@ dojo.declare("com.ibm.btt.dijit.AbstractAjaxMixin", null,{
 	callAsyncOperation : function(bttOperationId, asyncCode, timeout, respsContainer) {
  
 		var formValues = this.get("value");
-		var bttParam = dojo.fromJson(this.bttParams);
+		var bttParam = {};
+		if(this.bttParams){
+			bttParam = dojo.fromJson(this.bttParams);
+		}
+		 
 		bttParam[AjaxUtil.constants.BTT_OPERATIONNAME] = bttOperationId;
 		bttParam = AjaxUtil.prepareBTTParams(bttParam);
 		
@@ -3318,7 +3322,7 @@ dojo.declare("com.ibm.btt.dijit.Form", [ dijit.form.Form,
 			if(evt.charOrCode === dk.ENTER){
 				while(node){
 					if (node == this.domNode) {
-						if(this.bttParams && this.bttParams != ""){
+						if(this.bttParams && this.bttParams != "" && (this.bttParams.indexOf("dse_operationName") > 0)){
 							this.submit();
 						} else {
 							if(evt){
@@ -8420,7 +8424,6 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 			delete this._disableCache.columnReordering;
 	 			//refresh table to make the columnReordering work
 	 			this._refresh(true);
-	 			
 	 		}
 	 		
 	 		// Show scrollbars
@@ -8440,7 +8443,7 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 		dojo.removeClass(this.domNode, "dijitDisabled");
 	 		
 	 	}
-	 	this._refresh(true);
+	 	
 	 	this.checkSelectionNum();
 	 	
 	 },

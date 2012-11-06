@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Tue Oct 16 16:56:44 CST 2012 -->
+<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Fri Nov 02 12:14:49 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -99,6 +99,7 @@ dojo.addOnLoad(function(){
                           <bttdojo:column unCheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
                           <bttdojo:column widget="LabelFromList" align="left" dataName="accountAttribution" width="80" text="%nls.testtable/accountAttribution" storeURL="listFiles/accountAttribution.js"/>
                           <bttdojo:column widget="Image" align="left" dataName="ImageField" width="80" text="%nls.testtable/Image"/>
+                          <bttdojo:column align="left" dataName="table_dataRecord01.table_dataField" width="80" text="column0"/>
                         </bttdojo:table>
                       </td>
                     </tr>
@@ -117,6 +118,8 @@ dojo.addOnLoad(function(){
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label01" dataName="AccountInfo.AccountName" text="Label"/>
                       </td>
+                      <td>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -124,6 +127,8 @@ dojo.addOnLoad(function(){
                       </td>
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label02" dataName="AccountInfo.TradeTime" text="Label"/>
+                      </td>
+                      <td>
                       </td>
                     </tr>
                     <tr>
@@ -133,6 +138,8 @@ dojo.addOnLoad(function(){
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label03" dataName="AccountInfo.MaximumAmount" text="Label"/>
                       </td>
+                      <td>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -140,6 +147,8 @@ dojo.addOnLoad(function(){
                       </td>
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label04" dataName="AccountInfo.AccountOpeningDate" text="Label"/>
+                      </td>
+                      <td>
                       </td>
                     </tr>
                     <tr>
@@ -149,6 +158,8 @@ dojo.addOnLoad(function(){
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label05" dataName="AccountInfo.AccountBlance" text="Label"/>
                       </td>
+                      <td>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -157,6 +168,8 @@ dojo.addOnLoad(function(){
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label06" dataName="AccountInfo.Rate" text="Label"/>
                       </td>
+                      <td>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -164,6 +177,19 @@ dojo.addOnLoad(function(){
                       </td>
                       <td>
                         <bttdojo:label id="EditSelectionResultInGroupPage_label07" dataName="AccountInfo.Usable" text="Label"/>
+                      </td>
+                      <td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                        <bttdojo:table id="EditSelectionResultInGroupPage_table01" dataNameForList="AccountInfo.table_dataList" isPageable="false">
+                          <bttdojo:column align="left" dataName="table_dataField02" width="80" text="column0"/>
+                        </bttdojo:table>
                       </td>
                     </tr>
                   </table>

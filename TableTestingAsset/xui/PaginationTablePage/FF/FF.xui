@@ -12,7 +12,7 @@
         </widget>
         <gridLayout numColumns="1"/>
       </container>
-      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" action="flowEvent=" isActionable="true" id="tableFF" selectionMode="multiple">
+      <widget name="Table" paginationParams="{'timeout':'50000','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'','paginationWhenLoading':'false','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" dataName="selectAccountList" id="tableFF" selectionMode="multiple">
         <gridData/>
         <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
           <tableColumnAlignment>16384</tableColumnAlignment>
@@ -49,9 +49,9 @@
         </column>
       </widget>
       <container name="Panel" id="panel02">
-        <gridData heightHint="257" verticalAlignment="1" widthHint="310"/>
+        <gridData heightHint="257" verticalAlignment="1" widthHint="283"/>
         <container name="Group" id="group" text="Test in group">
-          <gridData heightHint="111" verticalAlignment="1" widthHint="280"/>
+          <gridData heightHint="111" verticalAlignment="1" widthHint="216"/>
           <widget name="Link" action="flowEvent=group" id="link" text="Link to 'FFtable in group'">
             <gridData/>
           </widget>
@@ -59,12 +59,12 @@
             <gridData/>
           </widget>
           <container name="Panel" id="panel04">
-            <gridData heightHint="33" verticalAlignment="1" widthHint="252"/>
+            <gridData heightHint="33" verticalAlignment="1" widthHint="132"/>
             <widget name="Button" action="flowEvent=submit to group" id="button01" text="Submit to group">
               <gridData/>
             </widget>
-            <widget name="Button" id="button" text="Submit to group popup">
-              <gridData/>
+            <widget name="PlaceHolder">
+              <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
             </widget>
             <gridLayout numColumns="2"/>
           </container>

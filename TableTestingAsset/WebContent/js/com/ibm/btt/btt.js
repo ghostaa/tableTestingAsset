@@ -186,6 +186,16 @@ dojo.provide("com.ibm.btt.util.StringUtil");
 			}
 
 		},
+		
+		escapeEnterWrap : function(str) {
+			if (str) {
+				var tmp_String = str.replace(new RegExp("\r\n", "g"), "\n");
+				tmp_String = tmp_String.replace(new RegExp("\n", "g"), "<br/>");
+				return tmp_String;
+			} else {
+				return str;
+			}
+		},
 
 		replaceAll : function(str, subStr, newSubStr) {
 			if (str && subStr && newSubStr) {
@@ -457,7 +467,7 @@ dojo.declare("com.ibm.btt.dijit.Anchor",[dijit._Widget,dijit._Templated,com.ibm.
 	 * */
 	_setTextAttr : function(value){
 		this.text = value;
-		this.domNode.innerHTML = this.getI18NString(value);
+		this.domNode.innerHTML = StringUtil.escapeEnterWrap(this.getI18NString(value));
 	},
 	
 	/**
@@ -626,7 +636,7 @@ dojo.declare("com.ibm.btt.dijit.Button", [ dijit.form.Button,
 	 * */
 	_setTextAttr : function(value) {
 		this.text = value;
-		this.textNode.innerHTML = this.getI18NString(value);
+		this.textNode.innerHTML = StringUtil.escapeEnterWrap(this.getI18NString(value));
 	},
 	
 	/**
@@ -1027,7 +1037,7 @@ dojo.declare("com.ibm.btt.dijit.CheckBox", [ dijit.form.CheckBox, com.ibm.btt.di
 	 * */
 	_setTextAttr : function(value){
 		this.text = value;
-		this.labelNode.innerHTML = this.getI18NString(value);
+		this.labelNode.innerHTML = StringUtil.escapeEnterWrap(this.getI18NString(value));
 	},
 	
 	/**
@@ -3517,7 +3527,7 @@ dojo.declare("com.ibm.btt.dijit.Label",[dijit._Widget,dijit._Templated,com.ibm.b
 	 * */
 	_setTextAttr : function(value){
 		this.text = value;
-		this.domNode.innerHTML = this.getI18NString(value);
+		this.domNode.innerHTML = StringUtil.escapeEnterWrap(this.getI18NString(value));
 	},
 	
 	/**
@@ -3707,7 +3717,7 @@ dojo.declare("com.ibm.btt.dijit.RadioButton", [ dijit.form.RadioButton, com.ibm.
 	 * */
 	_setTextAttr : function(value){
 		this.text = value;
-		this.labelNode.innerHTML = this.getI18NString(value);
+		this.labelNode.innerHTML = StringUtil.escapeEnterWrap(this.getI18NString(value));
 	},
 	
 	/**
@@ -4391,8 +4401,8 @@ dojo.declare("com.ibm.btt.dijit.Select", [com.ibm.btt.dijit.ValidationTextBox, d
 		this.store.fetchItemByIdentity({
 			identity : value,
 			onItem : function (item) {
-				if (item)
-					isValueInItems = true;
+				//if (item) for defect 28042, this line code may get the wrong item
+				//isValueInItems = true;
 			}
 		});
 		
@@ -8886,16 +8896,16 @@ dojo.declare("com.ibm.btt.dijit.Message",[dijit._Widget,dijit._Templated,com.ibm
 		//1) get i18n value   2) if it's a template, Message1.display(��ERROR��, ��CROSS_FILED_VALIDATION_ERROR��,��{ xx : cbcrossbank.value, xx:xxx});
 		var message = ""; 
 		if(arguments.length  === 1 ){	//only one argument, it's text
-			message = this.getI18NString(text); 	//geti18n value...	
+			message = StringUtil.escapeEnterWrap(this.getI18NString(text)); 	//geti18n value...	
 		}else if(arguments.length === 2){	 // text, level ,
-			message = this.getI18NString(text); 	//geti18n value...
+			message = StringUtil.escapeEnterWrap(this.getI18NString(text)); 	//geti18n value...
 		}else if(arguments.length > 2){		//text, level, dynamic attributes...
 			var values = [];
 			for(var i= 2; i< arguments.length; i++){
 				values.push(arguments[i]);
 			}
 			console.debug("display,dynamic attributes values",values);
-			message = this.getI18NString(text,values,true);
+			message = StringUtil.escapeEnterWrap(this.getI18NString(text,values,true));
 		}
 		
 		return message;
@@ -10569,6 +10579,12 @@ dojo.declare("com.ibm.btt.dijit.TabbedPane", [dijit.layout.TabContainer,
 		} else {
 			this._setTabSelection();
 		}
+		
+		var children = this.getChildren();
+		for(var i=0;i<children.length;i++){
+			this._checkDisabedPane(children[i], children[i].title, null, children[i].disabled);
+		}
+		
 	},
 	
 	_setTabSelection : function(){
@@ -12717,10 +12733,12 @@ dojo.declare("com.ibm.btt.event.NavigationEngine", [ com.ibm.btt.event.Engine ],
 	 *              please do not use this method in customer code.
 	 * */
 	_onLinkClick : function(link, e){
-		if (link.get("target") !== "_blank") {
-			e.preventDefault();
-			if (link.bttParams) {
+		if (link.bttParams) {
+			dojo.stopEvent(e);
+			if (link.get("target") !== "_blank") {
 				this._submitData(dojo.fromJson(link.bttParams));
+			} else {
+				window.open(link.domNode.href);
 			}
 		}
 	},

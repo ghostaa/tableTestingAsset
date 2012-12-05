@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FFInGroup.xui by ghost, on Tue Oct 16 16:56:48 CST 2012 -->
+<!-- Generated from FFInGroup.xui by ghost, on Wed Dec 05 18:57:06 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="FFInGroup_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="FFInGroup_form" errorPage="PaginationTablePage/FF/FFInGroup.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="FFInGroup_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="FFInGroup_link" text="FFtable" flowEvent="returnToTFtable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="FFInGroup_label" text="-> FFtable in group"/>
                       </td>
                     </tr>
@@ -81,11 +81,11 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="FFInGroup_group" text="Group">
                   <table>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:table id="FFInGroup_tableFF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInGroup_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
                           <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                           <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>

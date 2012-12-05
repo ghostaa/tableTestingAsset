@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from TTInGroup.xui by ghost, on Tue Oct 16 16:56:52 CST 2012 -->
+<!-- Generated from TTInGroup.xui by ghost, on Wed Dec 05 18:57:14 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="TTInGroup_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="TTInGroup_form" errorPage="PaginationTablePage/TT/TTInGroup.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="TTInGroup_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="TTInGroup_link" text="TTtable" flowEvent="returnToTFtable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="TTInGroup_label" text="-> TTtable in group"/>
                       </td>
                     </tr>
@@ -81,11 +81,11 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="TTInGroup_group" text="Group">
                   <table>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:table id="TTInGroup_tableTT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TT$TTInGroup_tableTT" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
                           <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                           <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>

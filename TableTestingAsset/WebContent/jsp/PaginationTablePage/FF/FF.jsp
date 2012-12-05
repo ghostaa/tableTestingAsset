@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FF.xui by ghost, on Tue Nov 06 18:15:44 CST 2012 -->
+<!-- Generated from FF.xui by ghost, on Wed Dec 05 18:57:06 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,14 +63,14 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="FF_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="FF_form" errorPage="PaginationTablePage/FF/FF.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="FF_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="FF_label" text="FFtable"/>
                       </td>
                     </tr>
@@ -78,7 +78,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" selectionMode="multiple" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -95,27 +95,27 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="FF_panel02">
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="FF_group" text="Test in group">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="FF_link" text="Link to \'FFtable in group\'" flowEvent="group"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="FF_link02" text="Link to \'FFtable in popup group\'" flowEvent="groupPopup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="FF_panel04">
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:button id="FF_button01" type="submit" text="Submit to group" flowEvent="submit to group"/>
                                       </td>
                                       <td>
@@ -131,21 +131,21 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="FF_group01" text="Test in Tabbedpane">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="FF_link01" text="Link to \'FFtable in TabbedPane\'" flowEvent="tabbedPane"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="FF_link04" text="Link to \'FFtable in popup TabbedPane\'" flowEvent="tabbedPanePopup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="FF_panel05">
                                     <tr>
                                       <td>
@@ -161,7 +161,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="FF_panel03">
                             <tr>
                               <td>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultPage.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
+<!-- Generated from SelectionResultPage.xui by ghost, on Wed Dec 05 18:57:17 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="SelectionResultPage_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="SelectionResultPage_form" errorPage="SelectionResultPage/SelectionResultPage.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="SelectionResultPage_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="SelectionResultPage_link_copy" text="back" flowEvent="back"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="SelectionResultPage_label" text=" -> Selection Result"/>
                       </td>
                     </tr>
@@ -81,7 +81,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="SelectionResultPage_table" dataNameForList="selectAccountList" isPageable="false">
                   <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>

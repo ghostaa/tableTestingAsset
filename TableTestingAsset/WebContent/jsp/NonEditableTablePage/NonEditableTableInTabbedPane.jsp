@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Tue Oct 16 16:56:48 CST 2012 -->
+<!-- Generated from NonEditableTableInTabbedPane.xui by ghost, on Wed Dec 05 18:57:05 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="NonEditableTableInTabbedPane_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="NonEditableTableInTabbedPane_form" errorPage="NonEditableTablePage/NonEditableTableInTabbedPane.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableInTabbedPane_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="NonEditableTableInTabbedPane_link" text=" non-editable table" flowEvent="returnToNonEditableTable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTableInTabbedPane_label" text="-> non-editable table in TabbedPane"/>
                       </td>
                     </tr>
@@ -81,12 +81,12 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:tabbedpane id="NonEditableTableInTabbedPane_tabbedPane">
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane01" title="NormalTab">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:table id="NonEditableTableInTabbedPane_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
                             <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                             <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -99,13 +99,13 @@ dojo.addOnLoad(function(){
                         </td>
                       </tr>
                       <tr>
-                        <td valign="top">
+                        <td align="left" valign="top">
                             <table id="NonEditableTableInTabbedPane_panel02">
                               <tr>
-                                <td>
+                                <td align="left" valign="center">
                                   <bttdojo:button id="NonEditableTableInTabbedPane_button" type="submit" text="to group page" flowEvent="to group page"/>
                                 </td>
-                                <td>
+                                <td align="left" valign="center">
                                   <bttdojo:button id="NonEditableTableInTabbedPane_button01" type="submit" text="to pane popup page" flowEvent="to pane popup page"/>
                                 </td>
                               </tr>
@@ -117,11 +117,11 @@ dojo.addOnLoad(function(){
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane02" title="Group">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td valign="top">
+                        <td align="left" valign="top">
                           <bttdojo:group id="NonEditableTableInTabbedPane_group" text="Group">
                             <table>
                               <tr>
-                                <td>
+                                <td align="left" valign="center">
                                   <bttdojo:table id="NonEditableTableInTabbedPane_table_copy" dataNameForList="nonEditableAccountList" isPageable="false">
                                     <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                                     <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -142,17 +142,17 @@ dojo.addOnLoad(function(){
                   <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane03" title="Pane">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td valign="top">
+                        <td align="left" valign="top">
                           <bttdojo:tabbedpane id="NonEditableTableInTabbedPane_tabbedPane01">
                             <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane04" title="Tab01">
                               <table style="table-layout:fixed">
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:label id="NonEditableTableInTabbedPane_label01" text="tab01"/>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:table id="NonEditableTableInTabbedPane_table_copy01" dataNameForList="nonEditableAccountList" isPageable="false">
                                       <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -169,12 +169,12 @@ dojo.addOnLoad(function(){
                             <bttdojo:contentpane id="NonEditableTableInTabbedPane_ContentPane05" title="Tab02">
                               <table style="table-layout:fixed">
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:label id="NonEditableTableInTabbedPane_label02" text="tab02"/>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:table id="NonEditableTableInTabbedPane_table_copy01_copy" dataNameForList="nonEditableAccountList" isPageable="false">
                                       <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>

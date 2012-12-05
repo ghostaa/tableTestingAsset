@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Tue Oct 16 16:56:48 CST 2012 -->
+<!-- Generated from NonEditableTableIsManipulated.xui by ghost, on Wed Dec 05 18:57:05 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -65,17 +65,17 @@ dojo.addOnLoad(function(){
 <script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/NonEditableTablePage/NonEditableTableIsManipulated.js"> </script>
   <table id="NonEditableTableIsManipulated_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="NonEditableTableIsManipulated_form" errorPage="NonEditableTablePage/NonEditableTableIsManipulated.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_panel03">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="NonEditableTableIsManipulated_link_copy" text=" non-editable table" flowEvent="returnToNonEditableTable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTableIsManipulated_label" text=" -> manipulate non-editable table"/>
                       </td>
                     </tr>
@@ -83,10 +83,10 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTableIsManipulated_label01" text="Sort and columReorder"/>
                       </td>
                     </tr>
@@ -94,7 +94,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="NonEditableTableIsManipulated_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" sortEnabled="true" columnReordering="true" hint="the old hint" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -107,16 +107,16 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_visibility">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_visible" type="button" text="visible"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_hidden" type="button" text="hidden"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_gone" type="button" text="gone"/>
                       </td>
                     </tr>
@@ -124,16 +124,16 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_disabled">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTableIsManipulated_label02" text="disabled:"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_disabletrue" type="button" text=" true"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_disablefalse" type="button" text="false"/>
                       </td>
                     </tr>
@@ -141,16 +141,16 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_readonly">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTableIsManipulated_readonlylabel" text="read only:"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_readonlytrue" type="button" text="true"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_readonlyfalse" type="button" text="false"/>
                       </td>
                     </tr>
@@ -161,10 +161,10 @@ dojo.addOnLoad(function(){
               <td>
                   <table id="NonEditableTableIsManipulated_panel02">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_To group popup page" type="submit" text="To group popup page" flowEvent="to group popup page"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_To pane popup page" type="submit" text="To pane popup page" flowEvent="to pane popup page"/>
                       </td>
                     </tr>
@@ -172,13 +172,13 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTableIsManipulated_panel04">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_Change the hint from text" type="button" text="Change the hint from text"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:button id="NonEditableTableIsManipulated_Change the hint from NLS" type="button" text="Change the hint from NLS"/>
                       </td>
                     </tr>
@@ -186,7 +186,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:button id="NonEditableTableIsManipulated_Change the CSS" type="button" text="Change the CSS"/>
               </td>
             </tr>

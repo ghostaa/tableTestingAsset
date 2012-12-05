@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from NonEditableTable.xui by ghost, on Tue Oct 16 16:56:47 CST 2012 -->
+<!-- Generated from NonEditableTable.xui by ghost, on Wed Dec 05 18:57:04 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,14 +63,14 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="NonEditableTable_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="NonEditableTable_form" errorPage="NonEditableTablePage/NonEditableTable.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTable_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="NonEditableTable_label" text=" non-editable table"/>
                       </td>
                     </tr>
@@ -78,7 +78,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="NonEditableTable_table" dataName="selectAccountList" dataNameForList="nonEditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                   <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -91,30 +91,30 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="NonEditableTable_panel02">
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="NonEditableTable_group" text="Test in group">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="NonEditableTable_link" text="Link to \'table in group\' page" flowEvent="LinkToGroup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="NonEditableTable_link02" text="Link to popup page" flowEvent="group popup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="NonEditableTable_panel04">
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:button id="NonEditableTable_button" type="submit" text="submit to group page" flowEvent="submit to group page"/>
                                       </td>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:button id="NonEditableTable_button02" type="submit" text="submit to group popup page" flowEvent="submit to group popup page"/>
                                       </td>
                                     </tr>
@@ -128,27 +128,27 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="NonEditableTable_group01" text="Test inTabbedpane">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="NonEditableTable_link01" text="Link to \'table in TabbedPane\' page" flowEvent="LinkToPane"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="NonEditableTable_link04" text="Link to popup page" flowEvent="pane popup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="NonEditableTable_panel05">
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:button id="NonEditableTable_button01" type="submit" text="submit to pane page" flowEvent="submit to pane page"/>
                                       </td>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:button id="NonEditableTable_button03" type="submit" text="submit to pane popup page" flowEvent="submit to pane popup page"/>
                                       </td>
                                     </tr>
@@ -162,14 +162,14 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="NonEditableTable_panel03">
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                 <bttdojo:group id="NonEditableTable_group02" text="Test in \'manipulate table\'">
                                   <table>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="NonEditableTable_link03" text="Link to \'manipulate table\' page" flowEvent="manipulatetable"/>
                                       </td>
                                     </tr>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditSelectionResultInPanePage.xui by ghost, on Tue Oct 16 16:56:44 CST 2012 -->
+<!-- Generated from EditSelectionResultInPanePage.xui by ghost, on Wed Dec 05 18:56:55 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="EditSelectionResultInPanePage_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="EditSelectionResultInPanePage_form" errorPage="EditSelectionResultPage/EditSelectionResultInPanePage.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="EditSelectionResultInPanePage_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="EditSelectionResultInPanePage_link_copy" text="editable table" flowEvent="back"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInPanePage_label" text="-> EditSelection Result in pane"/>
                       </td>
                     </tr>
@@ -81,12 +81,12 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:tabbedpane id="EditSelectionResultInPanePage_tabbedPane">
                   <bttdojo:contentpane id="EditSelectionResultInPanePage_ContentPane01" title="multi-selection result">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:table id="EditSelectionResultInPanePage_table" dataNameForList="selectAccountList" isPageable="false">
                             <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                             <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -108,58 +108,58 @@ dojo.addOnLoad(function(){
                   <bttdojo:contentpane id="EditSelectionResultInPanePage_ContentPane02" title="single-selection result">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label08" text="AccountName"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label01" dataName="AccountInfo.AccountName" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label09" text="TradeTime"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label02" dataName="AccountInfo.TradeTime" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label10" text="MaximumAmount"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label03" dataName="AccountInfo.MaximumAmount" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label11" text="AccountOpeningDate"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label04" dataName="AccountInfo.AccountOpeningDate" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label12" text="AccountBlance"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label05" dataName="AccountInfo.AccountBlance" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label13" text="Rate"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label06" dataName="AccountInfo.Rate" text="Label"/>
                         </td>
                       </tr>
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label14" text="Usable"/>
                         </td>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:label id="EditSelectionResultInPanePage_label07" dataName="AccountInfo.Usable" text="Label"/>
                         </td>
                       </tr>

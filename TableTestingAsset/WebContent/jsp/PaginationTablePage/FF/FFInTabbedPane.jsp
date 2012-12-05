@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FFInTabbedPane.xui by ghost, on Tue Oct 16 16:56:49 CST 2012 -->
+<!-- Generated from FFInTabbedPane.xui by ghost, on Wed Dec 05 18:57:08 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="FFInTabbedPane_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="FFInTabbedPane_form" errorPage="PaginationTablePage/FF/FFInTabbedPane.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="FFInTabbedPane_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="FFInTabbedPane_link" text="FFtable" flowEvent="returnToTFTable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="FFInTabbedPane_label" text="-> FFInTabbedPane"/>
                       </td>
                     </tr>
@@ -81,12 +81,12 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:tabbedpane id="FFInTabbedPane_tabbedPane">
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane01" title="NormalTab">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td>
+                        <td align="left" valign="center">
                           <bttdojo:table id="FFInTabbedPane_tableFF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
                             <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                             <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -107,11 +107,11 @@ dojo.addOnLoad(function(){
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane02" title="Group">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td valign="top">
+                        <td align="left" valign="top">
                           <bttdojo:group id="FFInTabbedPane_group" text="Group">
                             <table>
                               <tr>
-                                <td>
+                                <td align="left" valign="center">
                                   <bttdojo:table id="FFInTabbedPane_tableFF1" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF1" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
                                     <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                     <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -136,17 +136,17 @@ dojo.addOnLoad(function(){
                   <bttdojo:contentpane id="FFInTabbedPane_ContentPane03" title="Pane">
                     <table style="table-layout:fixed">
                       <tr>
-                        <td valign="top">
+                        <td align="left" valign="top">
                           <bttdojo:tabbedpane id="FFInTabbedPane_tabbedPane01">
                             <bttdojo:contentpane id="FFInTabbedPane_ContentPane04" title="Tab01">
                               <table style="table-layout:fixed">
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:label id="FFInTabbedPane_label01" text="tab01"/>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:table id="FFInTabbedPane_tableFF2" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF2" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
                                       <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -167,12 +167,12 @@ dojo.addOnLoad(function(){
                             <bttdojo:contentpane id="FFInTabbedPane_ContentPane05" title="Tab02">
                               <table style="table-layout:fixed">
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:label id="FFInTabbedPane_label02" text="tab02"/>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>
+                                  <td align="left" valign="center">
                                     <bttdojo:table id="FFInTabbedPane_tableFF3" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FF$FFInTabbedPane_tableFF3" directPagination="false" paginationWhenLoading="false" rowsPerPage="10">
                                       <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                                       <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>

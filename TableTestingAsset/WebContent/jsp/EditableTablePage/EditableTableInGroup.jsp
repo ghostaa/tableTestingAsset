@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditableTableInGroup.xui by ghost, on Fri Nov 02 11:34:21 CST 2012 -->
+<!-- Generated from EditableTableInGroup.xui by ghost, on Wed Dec 05 18:56:57 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="EditableTableInGroup_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="EditableTableInGroup_form" errorPage="EditableTablePage/EditableTableInGroup.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="EditableTableInGroup_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="EditableTableInGroup_link" text="editable table" flowEvent="returnToEditableTable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditableTableInGroup_label" text="-> editable table in group"/>
                       </td>
                     </tr>
@@ -81,11 +81,11 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="EditableTableInGroup_group" text="Group">
                   <table>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:table id="EditableTableInGroup_table" dataName="AccountInfoRecord" dataNameForList="EditableAccountList" selectionMode="single" selectionRequired="true" isPageable="false">
                           <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                           <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -99,22 +99,18 @@ dojo.addOnLoad(function(){
                           <bttdojo:column unCheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
                           <bttdojo:column widget="LabelFromList" align="left" dataName="accountAttribution" width="80" text="%nls.testtable/accountAttribution" storeURL="listFiles/accountAttribution.js"/>
                           <bttdojo:column widget="Image" align="left" dataName="ImageField" width="80" text="%nls.testtable/Image"/>
-                          <bttdojo:column align="left" dataName="table_dataRecord01.table_dataField" width="80" text="column0"/>
                         </bttdojo:table>
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="EditableTableInGroup_panel02">
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:button id="EditableTableInGroup_button" type="submit" text="to group popup page" flowEvent="to group popup page"/>
                               </td>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:button id="EditableTableInGroup_button01" type="submit" text="to pane page" flowEvent="to pane page"/>
-                              </td>
-                              <td>
-                                <bttdojo:textbox id="EditableTableInGroup_text"/>
                               </td>
                             </tr>
                           </table>

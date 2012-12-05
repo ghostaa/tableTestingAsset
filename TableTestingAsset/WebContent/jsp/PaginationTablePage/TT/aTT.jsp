@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from aTT.xui by ghost, on Tue Oct 16 16:56:53 CST 2012 -->
+<!-- Generated from aTT.xui by ghost, on Wed Dec 05 18:57:16 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,14 +63,14 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="aTT_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="aTT_form" errorPage="PaginationTablePage/TT/aTT.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="aTT_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="aTT_label" text=" TTtable"/>
                       </td>
                     </tr>
@@ -78,7 +78,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="aTT_tableTT" dataName="AccountInfoRecord" dataNameForList="AccountInfoList" isPageable="true" selectionMode="single" selectionRequired="true" operationName="PAG_PaginationTablePage$TT$aTT_tableTT" directPagination="true" paginationWhenLoading="true" rowsPerPage="10">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -95,24 +95,24 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="aTT_panel02">
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="aTT_group" text="Test in group">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="aTT_link" text="Link to \'TTtable in group\'" flowEvent="LinkToGroup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="aTT_link02" text="Link to \'TTtable in popup group\'" flowEvent="group popup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="aTT_panel04">
                                     <tr>
                                       <td>
@@ -130,21 +130,21 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="aTT_group01" text="Test in Tabbedpane">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="aTT_link01" text="Link to \'TTtable in TabbedPane\'" flowEvent="LinkToPane"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="aTT_link04" text="Link to \'TTtable in popup TabbedPane\'" flowEvent="pane popup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="aTT_panel05">
                                     <tr>
                                       <td>
@@ -160,7 +160,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="aTT_panel03">
                             <tr>
                               <td>

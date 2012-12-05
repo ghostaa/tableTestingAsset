@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Fri Nov 02 12:14:49 CST 2012 -->
+<!-- Generated from EditSelectionResultInGroupPage.xui by ghost, on Wed Dec 05 18:56:55 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="EditSelectionResultInGroupPage_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="EditSelectionResultInGroupPage_form" errorPage="EditSelectionResultPage/EditSelectionResultInGroupPage.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="EditSelectionResultInGroupPage_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="EditSelectionResultInGroupPage_link_copy" text="editable table" flowEvent="back"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label" text="-> EditSelection Result in group"/>
                       </td>
                     </tr>
@@ -81,11 +81,11 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="EditSelectionResultInGroupPage_group" text="multi-selection result">
                   <table>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:table id="EditSelectionResultInGroupPage_table" dataNameForList="selectAccountList" isPageable="false">
                           <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                           <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -99,7 +99,6 @@ dojo.addOnLoad(function(){
                           <bttdojo:column unCheckedValue="false" widget="CheckBox" align="left" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable"/>
                           <bttdojo:column widget="LabelFromList" align="left" dataName="accountAttribution" width="80" text="%nls.testtable/accountAttribution" storeURL="listFiles/accountAttribution.js"/>
                           <bttdojo:column widget="Image" align="left" dataName="ImageField" width="80" text="%nls.testtable/Image"/>
-                          <bttdojo:column align="left" dataName="table_dataRecord01.table_dataField" width="80" text="column0"/>
                         </bttdojo:table>
                       </td>
                     </tr>
@@ -108,88 +107,63 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="EditSelectionResultInGroupPage_group01" text="single-selection result">
                   <table>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label08" text="AccountName"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label01" dataName="AccountInfo.AccountName" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label09" text="TradeTime"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label02" dataName="AccountInfo.TradeTime" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label10" text="MaximumAmount"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label03" dataName="AccountInfo.MaximumAmount" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label11" text="AccountOpeningDate"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label04" dataName="AccountInfo.AccountOpeningDate" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label12" text="AccountBlance"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label05" dataName="AccountInfo.AccountBlance" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label13" text="Rate"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label06" dataName="AccountInfo.Rate" text="Label"/>
                       </td>
-                      <td>
-                      </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label14" text="Usable"/>
                       </td>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="EditSelectionResultInGroupPage_label07" dataName="AccountInfo.Usable" text="Label"/>
-                      </td>
-                      <td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                      </td>
-                      <td>
-                      </td>
-                      <td>
-                        <bttdojo:table id="EditSelectionResultInGroupPage_table01" dataNameForList="AccountInfo.table_dataList" isPageable="false">
-                          <bttdojo:column align="left" dataName="table_dataField02" width="80" text="column0"/>
-                        </bttdojo:table>
                       </td>
                     </tr>
                   </table>

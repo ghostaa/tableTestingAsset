@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from TF.xui by ghost, on Tue Oct 16 17:10:21 CST 2012 -->
+<!-- Generated from TF.xui by ghost, on Wed Dec 05 18:57:12 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -64,14 +64,14 @@ dojo.addOnLoad(function(){
 <script type="text/javascript" src="<%=JSPUtil.getWebContextRootUrl()%>jsp/PaginationTablePage/TF/TF.js"> </script>
   <table id="TF_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="TF_form" errorPage="PaginationTablePage/TF/TF.jsp">
           <table>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="TF_panel01">
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:label id="TF_label" text="TFtable"/>
                       </td>
                     </tr>
@@ -79,7 +79,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="TF_tableTF" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$TF$TF_tableTF" directPagination="true" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
@@ -96,19 +96,19 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="TF_panel02">
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="TF_group" text="Test in group">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="TF_link" text="Link to \'TFtable in group\'" flowEvent="LinkToGroup"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="TF_link02" text="Link to \'TFtable in popup group\'" flowEvent="group popup"/>
                               </td>
                             </tr>
@@ -119,16 +119,16 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                         <bttdojo:group id="TF_group01" text="Test in Tabbedpane">
                           <table>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="TF_link01" text="Link to \'TFtable in TabbedPane\'" flowEvent="LinkToPane"/>
                               </td>
                             </tr>
                             <tr>
-                              <td>
+                              <td align="left" valign="center">
                                 <bttdojo:a id="TF_link04" text="Link to \'TFtable in popup TabbedPane\'" flowEvent="pane popup"/>
                               </td>
                             </tr>
@@ -139,7 +139,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="TF_panel03">
                             <tr>
                               <td>

@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from EditableTable.xui by ghost, on Tue Nov 06 18:16:14 CST 2012 -->
+<!-- Generated from EditableTable.xui by ghost, on Wed Dec 05 18:56:56 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,16 +63,16 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="EditableTable_panel">
     <tr>
-      <td valign="top">
+      <td align="left" valign="top">
         <bttdojo:form id="EditableTable_form" errorPage="EditableTablePage/EditableTable.jsp">
           <table>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:label id="EditableTable_label" text="editable table"/>
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:table id="EditableTable_table" dataName="selectAccountList" dataNameForList="EditableAccountList" selectionMode="multiple" selectionRequired="true" isPageable="false">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -90,33 +90,33 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                   <table id="EditableTable_panel01">
                     <tr>
-                      <td valign="top">
+                      <td align="left" valign="top">
                           <table id="EditableTable_panel02">
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                 <bttdojo:group id="EditableTable_group" text="Test in group">
                                   <table>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="EditableTable_link" text="Link to \'table in group\' page" flowEvent="LinkToGroup"/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="EditableTable_link02" text="Link to popup page" flowEvent="group popup"/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td valign="top">
+                                      <td align="left" valign="top">
                                           <table id="EditableTable_panel04">
                                             <tr>
-                                              <td>
+                                              <td align="left" valign="center">
                                                 <bttdojo:button id="EditableTable_button" type="submit" text="submit to group page" flowEvent="submit to group page"/>
                                               </td>
-                                              <td>
+                                              <td align="left" valign="center">
                                                 <bttdojo:button id="EditableTable_button02" type="submit" text="submit to group popup page" flowEvent="submit to group popup page"/>
                                               </td>
                                             </tr>
@@ -130,27 +130,27 @@ dojo.addOnLoad(function(){
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                 <bttdojo:group id="EditableTable_group01" text="Test inTabbedpane">
                                   <table>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="EditableTable_link01" text="Link to \'table in TabbedPane\' page" flowEvent="LinkToPane"/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="EditableTable_link04" text="Link to popup page" flowEvent="pane popup"/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td valign="top">
+                                      <td align="left" valign="top">
                                           <table id="EditableTable_panel05">
                                             <tr>
-                                              <td>
+                                              <td align="left" valign="center">
                                                 <bttdojo:button id="EditableTable_button01" type="submit" text="submit to pane page" flowEvent="submit to pane page"/>
                                               </td>
-                                              <td>
+                                              <td align="left" valign="center">
                                                 <bttdojo:button id="EditableTable_button03" type="submit" text="submit to pane popup page" flowEvent="submit to pane popup page"/>
                                               </td>
                                             </tr>
@@ -164,14 +164,14 @@ dojo.addOnLoad(function(){
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                   <table id="EditableTable_panel03">
                                     <tr>
-                                      <td valign="top">
+                                      <td align="left" valign="top">
                                         <bttdojo:group id="EditableTable_group02" text="Test in \'manipulate table\'">
                                           <table>
                                             <tr>
-                                              <td>
+                                              <td align="left" valign="center">
                                                 <bttdojo:a id="EditableTable_link03" text="Link to \'manipulate table\' page" flowEvent="manipulatetable"/>
                                               </td>
                                             </tr>
@@ -185,11 +185,11 @@ dojo.addOnLoad(function(){
                               </td>
                             </tr>
                             <tr>
-                              <td valign="top">
+                              <td align="left" valign="top">
                                 <bttdojo:group id="EditableTable_group03" text="Test selection and bombo box">
                                   <table>
                                     <tr>
-                                      <td>
+                                      <td align="left" valign="center">
                                         <bttdojo:a id="EditableTable_link05" text="Link to \'selection and combo box\' page" flowEvent="selection and combo box"/>
                                       </td>
                                     </tr>

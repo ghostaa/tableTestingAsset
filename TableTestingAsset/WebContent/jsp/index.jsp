@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from index.xui by ghost, on Mon Oct 22 16:42:54 CST 2012 -->
+<!-- Generated from index.xui by ghost, on Wed Dec 05 18:57:17 CST 2012 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,31 +63,31 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="index_null">
     <tr>
-      <td valign="top">
-        <bttdojo:form id="index_form" errorPage="index.jsp">
+      <td align="left" valign="top">
+        <bttdojo:form id="index_form" errorPage="index.jsp" style="width:375px;height:361px;">
           <table style="width:375px;height:361px;">
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:label id="index_label" text="%nls.bttsample/Welcome_To_Btt_Sample"/>
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:a id="index_link" text="%nls.bttsample/Click_Link_Run_Flow" flowId="sampleFlow"/>
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:a id="index_link02" text="nonEditable" flowId="nonEditableTableFlow"/>
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="left" valign="center">
                 <bttdojo:a id="index_link01" text="editable" flowId="editableTableFlow"/>
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td align="left" valign="top">
                 <bttdojo:group id="index_group" text="PaginationIndex">
                   <table>
                     <tr>
@@ -95,7 +95,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="index_link03" text="TFtable" flowId="PaginationTFFlow" flowEvent="start"/>
                       </td>
                     </tr>
@@ -104,7 +104,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="index_link04" text="TTtable" flowId="PaginationTTFlow" flowEvent="start"/>
                       </td>
                     </tr>
@@ -113,7 +113,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="index_link05" text="FFtable" flowId="PaginationFFFlow" flowEvent="start"/>
                       </td>
                     </tr>
@@ -122,7 +122,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td align="left" valign="center">
                         <bttdojo:a id="index_link06" text="FTtable" flowId="PaginationFTFlow"/>
                       </td>
                     </tr>

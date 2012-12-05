@@ -98,7 +98,7 @@ public class CreatePaginationData extends BTTServerOperation
 		System.out.println("accountTable is : -----------------------------------------------------------------------------------------------------");
 		
 		// save changed value
-		AccountListDB.saveAccountList(accountTable, toSavePageNumber);
+		//AccountListDB.saveAccountList(accountTable, toSavePageNumber);
 
 		// set value		
 		AccountListDB.getAllAccountList(pageNumber, accountTable);

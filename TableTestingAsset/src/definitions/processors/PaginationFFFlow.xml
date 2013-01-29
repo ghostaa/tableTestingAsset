@@ -9,14 +9,14 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState type="page" typeIdInfo="PaginationTablePage/FF/FF.jsp" id="PaginationTablePage/FF/FF">
+		<htmlState type="page" typeIdInfo="PaginationTablePage/FF/FF.jsp" id="PaginationTablePageFFFF">
 			<transitions>
-				<htmlTransition id="PaginationTablePage/FF/FF.ok" targetState="OK"/>
-				<htmlTransition id="PaginationTablePage/FF/FF.group" targetState="FFInGroup"/>
-				<htmlTransition id="PaginationTablePage/FF/FF.groupPopup" targetState="FFInGroupPopup"/>
-				<htmlTransition id="PaginationTablePage/FF/FF.tabbedPane" targetState="FFInTabbedPane"/>
-				<htmlTransition id="PaginationTablePage/FF/FF.tabbedPanePopup" targetState="FFInTabbedPanePopup"/>
-				<htmlTransition id="PaginationTablePage/FF/FF.submit to group" inputMapFmt="PaginationTablePage/FF/FF.submit to group_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
+				<htmlTransition id="PaginationTablePageFFFF.ok" targetState="OK"/>
+				<htmlTransition id="PaginationTablePageFFFF.group" targetState="FFInGroup"/>
+				<htmlTransition id="PaginationTablePageFFFF.groupPopup" targetState="FFInGroupPopup"/>
+				<htmlTransition id="PaginationTablePageFFFF.tabbedPane" targetState="FFInTabbedPane"/>
+				<htmlTransition id="PaginationTablePageFFFF.tabbedPanePopup" targetState="FFInTabbedPanePopup"/>
+				<htmlTransition id="PaginationTablePageFFFF.submit to group" inputMapFmt="PaginationTablePage/FF/FF.submit to group_InputFmt" targetState="EidtSelectionResultInGroupFlow"/>
 			</transitions>
 		</htmlState>
 
@@ -24,37 +24,37 @@
 
 		<operationState typeIdInfo="InitPaginationDataOp" id="InitPaginationDataOp" type="operation">
 			<transitions>
-				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="InitPaginationDataOp.ok" outputMapFmt="CreatePaginationDataOp.ok_OutputFmt01" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</operationState>
 
 		<popupPageState type="page" typeIdInfo="PaginationTablePage/FF/FFInGroup.jsp" id="FFInGroupPopup">
 			<transitions>
-				<htmlTransition id="FFInGroupPopup.returnToTFtable" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="FFInGroupPopup.returnToTFtable" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</popupPageState>
 
 		<htmlState type="page" typeIdInfo="PaginationTablePage/FF/FFInGroup.jsp" id="FFInGroup">
 			<transitions>
-				<htmlTransition id="FFInGroup.returnToTFtable" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="FFInGroup.returnToTFtable" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</htmlState>
 
 		<htmlState type="page" typeIdInfo="PaginationTablePage/FF/FFInTabbedPane.jsp" id="FFInTabbedPane">
 			<transitions>
-				<htmlTransition id="FFInTabbedPane.returnToTFTable" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="FFInTabbedPane.returnToTFTable" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</htmlState>
 
 		<popupPageState type="page" typeIdInfo="PaginationTablePage/FF/FFInTabbedPane.jsp" id="FFInTabbedPanePopup">
 			<transitions>
-				<htmlTransition id="FFInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="FFInTabbedPanePopup.returnToTFTable" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</popupPageState>
 
 		<htmlState typeIdInfo="EidtSelectionResultInGroupFlow" id="EidtSelectionResultInGroupFlow" type="subFlow">
 			<transitions>
-				<htmlTransition id="EidtSelectionResultInGroupFlow.back" targetState="PaginationTablePage/FF/FF"/>
+				<htmlTransition id="EidtSelectionResultInGroupFlow.back" targetState="PaginationTablePageFFFF"/>
 			</transitions>
 		</htmlState>
 	</htmlProcessor>
@@ -156,7 +156,7 @@
 	<fmtDef id="PaginationTablePage/FF/FF.submit to group_InputFmt">
 		<mapperConverterExpression>
 			<map from="AccountInfoRecord" to="AccountInfo"/>
-			<map from="selectAccountList" to="EditableAccountList" append="false"/>
+			<map from="selectAccountList" to="selectAccountList" append="false"/>
 			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 		</mapperConverterExpression>

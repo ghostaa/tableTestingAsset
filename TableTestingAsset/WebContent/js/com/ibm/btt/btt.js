@@ -1206,7 +1206,7 @@ dojo.declare("com.ibm.btt.dijit.CheckBox", [ dijit.form.CheckBox, com.ibm.btt.di
 		if(this.height != ""){
 			this.height = value;
 			var height = value.replace(new RegExp("px", "gm"), "");
-			try{
+			/*try{
 				height = Number(height);
 			} catch(e) {
 				console.error("Illegal input argument. Can not convert input height:"+ value +" to number.");
@@ -1216,8 +1216,8 @@ dojo.declare("com.ibm.btt.dijit.CheckBox", [ dijit.form.CheckBox, com.ibm.btt.di
 			var labelHeight = height - box.h;
 			if(labelHeight<0){
 				labelHeight = 0;
-			}
-			dojo.style(this.labelNode, "height", labelHeight + "px");
+			}*/
+			dojo.style(this.labelNode, "height", height + "px");
 		}
 	},
 	
@@ -2639,7 +2639,9 @@ dojo.declare("com.ibm.btt.dijit.AbstractAjaxMixin", null,{
 				}
 			} else {
 				for(var p in vobj) {
-					vobj[p] = arguments.callee(vobj[p]);
+					if(p.indexOf("_") != 0){
+						vobj[p] = arguments.callee(vobj[p]);
+					}
 				}
 			}
 			return vobj;
@@ -3148,8 +3150,11 @@ dojo.declare("com.ibm.btt.dijit.Form", [ dijit.form.Form,
 	onSubmit : function(e){
 			
 		var button = this._querySubmitButton(e);
-		
-		this.handleButtonSubmit(button);
+		if (button && button.bttParams) {
+			this.handleButtonSubmit(button);
+		} else {
+			this.parameterHandler(this.bttParams);
+		}
 		
 		if(this.validateOnSubmit) {
 			if(!this.isValid() || !this.xValid) return false;
@@ -3161,9 +3166,11 @@ dojo.declare("com.ibm.btt.dijit.Form", [ dijit.form.Form,
 			}
 		});		
 		
-		if(this.onFormSubmit){
+		if (this.onFormSubmit) {
 			this.onFormSubmit();
 		}
+		
+		
 		
 		return true;
 		
@@ -3881,7 +3888,7 @@ dojo.declare("com.ibm.btt.dijit.RadioButton", [ dijit.form.RadioButton, com.ibm.
 		if(this.height != ""){
 			this.height = value;
 			var height = value.replace(new RegExp("px", "gm"), "");
-			try{
+			/*try{
 				height = Number(height);
 			} catch(e) {
 				console.error("Illegal input argument. Can not convert input height:"+ value +" to number.");
@@ -3891,8 +3898,8 @@ dojo.declare("com.ibm.btt.dijit.RadioButton", [ dijit.form.RadioButton, com.ibm.
 			var labelHeight = height - box.h;
 			if(labelHeight<0){
 				labelHeight = 0;
-			}
-			dojo.style(this.labelNode, "height", labelHeight + "px");
+			}*/
+			dojo.style(this.labelNode, "height", height + "px");
 		}
 	},
 	
@@ -5264,6 +5271,21 @@ dojo.declare("com.ibm.btt.event.Engine", [com.ibm.btt.event._ConditionMixin], {
 		delete this._formOnLoaded;
 	},
 
+	_getWidget :function(id){
+		if (id.lastIndexOf(".") == -1) {
+			return dijit.byId(id);
+		} else {
+			var parentId = id.substring(0, id.indexOf("."));
+			var childId = id.substring(id.indexOf(".") + 1, id.length);
+			obj = dijit.byId(parentId);
+			if(obj && obj.getWidget){
+				return obj.getWidget(childId);
+			} else {
+				return null;
+			}
+		}
+	},
+	
 	/**
 	 *
 	 * register single rule
@@ -5273,24 +5295,15 @@ dojo.declare("com.ibm.btt.event.Engine", [com.ibm.btt.event._ConditionMixin], {
 	 * */
 	_registerEvent : function(rule, event) {
 		
-		var obj;
+		var obj = this._getWidget(event.id);
 		
 		//check if the widget id contains special character "."
 		//if the id contains "." that's mean we are listening the subwidget in a complex widget
 		//engine need to use getWidget mehtod of this widget to get the instance of subwidget
-		if (event.id.lastIndexOf(".") == -1) {
-			obj = dijit.byId(event.id);
-		} else {
-			var parentId = event.id.substring(0,event.id.indexOf("."));
-			var childId = event.id.substring(event.id.indexOf(".") + 1, event.id.length);
-			obj = dijit.byId(parentId);
-			if(obj && obj.getWidget){
-				obj = obj.getWidget(childId);
-			} else {
-				console.error("Failed to register event '" + event.id + "', " +
-						"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
-				return;
-			}
+		if (!obj) {
+			console.error("Failed to register event '" + event.id + "', " +
+				"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
+			return;
 		}
 		
 		//use dojo connect to listen and trigger the event
@@ -5411,11 +5424,26 @@ dojo.declare("com.ibm.btt.event.Engine", [com.ibm.btt.event._ConditionMixin], {
 		if (this.monitor != null) {
 			this.monitor.monitorSetPropertyAction(id, property, value);
 		}
-		dijit.byId(id).set(property, value);
+		var obj = this._getWidget(id);
+		if (!obj) {
+			console.error("Failed to register event '" + event.id + "', " +
+				"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
+			return;
+		}
+		obj.set(property, value);
 	},
 
 	getPW : function(id, property) {
-		var value=dijit.byId(id).get(property);
+
+		var obj = this._getWidget(id);
+		if (!obj) {
+			obj = dijit.byId(event.id);
+			console.error("Failed to register event '" + event.id + "', " +
+				"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
+			return;
+		}
+		
+		var value = obj.get(property);
 		if (this.monitor != null) {
 			this.monitor.monitorGetPropertyAction(id, property, value);
 		}
@@ -5423,12 +5451,23 @@ dojo.declare("com.ibm.btt.event.Engine", [com.ibm.btt.event._ConditionMixin], {
 	},
 
 	getW : function(id) {
-		return dijit.byId(id);
+		var obj = this._getWidget(id);
+		if (!obj) {
+			console.error("Failed to register event '" + event.id + "', " +
+				"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
+			return;
+		}
+		return obj;
 	},
 	
 	runWF: function( id, functionName, parameter){		
 		
-		var targetObj = dijit.byId(id);
+		var targetObj = this._getWidget(id);
+		if (!targetObj) {
+			console.error("Failed to register event '" + event.id + "', " +
+				"parent widget mush provide getWidget(id) widget to support subwidget listening funcion.");
+			return;
+		}
 		var args = [];
 		for ( var i = 2; i < arguments.length; i++) {
 			args[i - 2] = arguments[i];
@@ -5484,6 +5523,12 @@ dojo.provide("com.ibm.btt.dijit.GridDijit");
 dojo.declare("dojox.btt.grid.cells.BaseCellWidget",dojox.grid.cells._Widget,{
 		
 
+	constructor : function(){
+		if(!this.widget) {
+			this.widget = this.createWidget(dojo.create('div'), "");
+		}
+	},
+	
 	createWidget: function(inNode, inDatum, inRowIndex){
 		var widget = this.inherited(arguments);
 		var _this = this;
@@ -5492,6 +5537,28 @@ dojo.declare("dojox.btt.grid.cells.BaseCellWidget",dojox.grid.cells._Widget,{
 			
 		});
 		return widget;
+	},
+	
+	setValue: function(inRowIndex, inValue){
+		if(this.widget&&this.widget.set){
+			//Look for lazy-loading editor and handle it via its deferred.
+			if(this.widget.onLoadDeferred){
+				var self = this;
+				this.widget.onLoadDeferred.addCallback(function(){
+					self.widget._lastValueReported = inValue;
+					self.widget.set("value", inValue===null?"":inValue);
+				});
+			}else{
+				this.widget._lastValueReported = inValue;
+				this.widget.set("value", inValue, inValue);
+			}
+		}else{
+			this.inherited(arguments);
+		}
+	},
+	
+	getWidget : function(){
+		return this.widget;
 	}
 	
 });
@@ -5515,10 +5582,10 @@ dojo.declare("dojox.btt.grid.cells.DateTextBox", dojox.btt.grid.cells.BaseCellWi
 			return "";
 		}
 
-		if(this.widget == null) {
+		/*if(this.widget == null) {
 			this.widget = this.createWidget(dojo.create('div'), "");
 			//this.widget.set("value", null);
-		}
+		}*/
 
 		var date;
 
@@ -5546,6 +5613,7 @@ dojo.declare("dojox.btt.grid.cells.DateTextBox", dojox.btt.grid.cells.BaseCellWi
 	setValue: function(inRowIndex, inValue){
 
 		if(inValue == undefined || inValue == null || inValue == "" || inValue == "null"){
+			this.widget._lastValueReported = null;
 			this.widget.set('value', null);
 			return;
 		}
@@ -5553,12 +5621,16 @@ dojo.declare("dojox.btt.grid.cells.DateTextBox", dojox.btt.grid.cells.BaseCellWi
 		if(this.widget){
 			if(typeof inValue == "string") {
 				if(this.widget && this.widget.pattern){
-					this.widget.attr('value', this.widget.parse(inValue, this.widget.constraints));
+					var date = this.widget.parse(inValue, this.widget.constraints);
+					this.widget._lastValueReported = date;
+					this.widget.set('value', date);
 				} else {
-					this.widget.attr('value', new Date(inValue));
+					this.widget._lastValueReported = new Date(inValue);
+					this.widget.set('value', new Date(inValue));
 				}
 			} else {
-				this.widget.attr('value', inValue);
+				this.widget._lastValueReported = inValue;
+				this.widget.set('value', inValue);
 			}
 		}else{
 			this.inherited(arguments);
@@ -5593,9 +5665,9 @@ dojo.declare("dojox.btt.grid.cells.CurrencyTextBox", dojox.btt.grid.cells.BaseCe
 	widgetClass: com.ibm.btt.dijit.CurrencyTextBox,
 	
 	formatter : function(inData) {
-		if(this.widget == null) {
+		/*if(this.widget == null) {
 			this.widget = this.createWidget(dojo.create('div'), "");
-		}
+		}*/
 		
 		//deal with null value
 		if(inData === null){
@@ -5605,7 +5677,8 @@ dojo.declare("dojox.btt.grid.cells.CurrencyTextBox", dojox.btt.grid.cells.BaseCe
 		if(typeof inData == 'string') {
 			inData = Number(inData);
 		}
-		this.widget.attr('value', inData);
+		this.widget._lastValueReported = inData;
+		this.widget.set('value', inData);
 		
 		return dojo.number.format(inData, this.widget.constraints);
 	},
@@ -5623,7 +5696,14 @@ dojo.declare("dojox.btt.grid.cells.CurrencyTextBox", dojox.btt.grid.cells.BaseCe
 			this.widget.displayMessage(this.widget.getErrorMessage(true));		//DISPLAY THE ERROR MESSAGE TO GIVE END USER FEEDBACK
 			return undefined;
 		}
-	}		
+	},
+
+	setValue : function(inRowIndex, inValue) {
+		if (inValue && typeof inValue == 'string') {
+			inData = Number(inValue);
+		}
+		this.inherited(arguments);
+	}
 	
 });
 
@@ -5632,9 +5712,9 @@ dojo.declare("dojox.btt.grid.cells.NumberTextBox", dojox.btt.grid.cells.BaseCell
 	widgetClass: com.ibm.btt.dijit.NumberTextBox,
 	
 	formatter : function(inData) {
-		if(this.widget == null) {
+		/*if(this.widget == null) {
 			this.widget = this.createWidget(dojo.create('div'), "");
-		}
+		}*/
 		
 		//deal with null value
 		if(inData === null || inData === ""){
@@ -5686,15 +5766,17 @@ dojo.declare("dojox.btt.grid.cells.CheckBox", dojox.btt.grid.cells.BaseCellWidge
 	widgetClass: com.ibm.btt.dijit.CheckBox,
 	
 	getValue: function(){
-		return this.widget.attr('value');//isChecked ? this.widget.checkedValue : this.widget.unCheckedValue;//this.widget.checked;
+		return this.widget.get('value');//isChecked ? this.widget.checkedValue : this.widget.unCheckedValue;//this.widget.checked;
 	},
 	setValue: function(inRowIndex, inValue){
 
 		if(inValue && this.widget){
 			if( inValue.toString() == this.widget.checkedValue.toString() ) {
-				this.widget.attr("isChecked", true);
+				this.widget._lastValueReported = true;
+				this.widget.set("isChecked", true);
 			} else {
-				this.widget.attr("isChecked", false);
+				this.widget._lastValueReported = false;
+				this.widget.set("isChecked", false);
 			} 
 		}else{
 			this.inherited(arguments);
@@ -5713,7 +5795,7 @@ dojo.declare("dojox.btt.grid.cells.StringTextBox", dojox.btt.grid.cells.BaseCell
 	
 	getValue: function(inRowIndex){
 		if(this.widget.isValid()){
-			return this.widget.attr('value'); 
+			return this.widget.get('value'); 
 		}else{
 			this.widget.displayMessage(this.widget.getErrorMessage(true));		//DISPLAY THE ERROR MESSAGE TO GIVE END USER FEEDBACK
 			return undefined;
@@ -5772,9 +5854,9 @@ dojo.declare("dojox.btt.grid.cells.Select", dojox.btt.grid.cells.BaseCellWidget,
 
 	formatter : function(inData) {
 		
-		if(this.widget == null) {
+		/*if(this.widget == null) {
 			this.widget = this.createWidget(dojo.create('div'), "");
-		}
+		}*/
 		
 		if((inData === null) || (inData === "")){
 			return "";
@@ -7794,6 +7876,10 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 * disable, default value is false
 	 */
 	disabled: false,
+	
+	isActionable : false,
+	
+	bttParams : "",
 		
 	create : function(){
 	
@@ -7860,6 +7946,15 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 		//check each cell to see if there is a defined in the cell widget.
 		//if there is one, add it into the store comparatorMap
 		this._setComparatorForColunm();
+		
+		
+		this._eventHandlers.push(dojo.connect(this, "onRowDblClick", this, this._onRowDblClick));
+		
+		this._eventHandlers.push(dojo.connect(this, "onRowClick", this, this._onRowClick));
+		this._eventHandlers.push(dojo.connect(document, "onkeydown", this, this._onKeyEvent));
+		this._eventHandlers.push(dojo.connect(document, "onkeyup", this, this._onKeyEvent));
+		this._eventHandlers.push(dojo.connect(this.edit.setEditCell, "onkeyup", this, this._onCellEdit));
+		
 	},
 	
 	/**
@@ -7872,6 +7967,201 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	_onCellWidgetClick : function(e){
 		if(e.cell._onClick){
 			e.cell._onClick(e);
+		}
+	},
+	
+	_onKeyEvent : function(e){
+		this.inherited(arguments);
+		this._isCtrlPressed = e.ctrlKey;
+		
+		/*if(e.keyCode === dojo.keys.ENTER){
+			var isEditing = this.edit.isEditing();
+			this.edit.apply();
+			if(!isEditing){
+				this.edit.setEditCell(this.focus.cell, this.focus.rowIndex);
+			}
+		}*/
+	},
+	
+	_onCellEdit : function(inCell, inRowIndex){
+		for ( var i = 0; i < this.layout.cells.length; i++) {
+			if (this.layout.cells[i] == inCell) {
+				this.editingCellColumnIndex = i;
+				break;
+			}
+		}
+		this.editingCellRowIndex = inRowIndex;
+		this.onCellEdit(this.editingCellColumnIndex, this.editingCellRowIndex);
+	},
+	
+	onCellEdit : function(){
+		
+	},
+	
+	_onRowDblClick : function(e){
+		if (this.selectionMode === "single") {
+			if(!this.selection.isSelected(e.rowIndex)){
+				this.selection.setSelected(e.rowIndex, true);			
+			}
+		} else if(this.selectionMode === "extended"){
+			if (dojo.isIE && this._isCtrlPressed) {
+				this.selection.toggleSelect(e.rowIndex);
+			}
+		} else {
+			
+		}
+		if(this.isActionable){
+			if(this.readOnly === true || e.cell.editable === false){
+				var form = this._getParentForm();
+				if (this.bttParams != "" && form) {
+					form.bttParams = this.bttParams;
+					form.submit();
+				}
+			}
+		}
+	},
+	
+	_onRowClick : function(args){
+		this._lastClickedRow = args.rowIndex;
+	},
+	
+	getLastClickedRowIndex : function(){
+		if (this._lastClickedRow != undefined && this._lastClickedRow != null) {
+			return this._lastClickedRow;
+		} else {
+			return -1;
+		}
+	},
+	
+	setCellValueByIndex: function(inColumnIndex, inRowIndex, inValue){
+		var cell = this.layout.cells[inColumnIndex];
+		var inAttrName;
+		if (cell && cell.field) {
+			inAttrName = cell.field;
+		} else {
+			return;
+		}
+		if(this.edit && this.edit.apply){
+			this.edit.apply();
+		}
+		this.store.fetchItemByIdentity({
+			identity : this._by_idx[inRowIndex].idty,
+			onItem : dojo.hitch(this, function(item) {
+				var oldValue = this.store.getValue(item, inAttrName);
+				if (typeof oldValue == 'number') {
+					inValue = isNaN(inValue) ? inValue : parseFloat(inValue);
+				} else if (typeof oldValue == 'boolean') {
+					inValue = inValue == 'true' ? true : inValue == 'false' ? false : inValue;
+				} else if (oldValue instanceof Date) {
+					var asDate = new Date(inValue);
+					inValue = isNaN(asDate.getTime()) ? inValue : asDate;
+				}
+				this.store.setValue(item, inAttrName, inValue);
+				var _this = this;
+				setTimeout(function(){
+					_this.focus.findAndFocusGridCell();
+				}, 50);
+			})
+		});
+	}, 
+	
+	getCellValueByIndex: function(inColumnIndex, inRowIndex){
+		var cell = this.layout.cells[inColumnIndex];
+		var inAttrName;
+		if (cell && cell.field) {
+			inAttrName = cell.field;
+		} else {
+			return undefined;
+		}
+		var oldValue;
+		this.store.fetchItemByIdentity({
+			identity: this._by_idx[inRowIndex].idty,
+			onItem: dojo.hitch(this, function(item){
+				oldValue = this.store.getValue(item, inAttrName);
+			})
+		});
+		return oldValue;
+	}, 
+	
+	setCellValueByName: function(name, inRowIndex, inValue){
+		var cell;
+		for ( var i = 0; i < this.layout.cells.length; i++) {
+			if(name == this.layout.cells[i].field){
+				var inAttrName;
+				cell = this.layout.cells[i];
+				if (cell && cell.field) {
+					inAttrName = cell.field;
+				} else {
+					return;
+				}
+				if(this.edit && this.edit.apply){
+					this.edit.apply();
+				}
+				this.store.fetchItemByIdentity({
+					identity : this._by_idx[inRowIndex].idty,
+					onItem : dojo.hitch(this, function(item) {
+						var oldValue = this.store.getValue(item, inAttrName);
+						if (typeof oldValue == 'number') {
+							inValue = isNaN(inValue) ? inValue : parseFloat(inValue);
+						} else if (typeof oldValue == 'boolean') {
+							inValue = inValue == 'true' ? true : inValue == 'false' ? false : inValue;
+						} else if (oldValue instanceof Date) {
+							var asDate = new Date(inValue);
+							inValue = isNaN(asDate.getTime()) ? inValue : asDate;
+						}
+						this.store.setValue(item, inAttrName, inValue);
+						var _this = this;
+						setTimeout(function(){
+							_this.focus.findAndFocusGridCell();
+						}, 50);
+					})
+				});
+			}
+		}
+	}, 
+	
+	getCellValueByName: function(name, inRowIndex){
+		var cell;
+		for ( var i = 0; i < this.layout.cells.length; i++) {
+			if(name == this.layout.cells[i].field){
+				cell = this.layout.cells[i];
+			}
+		}
+		if(!cell){
+			return undefined;
+		}
+		var inAttrName;
+		if (cell && cell.field) {
+			inAttrName = cell.field;
+		} else {
+			return undefined;
+		}
+		var oldValue;
+		this.store.fetchItemByIdentity({
+			identity: this._by_idx[inRowIndex].idty,
+			onItem: dojo.hitch(this, function(item){
+				oldValue = this.store.getValue(item, inAttrName);
+			})
+		});
+		return oldValue;
+	}, 
+	
+	_getParentForm : function(){
+		for(var node = this.domNode; node.parentNode/*#5935*/; node=node.parentNode){
+			var widget=dijit.byNode(node);
+			if (widget && typeof widget._onSubmit == "function") {
+				return widget;
+			}
+		}
+	},
+	
+	_setIsActionableAttr : function(value){
+		if(value == "true"){
+			this.isActionable = true;
+		} else if(value == "false"){
+			this.isActionable = false;
+		} else {
+			this.isActionable = value;
 		}
 	},
 	
@@ -7919,7 +8209,11 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	},
 	
 	setStoreData: function(newRows /* array of objects */) {
-		this.setStore(new dojo.data.ItemFileWriteStore({data: {items: newRows }}));
+		var flag = this.store != null;
+		this.setStore(new dojo.data.ItemFileWriteStore({data: {items: newRows }, hierarchical : false}));
+		if(flag){
+			this._setComparatorForColunm();
+		}
 	},
 	
 	/**
@@ -7931,7 +8225,7 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 * */
 	_setStoreDataAttr : function(value){
 		if(!this.store){
-			this.store = new dojo.data.ItemFileWriteStore({data: {items: dojo.fromJson(value) }});
+			this.store = new dojo.data.ItemFileWriteStore({data: {items: dojo.fromJson(value) }, hierarchical : false});
 		}
 	},
 	
@@ -7976,7 +8270,8 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 						for (var i = 0; i < cells.length; i ++ ) {
 							if(cells[i].editable) {
 								var name = cells[i].field;
-								var value = store.getValue(items[m] , cells[i].field);
+								var value = store.getValue(items[m] , cells[i].field);			
+								
 								if (value && value !== "" && typeof value != "string") {
 						    		if(cells[i].editable && cells[i].widget && cells[i].widget.serialize) {
 						    			value = cells[i].widget.serialize(value, cells[i].widget.constraints);
@@ -7999,6 +8294,29 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 		} else return;
 	},
 	
+	
+	_createInputNodesForObj : function(containerNode, obj, preName) {
+		for(var p in obj) {
+			if(obj[p] != null && typeof obj[p] == "object") {
+				this._createInputNodesForObj(containerNode, obj[p], preName + "." + p);
+			} else {
+				var tempName = preName + "." + p;
+				var value = obj[p] === null || typeof obj[p] == "undefined" ? "" : obj[p];
+				var nodeList = dojo.query("input[type='hidden',name='" + tempName + "']", containerNode);
+				if(nodeList.length > 0) {
+					nodeList.attr("value", value);
+				} else {
+					var tempObj = {};
+					tempObj.type = 'hidden';
+					tempObj.name = tempName;
+					tempObj.value = value;
+					dojo.create("input", tempObj, containerNode, "last");
+				}
+				
+			}
+		}
+	},	
+	
 	onFormSubmit : function() {
 		// Do NOT submit any data if this grid is disabled
 		if(this.disabled){
@@ -8016,6 +8334,8 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 			dojo.query("> input[type=hidden]", node).forEach(function(node, index, array){ 
 			    dojo.destroy(node);
 			 }); 
+			
+			var _this = this;
 			
 			if ( ! (this.store instanceof dojox.data.QueryReadStore) ){
 				
@@ -8039,8 +8359,12 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 							    			tempObj.value = cells[i].widget.serialize(tempObj.value, cells[i].widget.constraints);
 							    		} 
 							    	}
-									tempObj.value = tempObj.value === null? "" : tempObj.value;
-									dojo.create("input", tempObj, node, "last");
+									if(tempObj.value !== null && typeof tempObj.value == "object") {
+										_this._createInputNodesForObj(node, tempObj.value, tempObj.name);
+									} else {
+										tempObj.value = tempObj.value === null? "" : tempObj.value;
+										dojo.create("input", tempObj, node, "last");
+									}									
 								}
 							}
 						}
@@ -8073,8 +8397,12 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 					    			   tempObj.value = cells[i].widget.serialize(tempObj.value, cells[i].widget.constraints);
 					    		   } 
 					    	   }
-					    	   tempObj.value = tempObj.value === null? "" : tempObj.value;
-					    	   dojo.create("input", tempObj, node, "last");
+					    	   if(tempObj.value !== null & typeof tempObj.value == "object") {
+					    		   _this._createInputNodesForObj(node, tempObj.value, tempObj.name);
+					    	   } else {
+					    		   tempObj.value = tempObj.value === null? "" : tempObj.value;
+					    		   dojo.create("input", tempObj, node, "last");
+					    	   }
 					    	   break;
 					       } 
 					    }
@@ -8275,20 +8603,22 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	},
 	
 	showErrorIcon: function(message){
-		if(message){
-			this.errorMessageIcon.title = message;
-			this.errorMessageIcon.style.display = "";
-			var hint = this.get('hint');
-			if (hint != undefined && hint != null && hint != "") {
-				this._hint = hint;
-				this.set('hint', message);
-			} 
-		}else{
-			this.errorMessageIcon.title = "";
-			this.errorMessageIcon.style.display = "none";
-			if(this._hint){
-				this.set('hint', this._hint);
-				delete this._hint;
+		if (this.errorMessageIcon) {
+			if(message){
+				this.errorMessageIcon.title = message;
+				this.errorMessageIcon.style.display = "";
+				var hint = this.get('hint');
+				if (hint != undefined && hint != null && hint != "") {
+					this._hint = hint;
+					this.set('hint', message);
+				} 
+			}else{
+				this.errorMessageIcon.title = "";
+				this.errorMessageIcon.style.display = "none";
+				if(this._hint){
+					this.set('hint', this._hint);
+					delete this._hint;
+				}
 			}
 		}
 	},
@@ -8486,15 +8816,10 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	 * Override the canEdit, to support readOnly and disable property
 	 */
 	canEdit: function(inCell, inRowIndex){
-		console.debug("[this.readOnly,this.disabled]",this.readOnly,this.disabled);
-		
 		if((this.readOnly === true)||(this.disabled === true)){
-			console.debug("can't edit");
 			return false;			
 		}else{
-			var result = this.inherited(arguments);
-			console.debug("canEdit:",result);
-			return result;
+			return this.inherited(arguments);
 		}
 	},
 	
@@ -8535,11 +8860,52 @@ dojo.declare("com.ibm.btt.dijit.Grid",[ dojox.grid.EnhancedGrid,
 	getWidget : function(arg){
 		var cells = this.layout.cells;
 		for ( var i = 0; i < cells.length; i++) {
-			if (cells[i].id == arg) {
-				return cells[i];
+			if (cells[i].id == arg && cells[i].getWidget) {
+				return cells[i].getWidget();
 			}
 		}
 		return undefined;
+	},
+	
+	showColumn : function(index){
+		if (index > -1 && index < this.layout.cells.length && this.disabled === false) {
+			this.layout.setColumnVisibility(index, true);
+			if(dojo.isIE){
+				var _this = this;
+				setTimeout(function(){
+					try{
+						_this._refresh();
+					}catch(e){
+						_this._refresh();
+					}
+				}, 0);
+			}
+		}
+	},
+	
+	hideColumn : function(index){
+		if (index > -1 && index < this.layout.cells.length && this.disabled === false) {
+			this.layout.setColumnVisibility(index, false);
+			if(dojo.isIE){
+				var _this = this;
+				setTimeout(function(){
+					try{
+						_this._refresh();
+						_this._refresh();
+					}catch(e){
+						_this._refresh();
+					}
+				}, 0);
+			}
+		}
+	},
+	
+	isColumnVisible : function(index){
+		if (index > -1 && index < this.layout.cells.length) {
+			return !this.layout.cells[index].hidden;
+		} else {
+			undefined;
+		}
 	},
 	
 	destroy : function(){
@@ -11793,14 +12159,14 @@ dojo.declare("com.ibm.btt.dijit.plugins.Pagination", dojox.grid.enhanced._Plugin
 					var tmpStore = this.grid.get("store");
 					tmpStore.close();
 				}
-				this.grid.set("store",
-					new dojo.data.ItemFileWriteStore({
-						data : {
-							items : data.items
-						}
-				}));
-				this.grid._refresh();
-				this.grid._refresh();
+				this.grid.setStoreData(data.items);
+				/*this.grid._refresh();
+				try {
+					this.grid._refresh();
+				} catch (e) {
+					console.warn('refresh failed');
+				}*/
+				
 				if (this.mode == "simple") {
 					this._setPageSize(data.totalRowNumber);
 				}
@@ -11822,15 +12188,17 @@ dojo.declare("com.ibm.btt.dijit.plugins.Pagination", dojox.grid.enhanced._Plugin
 			if(data && data.errMsg) this.grid.showErrorIcon(data.errMsg);
 			this.grid.onAsyncOK(arguments);
 		}catch(e){
-			(new dijit.Dialog({
-	            title: "",
-	            content : arg
-	        })).show();
 			this.grid.onAsyncError(arguments);
+			this.handleResponseError(arg);
 		}
-
 		this._paginateable = true;
-				
+	},
+	
+	handleResponseError : function(arg){
+		(new dijit.Dialog({
+	        title: "",
+	        content : arg
+	    })).show();
 	},
 	
 	_setBtnState : function(state) {

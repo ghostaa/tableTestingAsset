@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInGroupFlow','ctxName':'SelectionResultInGroupCtx'}" isRuleDirty="false">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,693,402" dataBinding="{'ctxType':'proc','ctxFile':'SelectionResultInGroupFlow','ctxName':'SelectionResultInGroupCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="402" verticalAlignment="1" widthHint="625"/>
+    <gridData heightHint="402" verticalAlignment="1" widthHint="693" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:725,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:385,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
     <container name="Form" id="form">
-      <gridData heightHint="394" verticalAlignment="1" widthHint="617"/>
+      <gridData heightHint="394" verticalAlignment="1" widthHint="617" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:691,&quot;displaySize&quot;:671,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:400,&quot;displaySize&quot;:288,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="297"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="297" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:669,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:15,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         <widget name="Link" action="flowEvent=back" id="link_copy" text="non-editable table">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:103,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label" text=" -&gt; Selection Result in group">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:164,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <gridLayout numColumns="2"/>
       </container>
       <container name="Group" id="group" text="multi-selection result">
-        <gridData heightHint="150" verticalAlignment="1" widthHint="609"/>
+        <gridData heightHint="150" verticalAlignment="1" widthHint="609" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:669,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:144,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         <widget name="Table" dataNameForList="selectAccountList" id="table">
-          <gridData/>
-          <column widget="" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:663,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:102,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
+          <column widthType="FixedSize" widget="" dataName="AccountName" width="80" relativeWidth="1" text="%nls.testtable/AccountName">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime">
+          <column widthType="FixedSize" widget="" dataName="TradeTime" width="80" relativeWidth="1" text="%nls.testtable/TradeTime">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+          <column widthType="FixedSize" widget="" dataName="MaximumAmount" width="80" relativeWidth="1" text="%nls.testtable/MaximumAmount">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="AccountOpeningDate" width="80" text="%nls.testtable/AccountOpeningDate">
+          <column widthType="FixedSize" widget="" dataName="AccountOpeningDate" width="80" relativeWidth="1" text="%nls.testtable/AccountOpeningDate">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <column widthType="FixedSize" widget="" dataName="AccountBlance" width="80" relativeWidth="1" text="%nls.testtable/AccountBlance">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="Rate" width="80" text="%nls.testtable/Rate">
+          <column widthType="FixedSize" widget="" dataName="Rate" width="80" relativeWidth="1" text="%nls.testtable/Rate">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="" dataName="Usable" width="80" text="%nls.testtable/Usable">
+          <column widthType="FixedSize" widget="" dataName="Usable" width="80" relativeWidth="1" text="%nls.testtable/Usable">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
         </widget>
         <widget name="PlaceHolder">
-          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+          <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:-1,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:-1,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <gridLayout numColumns="1"/>
       </container>
       <container name="Group" id="group01" text="single-selection result">
-        <gridData heightHint="201" verticalAlignment="1" widthHint="199"/>
+        <gridData heightHint="201" verticalAlignment="1" widthHint="199" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:669,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:123,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         <widget name="Label" id="label08" text="AccountName">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.AccountName" id="label01" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.AccountName" id="label01" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label09" text="TradeTime">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.TradeTime" id="label02" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.TradeTime" id="label02" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label10" text="MaximumAmount">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.MaximumAmount" id="label03" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.MaximumAmount" id="label03" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label11" text="AccountOpeningDate">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.AccountOpeningDate" id="label04" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.AccountOpeningDate" id="label04" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label12" text="AccountBlance">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.AccountBlance" id="label05" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.AccountBlance" id="label05" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label13" text="Rate">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.Rate" id="label06" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.Rate" id="label06" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label14" text="Usable">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:119,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
-        <widget name="Label" dataName="AccountInfoRecord.Usable" id="label07" text="Label">
-          <gridData/>
+        <widget name="Label" dataName="AccountInfo.Usable" id="label07" text="Label">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:30,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <gridLayout numColumns="2"/>
       </container>

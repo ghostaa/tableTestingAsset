@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FTInGroup.xui by ghost, on Wed Dec 05 18:57:09 CST 2012 -->
+<!-- Generated from FTInGroup.xui by ghost, on Tue Jan 29 15:37:56 CST 2013 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="FTInGroup_panel">
     <tr>
-      <td align="left" valign="top">
+      <td style="text-align:left;vertical-align:top;">
         <bttdojo:form id="FTInGroup_form" errorPage="PaginationTablePage/FT/FTInGroup.jsp">
           <table>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                   <table id="FTInGroup_panel01">
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:a id="FTInGroup_link" text="FTtable" flowEvent="returnToFTtable"/>
                       </td>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="FTInGroup_label" text="-> FTtable in group"/>
                       </td>
                     </tr>
@@ -81,15 +81,15 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                 <bttdojo:group id="FTInGroup_group" text="Group">
                   <table>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:table id="FTInGroup_tableFT" dataNameForList="AccountInfoList" isPageable="true" operationName="PAG_PaginationTablePage$FT$FTInGroup_tableFT" directPagination="false" paginationWhenLoading="true" rowsPerPage="10">
                           <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                           <bttdojo:column dataNameForList="AccountTypeForSelect" widget="Select" align="left" dataName="AccountType" width="80" labelField="labelField" valueField="valueField" text="%nls.testtable/AccountType"/>
-                          <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForCombo.js"/>
+                          <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
                           <bttdojo:column numberType="bigDecimal" widget="TextBox" align="left" dataName="MaximumAmount" width="80" type="Number" decimalPlaces="3" text="%nls.testtable/MaximumAmount"/>
                           <bttdojo:column pattern="yyyy-MM-dd" widget="TextBox" align="left" dataName="AccountOpeningDate" width="100" type="Date" text="%nls.testtable/AccountOpeningDate"/>
                           <bttdojo:column currency="EUR" numberType="bigDecimal" widget="TextBox" align="left" dataName="AccountBlance" width="80" type="Currency" text="%nls.testtable/AccountBlance"/>

@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,80,80" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFTFlow','ctxName':'PaginationFTCtx'}" isRuleDirty="false">
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="208,171,1081,300" dataBinding="{'ctxType':'proc','ctxFile':'PaginationFTFlow','ctxName':'PaginationFTCtx'}" isRuleDirty="false">
   <styles/>
   <container name="Panel" id="panel">
-    <gridData heightHint="177" verticalAlignment="1" widthHint="965"/>
+    <gridData heightHint="300" verticalAlignment="1" widthHint="1081" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:712,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:385,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
     <container name="Form" id="form">
-      <gridData heightHint="169" verticalAlignment="1" widthHint="957"/>
+      <gridData heightHint="169" verticalAlignment="1" widthHint="957" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:1079,&quot;displaySize&quot;:1059,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:298,&quot;displaySize&quot;:141,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
       <container name="Panel" id="panel01">
-        <gridData heightHint="31" verticalAlignment="1" widthHint="181"/>
+        <gridData heightHint="31" verticalAlignment="1" widthHint="181" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:1057,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:15,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         <widget name="Link" action="flowEvent=returnToFTtable" id="link" text="FTtable">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:41,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <widget name="Label" id="label" text="-&gt; FTtable in group">
-          <gridData/>
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:110,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:13,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         </widget>
         <gridLayout numColumns="2"/>
       </container>
       <container name="Group" id="group" text="Group">
-        <gridData heightHint="128" verticalAlignment="1" widthHint="949"/>
+        <gridData heightHint="128" verticalAlignment="1" widthHint="949" heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:1057,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:122,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
         <widget name="Table" paginationParams="{'timeout':'','operationNameForPagination':'CreatePaginationDataOp','rowsPerPage':'10','directPagination':'false','paginationType':'default','errorOutputMapping':'','normalOutputMapping':'normalOutputMapping','nextInputMapping':'nextInputMapping','initialInputMapping':'initialInputMapping','paginationWhenLoading':'true','previousInputMapping':'previousInputMapping','directInputMapping':''}" dataNameForList="AccountInfoList" isPageable="true" id="tableFT">
-          <gridData/>
-          <column widget="TextBox" editable="true" dataName="AccountName" width="80" text="%nls.testtable/AccountName">
+          <gridData heightType="AutoSize" widthType="AutoSize" relativeWidth="-1" relativeHeight="-1" cell="{&quot;width&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:1051,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1},&quot;height&quot;:{&quot;containerSize&quot;:-1,&quot;displaySize&quot;:102,&quot;fixedSize&quot;:-1,&quot;type&quot;:&quot;AutoSize&quot;,&quot;relativeSize&quot;:-1}}" horizontalIndentType="FixedSize"/>
+          <column widthType="FixedSize" widget="TextBox" editable="true" dataName="AccountName" width="80" relativeWidth="1" text="%nls.testtable/AccountName">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" text="%nls.testtable/AccountType">
+          <column widthType="FixedSize" dataNameForList="AccountTypeForSelect" widget="Select" editable="true" dataName="AccountType" width="80" labelField="labelField" urlForList="" valueField="valueField" relativeWidth="1" text="%nls.testtable/AccountType">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForCombo.js" valueField="" text="%nls.testtable/TradeTime">
+          <column widthType="FixedSize" dataNameForList="" widget="Select" editable="true" dataName="TradeTime" width="80" labelField="" urlForList="listFiles/tradeTimeForSelect.js" valueField="" relativeWidth="1" text="%nls.testtable/TradeTime">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="TextBox" editable="true" dataName="MaximumAmount" width="80" text="%nls.testtable/MaximumAmount">
+          <column widthType="FixedSize" widget="TextBox" editable="true" dataName="MaximumAmount" width="80" relativeWidth="1" text="%nls.testtable/MaximumAmount">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" text="%nls.testtable/AccountOpeningDate">
+          <column widthType="FixedSize" widget="TextBox" editable="true" dataName="AccountOpeningDate" width="100" relativeWidth="1" text="%nls.testtable/AccountOpeningDate">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="TextBox" editable="true" dataName="AccountBlance" width="80" text="%nls.testtable/AccountBlance">
+          <column widthType="FixedSize" widget="TextBox" editable="true" dataName="AccountBlance" width="80" relativeWidth="1" text="%nls.testtable/AccountBlance">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/tradeTimeForCombo.js" text="%nls.testtable/Rate">
+          <column widthType="FixedSize" dataNameForList="" widget="ComboBox" editable="true" dataName="Rate" width="80" labelField="" urlForList="listFiles/tradeTimeForCombo.js" valueField="" relativeWidth="1" text="%nls.testtable/Rate">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" text="%nls.testtable/Localtion">
+          <column widthType="FixedSize" dataNameForList="LocaltionForComboBox" widget="ComboBox" editable="true" dataName="Localtion" width="80" labelField="labelField" urlForList="" valueField="" relativeWidth="1" text="%nls.testtable/Localtion">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column unCheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" checkedValue="true" text="%nls.testtable/Usable">
+          <column widthType="FixedSize" unCheckedValue="false" widget="CheckBox" editable="true" dataName="Usable" width="80" relativeWidth="1" checkedValue="true" text="%nls.testtable/Usable">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="" text="%nls.testtable/accountAttribution">
+          <column widthType="FixedSize" widget="LabelFromList" editable="false" dataName="accountAttribution" width="80" urlForList="" relativeWidth="1" text="%nls.testtable/accountAttribution">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
-          <column widget="Image" editable="false" dataName="ImageField" width="80" text="%nls.testtable/Image">
+          <column widthType="FixedSize" widget="Image" editable="false" dataName="ImageField" width="80" relativeWidth="1" text="%nls.testtable/Image">
             <tableColumnAlignment>16384</tableColumnAlignment>
           </column>
         </widget>

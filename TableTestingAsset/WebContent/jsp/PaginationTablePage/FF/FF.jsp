@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from FF.xui by ghost, on Wed Dec 05 18:57:06 CST 2012 -->
+<!-- Generated from FF.xui by ghost, on Tue Jan 29 15:34:21 CST 2013 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,14 +63,14 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="FF_panel">
     <tr>
-      <td align="left" valign="top">
+      <td style="text-align:left;vertical-align:top;">
         <bttdojo:form id="FF_form" errorPage="PaginationTablePage/FF/FF.jsp">
           <table>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                   <table id="FF_panel01">
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="FF_label" text="FFtable"/>
                       </td>
                     </tr>
@@ -78,7 +78,7 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td align="left" valign="center">
+              <td style="text-align:left;vertical-align:middle;">
                 <bttdojo:table id="FF_tableFF" dataName="selectAccountList" dataNameForList="AccountInfoList" isPageable="true" selectionMode="multiple" operationName="PAG_PaginationTablePage$FF$FF_tableFF" directPagination="false" paginationWhenLoading="false" rowsPerPage="10" timeout="50000">
                   <bttdojo:column widget="TextBox" align="left" dataName="AccountName" width="80" type="String" text="%nls.testtable/AccountName"/>
                   <bttdojo:column widget="Select" align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime" storeURL="listFiles/tradeTimeForSelect.js"/>
@@ -95,81 +95,65 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                   <table id="FF_panel02">
                     <tr>
-                      <td align="left" valign="top">
+                      <td style="text-align:left;vertical-align:top;">
                         <bttdojo:group id="FF_group" text="Test in group">
                           <table>
                             <tr>
-                              <td align="left" valign="center">
+                              <td style="text-align:left;vertical-align:middle;">
                                 <bttdojo:a id="FF_link" text="Link to \'FFtable in group\'" flowEvent="group"/>
                               </td>
                             </tr>
                             <tr>
-                              <td align="left" valign="center">
+                              <td style="text-align:left;vertical-align:middle;">
                                 <bttdojo:a id="FF_link02" text="Link to \'FFtable in popup group\'" flowEvent="groupPopup"/>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top">
-                                  <table id="FF_panel04">
-                                    <tr>
-                                      <td align="left" valign="center">
-                                        <bttdojo:button id="FF_button01" type="submit" text="Submit to group" flowEvent="submit to group"/>
-                                      </td>
-                                      <td>
-                                      </td>
-                                    </tr>
-                                  </table>
                               </td>
                             </tr>
                           </table>
                         </bttdojo:group>
                       </td>
-                      <td>
+                      <td style="text-align:vertical-align:">
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="top">
+                      <td style="text-align:left;vertical-align:top;">
                         <bttdojo:group id="FF_group01" text="Test in Tabbedpane">
                           <table>
                             <tr>
-                              <td align="left" valign="center">
+                              <td style="text-align:left;vertical-align:middle;">
                                 <bttdojo:a id="FF_link01" text="Link to \'FFtable in TabbedPane\'" flowEvent="tabbedPane"/>
                               </td>
                             </tr>
                             <tr>
-                              <td align="left" valign="center">
+                              <td style="text-align:left;vertical-align:middle;">
                                 <bttdojo:a id="FF_link04" text="Link to \'FFtable in popup TabbedPane\'" flowEvent="tabbedPanePopup"/>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td align="left" valign="top">
-                                  <table id="FF_panel05">
-                                    <tr>
-                                      <td>
-                                      </td>
-                                    </tr>
-                                  </table>
                               </td>
                             </tr>
                           </table>
                         </bttdojo:group>
                       </td>
-                      <td>
+                      <td style="text-align:vertical-align:">
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="top">
+                      <td style="text-align:left;vertical-align:top;">
                           <table id="FF_panel03">
                             <tr>
-                              <td>
+                              <td style="text-align:vertical-align:">
                               </td>
                             </tr>
                           </table>
                       </td>
-                      <td>
+                      <td style="text-align:vertical-align:">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:button id="FF_button01" type="submit" text="Submit to group" flowEvent="submit to group"/>
+                      </td>
+                      <td style="text-align:vertical-align:">
                       </td>
                     </tr>
                   </table>

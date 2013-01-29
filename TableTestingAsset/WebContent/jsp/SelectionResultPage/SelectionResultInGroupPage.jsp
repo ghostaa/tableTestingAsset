@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from SelectionResultInGroupPage.xui by ghost, on Wed Dec 05 18:57:17 CST 2012 -->
+<!-- Generated from SelectionResultInGroupPage.xui by ghost, on Tue Jan 29 14:44:09 CST 2013 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -63,17 +63,17 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="SelectionResultInGroupPage_panel">
     <tr>
-      <td align="left" valign="top">
+      <td style="text-align:left;vertical-align:top;">
         <bttdojo:form id="SelectionResultInGroupPage_form" errorPage="SelectionResultPage/SelectionResultInGroupPage.jsp">
           <table>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                   <table id="SelectionResultInGroupPage_panel01">
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:a id="SelectionResultInGroupPage_link_copy" text="non-editable table" flowEvent="back"/>
                       </td>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label" text=" -> Selection Result in group"/>
                       </td>
                     </tr>
@@ -81,11 +81,11 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                 <bttdojo:group id="SelectionResultInGroupPage_group" text="multi-selection result">
                   <table>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:table id="SelectionResultInGroupPage_table" dataNameForList="selectAccountList" isPageable="false">
                           <bttdojo:column align="left" dataName="AccountName" width="80" text="%nls.testtable/AccountName"/>
                           <bttdojo:column align="left" dataName="TradeTime" width="80" text="%nls.testtable/TradeTime"/>
@@ -98,7 +98,7 @@ dojo.addOnLoad(function(){
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td style="text-align:vertical-align:">
                       </td>
                     </tr>
                   </table>
@@ -106,63 +106,63 @@ dojo.addOnLoad(function(){
               </td>
             </tr>
             <tr>
-              <td align="left" valign="top">
+              <td style="text-align:left;vertical-align:top;">
                 <bttdojo:group id="SelectionResultInGroupPage_group01" text="single-selection result">
                   <table>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label08" text="AccountName"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label01" dataName="AccountInfoRecord.AccountName" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label01" dataName="AccountInfo.AccountName" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label09" text="TradeTime"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label02" dataName="AccountInfoRecord.TradeTime" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label02" dataName="AccountInfo.TradeTime" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label10" text="MaximumAmount"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label03" dataName="AccountInfoRecord.MaximumAmount" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label03" dataName="AccountInfo.MaximumAmount" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label11" text="AccountOpeningDate"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label04" dataName="AccountInfoRecord.AccountOpeningDate" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label04" dataName="AccountInfo.AccountOpeningDate" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label12" text="AccountBlance"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label05" dataName="AccountInfoRecord.AccountBlance" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label05" dataName="AccountInfo.AccountBlance" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label13" text="Rate"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label06" dataName="AccountInfoRecord.Rate" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label06" dataName="AccountInfo.Rate" text="Label"/>
                       </td>
                     </tr>
                     <tr>
-                      <td align="left" valign="center">
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:label id="SelectionResultInGroupPage_label14" text="Usable"/>
                       </td>
-                      <td align="left" valign="center">
-                        <bttdojo:label id="SelectionResultInGroupPage_label07" dataName="AccountInfoRecord.Usable" text="Label"/>
+                      <td style="text-align:left;vertical-align:middle;">
+                        <bttdojo:label id="SelectionResultInGroupPage_label07" dataName="AccountInfo.Usable" text="Label"/>
                       </td>
                     </tr>
                   </table>

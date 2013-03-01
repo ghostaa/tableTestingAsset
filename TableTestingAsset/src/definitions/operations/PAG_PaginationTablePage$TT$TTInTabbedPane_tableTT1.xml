@@ -48,6 +48,8 @@
 		<mapperConverterExpression>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 			<map from="paginationData.TTInTabbedPane_tableTT1_totalRowNumber" to="paginationData.totalRowNumber"/>
+			<map from="paginationData.TTInTabbedPane_tableTT1_pageNumber" to="paginationData.pageNumber"/>
+			<map from="paginationData.TTInTabbedPane_tableTT1_rowsPerPage" to="paginationData.rowsPerPage"/>
 			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>
 			<map from="currentPageNum" to="currentPageNum"/>

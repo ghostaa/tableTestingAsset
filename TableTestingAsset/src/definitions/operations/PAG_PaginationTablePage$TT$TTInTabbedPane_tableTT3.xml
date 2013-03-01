@@ -47,6 +47,8 @@
 	<fmtDef id="directInputMapping">
 		<mapperConverterExpression>
 			<map from="paginationData.TTInTabbedPane_tableTT3_totalRowNumber" to="paginationData.totalRowNumber"/>
+			<map from="paginationData.TTInTabbedPane_tableTT3_pageNumber" to="paginationData.pageNumber"/>
+			<map from="paginationData.TTInTabbedPane_tableTT3_rowsPerPage" to="paginationData.rowsPerPage"/>
 			<map from="AccountInfoList" to="AccountInfoList" append="false"/>
 			<map from="LocaltionForComboBox" to="LocaltionForComboBox" append="false"/>
 			<map from="AccountTypeForSelect" to="AccountTypeForSelect" append="false"/>

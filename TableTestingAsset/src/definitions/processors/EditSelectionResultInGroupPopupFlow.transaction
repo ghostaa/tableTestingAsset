@@ -16,13 +16,13 @@
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_fbLPtvv3EeG05aSizZt4bg" key="_fbLPtfv3EeG05aSizZt4bg" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_fbLPuPv3EeG05aSizZt4bg" key="_fbLPt_v3EeG05aSizZt4bg" value="Override state mapping"/>
       </transitions>
-      <transitions xmi:type="transaction:Transition" xmi:id="_gJtwsPv3EeG05aSizZt4bg" tag="Transition" id="EditSelectionResultPage/EditSelectionResultInGroupPage.back" target="_aHjiUPvpEeG05aSizZt4bg" source="_ebFEoPv3EeG05aSizZt4bg">
+      <transitions xmi:type="transaction:Transition" xmi:id="_gJtwsPv3EeG05aSizZt4bg" tag="Transition" id="EditSelectionResultPageEditSelectionResultInGroupPage.back" target="_aHjiUPvpEeG05aSizZt4bg" source="_ebFEoPv3EeG05aSizZt4bg">
         <attributes xmi:type="transaction:Attribute" xmi:id="_gJtwsfv3EeG05aSizZt4bg" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_gJtwtPv3EeG05aSizZt4bg" name="Output Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_gJtws_v3EeG05aSizZt4bg" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_gJtwt_v3EeG05aSizZt4bg" name="O1Output Mapping Behaviour" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_gJtwtfv3EeG05aSizZt4bg" name="O2Input Mapping Behaviour" type="java.lang.String"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_gJtwsvv3EeG05aSizZt4bg" key="_gJtwsfv3EeG05aSizZt4bg" value="EditSelectionResultPage/EditSelectionResultInGroupPage.back"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_gJtwsvv3EeG05aSizZt4bg" key="_gJtwsfv3EeG05aSizZt4bg" value="EditSelectionResultPageEditSelectionResultInGroupPage.back"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_gJtwtvv3EeG05aSizZt4bg" key="_gJtwtfv3EeG05aSizZt4bg" value="Override state mapping"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_gJtwuPv3EeG05aSizZt4bg" key="_gJtwt_v3EeG05aSizZt4bg" value="Override state mapping"/>
       </transitions>
@@ -44,13 +44,13 @@
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_aHjiVPvpEeG05aSizZt4bg" key="_aHjiU_vpEeG05aSizZt4bg" value="final"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_adpHEPvpEeG05aSizZt4bg" key="_aHjiVfvpEeG05aSizZt4bg" value="back"/>
       </children>
-      <children xmi:type="transaction:State" xmi:id="_ebFEoPv3EeG05aSizZt4bg" tag="PopupPageState" id="EditSelectionResultPage/EditSelectionResultInGroupPage" targetTransitions="_gJtwsPv3EeG05aSizZt4bg" sourceTransitions="_fbLPsPv3EeG05aSizZt4bg">
+      <children xmi:type="transaction:State" xmi:id="_ebFEoPv3EeG05aSizZt4bg" tag="PopupPageState" id="EditSelectionResultPageEditSelectionResultInGroupPage" targetTransitions="_gJtwsPv3EeG05aSizZt4bg" sourceTransitions="_fbLPsPv3EeG05aSizZt4bg">
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEofv3EeG05aSizZt4bg" name="Page" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEo_v3EeG05aSizZt4bg" name="id" required="true" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEpfv3EeG05aSizZt4bg" name="Input Data Format" type="java.lang.String"/>
         <attributes xmi:type="transaction:Attribute" xmi:id="_ebFEpvv3EeG05aSizZt4bg" name="Output Data Format" type="java.lang.String"/>
         <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEovv3EeG05aSizZt4bg" key="_ebFEofv3EeG05aSizZt4bg" value="EditSelectionResultPage/EditSelectionResultInGroupPage.xui"/>
-        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEpPv3EeG05aSizZt4bg" key="_ebFEo_v3EeG05aSizZt4bg" value="EditSelectionResultPage/EditSelectionResultInGroupPage"/>
+        <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_ebFEpPv3EeG05aSizZt4bg" key="_ebFEo_v3EeG05aSizZt4bg" value="EditSelectionResultPageEditSelectionResultInGroupPage"/>
         <events xmi:type="transaction:Event" xmi:id="_fKu_8Pv3EeG05aSizZt4bg" name="back" automatic="true"/>
       </children>
     </processor>
@@ -91,6 +91,20 @@
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_MXA91PydEeGqbP2WAeYB4Q" key="_MXA90vydEeGqbP2WAeYB4Q" value="both"/>
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_NDLgQPydEeGqbP2WAeYB4Q" key="_MXA90fydEeGqbP2WAeYB4Q" value="AccountInfoRecord"/>
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_NsPEUPydEeGqbP2WAeYB4Q" key="_MXA90_ydEeGqbP2WAeYB4Q" value="AccountInfo"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_7hAJMIbkEeKfCtJJx9vxgw" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJMYbkEeKfCtJJx9vxgw" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJMobkEeKfCtJJx9vxgw" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJM4bkEeKfCtJJx9vxgw" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7hAJNIbkEeKfCtJJx9vxgw" key="_7hAJMobkEeKfCtJJx9vxgw" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7hAJNYbkEeKfCtJJx9vxgw" key="_7hAJMYbkEeKfCtJJx9vxgw" value="AccountTypeForSelect"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_7hAJNobkEeKfCtJJx9vxgw" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJN4bkEeKfCtJJx9vxgw" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJOIbkEeKfCtJJx9vxgw" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_7hAJOYbkEeKfCtJJx9vxgw" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7hAJOobkEeKfCtJJx9vxgw" key="_7hAJOIbkEeKfCtJJx9vxgw" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_7hAJO4bkEeKfCtJJx9vxgw" key="_7hAJN4bkEeKfCtJJx9vxgw" value="LocaltionForComboBox"/>
         </elements>
       </dataElements>
     </data>

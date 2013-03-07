@@ -24,6 +24,8 @@
 
 	<kColl id="EditSelectionResultInPanePopupRecord">
 		<refData refId="AccountInfoList" alias="selectAccountList"/>
+		<refData refId="AccountTypeForSelect"/>
+		<refData refId="LocaltionForComboBox"/>
 	</kColl>
 
 </EditSelectionResultInPanePopupFlow>

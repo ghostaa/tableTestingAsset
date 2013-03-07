@@ -84,6 +84,20 @@
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_tfUBMPvpEeG05aSizZt4bg" key="_s7XmofvpEeG05aSizZt4bg" value="AccountInfoList"/>
           <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_0OkHcPvpEeG05aSizZt4bg" key="_s7Xmo_vpEeG05aSizZt4bg" value="selectAccountList"/>
         </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_9mufkIbkEeKfCtJJx9vxgw" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufkYbkEeKfCtJJx9vxgw" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufkobkEeKfCtJJx9vxgw" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufk4bkEeKfCtJJx9vxgw" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9muflIbkEeKfCtJJx9vxgw" key="_9mufkobkEeKfCtJJx9vxgw" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9muflYbkEeKfCtJJx9vxgw" key="_9mufkYbkEeKfCtJJx9vxgw" value="AccountTypeForSelect"/>
+        </elements>
+        <elements xmi:type="transaction:RefData" xmi:id="_9muflobkEeKfCtJJx9vxgw" tag="refData">
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufl4bkEeKfCtJJx9vxgw" name="refId" required="true" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufmIbkEeKfCtJJx9vxgw" name="direction" type="java.lang.String"/>
+          <attributes xmi:type="transaction:Attribute" xmi:id="_9mufmYbkEeKfCtJJx9vxgw" name="alias" type="java.lang.String"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9mufmobkEeKfCtJJx9vxgw" key="_9mufmIbkEeKfCtJJx9vxgw" value="both"/>
+          <values xmi:type="transaction:AttributeToStringMapEntry" xmi:id="_9mufm4bkEeKfCtJJx9vxgw" key="_9mufl4bkEeKfCtJJx9vxgw" value="LocaltionForComboBox"/>
+        </elements>
       </dataElements>
     </data>
     <format xmi:type="transaction:FormatCategory" xmi:id="_W7q1KfvpEeG05aSizZt4bg"/>
